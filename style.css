@@ -1,0 +1,171 @@
+/*
+Theme Name: Ice Cap
+Theme URI: http://github.com/sayanee
+Description: White, Minimal & Responsive
+Version: 0.1
+Author: Sayanee
+Author URI: http://sayan.ee/
+Tags: clean, white, minimal, fluid, responsive
+*/
+@import url(css/reset.css);
+@import url(css/layout.css);
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Quicksand', sans-serif;
+  color: #595959; }
+
+body {
+  background-image: url("./images/bg.png"); }
+
+a {
+  color: #55afb9;
+  text-decoration: none; }
+  a:visited {
+    color: #55afb9; }
+  a:hover {
+    color: #55afb9;
+    text-decoration: underline; }
+
+#wrapper {
+  width: 80%;
+  margin: 0 auto; }
+  #wrapper header {
+    /*blog title*/
+    /*blog description*/ }
+    #wrapper header h1 {
+      font-size: 6em;
+      text-align: center; }
+      #wrapper header h1 a {
+        color: #595959;
+        font-weight: lighter; }
+        #wrapper header h1 a:hover {
+          text-decoration: none; }
+    #wrapper header h2 {
+      font-size: 1.5em;
+      color: #595959;
+      text-align: center;
+      margin-top: 10px; }
+  #wrapper nav {
+    font-size: 1.5em;
+    width: 100%;
+    clear: both;
+    background-color: #787878;
+    height: 30px;
+    margin: 30px 0px;
+    padding-top: 5px; }
+    #wrapper nav ul {
+      list-style: none;
+      text-align: center; }
+      #wrapper nav ul li {
+        margin: 10px 20px;
+        display: inline; }
+      #wrapper nav ul a {
+        color: #ebebeb;
+        font-weight: lighter;
+        display: inline-block; }
+        #wrapper nav ul a:hover {
+          text-decoration: none; }
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+.ir br {
+  display: none; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/* ==|== media queries ====================================================== */
+@media only screen and (min-width: 480px) {
+  #wrapper {
+    width: 95%; } }
+@media only screen and (min-width: 1024px) {
+  #wrapper {
+    width: 80%; } }
+/* ==|== print styles ======================================================= */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  a, a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
