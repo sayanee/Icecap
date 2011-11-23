@@ -7,8 +7,212 @@ Author: Sayanee
 Author URI: http://sayan.ee/
 Tags: clean, white, minimal, fluid, responsive
 */
-@import url(css/reset.css);
 @import url(css/layout.css);
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.231; }
+
+body, button, input, select, textarea {
+  font-family: sans-serif;
+  color: #222; }
+
+::-moz-selection {
+  background: #55afb9;
+  color: #000;
+  text-shadow: none; }
+
+::selection {
+  background: #55afb9;
+  color: #000;
+  text-shadow: none; }
+
+a {
+  color: #00e; }
+
+a:visited {
+  color: #551a8b; }
+
+a:hover {
+  color: #06e; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+small {
+  font-size: 85%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+label {
+  cursor: pointer; }
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal;
+  *overflow: visible; }
+
+table button, table input {
+  *overflow: auto; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+input:invalid, textarea:invalid {
+  background-color: #f0dddd; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  vertical-align: top; }
+
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -16,7 +220,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   font-weight: normal;
   font-style: normal;
   font-family: 'Quicksand', sans-serif;
-  color: #595959; }
+  color: #646464; }
 
 body {
   background-image: url("./images/bg.png"); }
@@ -33,30 +237,27 @@ a {
 #wrapper {
   width: 80%;
   margin: 0 auto; }
-  #wrapper header {
-    /*blog title*/
-    /*blog description*/ }
-    #wrapper header h1 {
-      font-size: 6em;
-      text-align: center; }
-      #wrapper header h1 a {
-        color: #595959;
-        font-weight: lighter; }
-        #wrapper header h1 a:hover {
-          text-decoration: none; }
-    #wrapper header h2 {
-      font-size: 1.5em;
-      color: #595959;
-      text-align: center;
-      margin-top: 10px; }
+  #wrapper header h1 {
+    font-size: 6em;
+    text-align: center; }
+    #wrapper header h1 a {
+      color: #646464;
+      font-weight: lighter; }
+      #wrapper header h1 a:hover {
+        text-decoration: none; }
+  #wrapper header h2 {
+    font-size: 1.5em;
+    color: #646464;
+    text-align: center;
+    margin-top: 10px; }
   #wrapper nav {
     font-size: 1.5em;
     width: 100%;
     clear: both;
     background-color: #787878;
-    height: 30px;
     margin: 30px 0px;
-    padding-top: 5px; }
+    padding-top: 5px;
+    padding-bottom: 5px; }
     #wrapper nav ul {
       list-style: none;
       text-align: center; }
@@ -69,6 +270,48 @@ a {
         display: inline-block; }
         #wrapper nav ul a:hover {
           text-decoration: none; }
+  #wrapper article {
+    display: block;
+    width: 100%;
+    margin: 40px 0px;
+    clear: both; }
+    #wrapper article side {
+      display: block;
+      float: left;
+      width: 25%; }
+      #wrapper article side #circle {
+        background: #dadada;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        margin-top: 0%;
+        margin-bottom: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 2em; }
+        #wrapper article side #circle a {
+          color: #646464; }
+        #wrapper article side #circle div {
+          padding: 25%; }
+      #wrapper article side date {
+        text-align: center; }
+    #wrapper article post {
+      display: block;
+      float: left;
+      width: 75%; }
+      #wrapper article post h3 {
+        font-size: 2.5em;
+        font-weight: lighter;
+        margin-bottom: 30px; }
+        #wrapper article post h3 a {
+          color: #646464; }
+          #wrapper article post h3 a:hover {
+            text-decoration: none; }
+      #wrapper article post p {
+        font-size: 1.2em;
+        font-weight: lighter;
+        line-height: 23px; }
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir {
