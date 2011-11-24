@@ -79,11 +79,10 @@ td { vertical-align: top; }
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td 
 {margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-family: 'Quicksand', sans-serif; color:$grey-text-dark;}
 
-a { color: $blue-text-link; text-decoration: none;
+a{color: $grey-text-dark; text-decoration:none; 
   &:visited { color: $blue-text-link; }
-  &:hover { color: $blue-text-link; text-decoration: underline;}
+  &:hover{color: $blue-text-link; text-decoration: none;}
 }
-
 
 #wrapper{
   width:80%;
@@ -91,13 +90,12 @@ a { color: $blue-text-link; text-decoration: none;
   
   header{
     
-    h1{font-size:6em; text-align: center;
+    h1{font-size:6em; text-align: center; 
       a{color:$grey-text-dark;font-weight: lighter;
-        &:hover{text-decoration: none;}
+        &:hover{color: $blue-text-link; text-decoration: none;}
       }
     } 
-    h2{font-size:1.5em; color:$grey-text-dark;text-align: center;margin-top:10px;} 
-    
+    h2{font-size:1.5em; color:$grey-text-dark;text-align: center;margin-top:10px;}  
   }
   
   nav{
@@ -155,9 +153,7 @@ a { color: $blue-text-link; text-decoration: none;
         
         text-align:center;
         font-size: 2em;
-        
-        a{color:$grey-text-dark;}
-        
+                
         div{
           padding:25%;
         }
@@ -181,8 +177,8 @@ a { color: $blue-text-link; text-decoration: none;
         margin:10px auto;
         font-size:0.9em;
         
-        a{color:$grey-text-dark;
-          &:hover{text-decoration: underline;}
+         a{color:$grey-text-dark;
+            &:hover{color: $blue-text-link; text-decoration: none;}
         }
       }
     }
@@ -194,14 +190,19 @@ a { color: $blue-text-link; text-decoration: none;
       
       li{margin-left:30px;}
       
-      h3{font-size:2.5em; font-weight: lighter; margin-bottom:30px;
-        a{color:$grey-text-dark;
-          &:hover{text-decoration: none;}
+      h4{
+        font-size:2.5em; font-weight: lighter; margin-bottom:30px; 
+         a{color:$grey-text-dark;font-weight: lighter;
+            &:hover{color: $blue-text-link; text-decoration: none;}
         }
       }
       
-      p{font-size:1.2em; font-weight: lighter; line-height:23px; }
-      
+      p{font-size:1.2em; font-weight: lighter; line-height:23px; 
+        a { color: $blue-text-link; text-decoration: none;
+          &:visited { color: $blue-text-link; }
+          &:hover { color: $blue-text-link; text-decoration: underline;}
+        }
+      }
     }
   }
 
@@ -232,10 +233,7 @@ a { color: $blue-text-link; text-decoration: none;
       margin:0 auto;
       margin-top:-25px;
     }
-    prev{ background-image: url("./images/prev.png"); }
-    next{ background-image: url("./images/next.png"); }
   }
-
 }
 
 

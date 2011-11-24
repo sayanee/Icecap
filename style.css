@@ -223,13 +223,13 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   color: #646464; }
 
 a {
-  color: #55afb9;
+  color: #646464;
   text-decoration: none; }
   a:visited {
     color: #55afb9; }
   a:hover {
     color: #55afb9;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 #wrapper {
   width: 80%;
@@ -241,6 +241,7 @@ a {
       color: #646464;
       font-weight: lighter; }
       #wrapper header h1 a:hover {
+        color: #55afb9;
         text-decoration: none; }
   #wrapper header h2 {
     font-size: 1.5em;
@@ -287,8 +288,6 @@ a {
         margin-right: auto;
         text-align: center;
         font-size: 2em; }
-        #wrapper article side #circle a {
-          color: #646464; }
         #wrapper article side #circle div {
           padding: 25%; }
       #wrapper article side date {
@@ -308,25 +307,36 @@ a {
         #wrapper article side list a {
           color: #646464; }
           #wrapper article side list a:hover {
-            text-decoration: underline; }
+            color: #55afb9;
+            text-decoration: none; }
     #wrapper article post {
       display: block;
       float: right;
       width: 75%%; }
       #wrapper article post li {
         margin-left: 30px; }
-      #wrapper article post h3 {
+      #wrapper article post h4 {
         font-size: 2.5em;
         font-weight: lighter;
         margin-bottom: 30px; }
-        #wrapper article post h3 a {
-          color: #646464; }
-          #wrapper article post h3 a:hover {
+        #wrapper article post h4 a {
+          color: #646464;
+          font-weight: lighter; }
+          #wrapper article post h4 a:hover {
+            color: #55afb9;
             text-decoration: none; }
       #wrapper article post p {
         font-size: 1.2em;
         font-weight: lighter;
         line-height: 23px; }
+        #wrapper article post p a {
+          color: #55afb9;
+          text-decoration: none; }
+          #wrapper article post p a:visited {
+            color: #55afb9; }
+          #wrapper article post p a:hover {
+            color: #55afb9;
+            text-decoration: underline; }
   #wrapper menu {
     clear: both;
     height: 40px;

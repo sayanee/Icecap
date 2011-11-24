@@ -9,7 +9,7 @@
   <article class="clearfix">
     
    <post>
-      <h3><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+      <h4><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 
       <p>
     	  <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
@@ -56,7 +56,7 @@
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
     	<prev><?php next_posts_link( __( '&larr; Previous', 'twentyten' ) ); ?></prev>
-    	<next><?php previous_posts_link( __( 'Next &rarr;', 'twentyten' ) ); ?></next>
+    	<next><?php previous_posts_link('<img src="./images/prev.png" />'); ?></next>
   	</div>
   <?php endif; ?>
 </menu>
