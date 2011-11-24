@@ -5,22 +5,22 @@
 <!--[if gt IE 8]><!--> 
 <html class="no-js" <?php language_attributes(); ?> lang="en"> <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+  <title><?php wp_title( '|', true, 'right' ); ?></title>
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<?php
-	if ( is_singular() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
-	wp_head();
-?>
+  <?php
+  	if ( is_singular() && get_option( 'thread_comments' ) )
+  		wp_enqueue_script( 'comment-reply' );
+  	wp_head();
+  ?>
 </head>
 
 <body <?php body_class(); ?>>
