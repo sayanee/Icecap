@@ -213,6 +213,23 @@ table {
 td {
   vertical-align: top; }
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+html[xmlns] .clearfix {
+  display: block; }
+
+* html .clearfix {
+  height: 1%; }
+
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -341,29 +358,95 @@ a {
     clear: both;
     height: 40px;
     width: 100%;
-    margin: 20px 0;
-    padding: 0; }
-    #wrapper menu line {
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: #dadada;
-      clear: both; }
+    padding: 0px 0;
+    text-align: center; }
+    #wrapper menu a {
+      color: #55afb9;
+      text-decoration: none; }
+      #wrapper menu a:visited {
+        color: #55afb9; }
+      #wrapper menu a:hover {
+        color: #55afb9;
+        text-decoration: underline; }
     #wrapper menu prev, #wrapper menu next {
       display: block;
       background-repeat: no-repeat;
-      text-indent: -99999px;
       height: 45px;
       width: 45px;
       float: left; }
+    #wrapper menu prevtext, #wrapper menu nextext {
+      display: block;
+      width: 50%;
+      float: left; }
+    #wrapper menu prevtext {
+      text-align: left; }
+    #wrapper menu nexttext {
+      text-align: right; }
     #wrapper menu #button {
       width: 100px;
       margin: 0 auto;
       margin-top: -25px; }
-    #wrapper menu prev {
-      background-image: url("./images/prev.png"); }
-    #wrapper menu next {
-      background-image: url("./images/next.png"); }
+  #wrapper sidebar {
+    clear: both;
+    width: 100%;
+    margin: 0px 0; }
+    #wrapper sidebar ul.xoxo {
+      width: 100%;
+      list-style-type: none; }
+      #wrapper sidebar ul.xoxo a {
+        color: #55afb9;
+        text-decoration: none; }
+        #wrapper sidebar ul.xoxo a:visited {
+          color: #55afb9; }
+        #wrapper sidebar ul.xoxo a:hover {
+          color: #55afb9;
+          text-decoration: underline; }
+      #wrapper sidebar ul.xoxo label {
+        display: block; }
+      #wrapper sidebar ul.xoxo input[type="text"] {
+        clear: both;
+        width: 280px;
+        height: 25px;
+        margin-top: 20px;
+        border: 1px solid #dadada;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 0.7em; }
+      #wrapper sidebar ul.xoxo textarea:focus, #wrapper sidebar ul.xoxo input:focus {
+        border: 1px solid #9dd1d7;
+        outline: none; }
+      #wrapper sidebar ul.xoxo li {
+        width: 28.33%;
+        float: left;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        margin-bottom: 5%;
+        font-size: 2em;
+        /*each sidebar heading*/ }
+        #wrapper sidebar ul.xoxo li h3 {
+          margin-bottom: 15px; }
+        #wrapper sidebar ul.xoxo li ul {
+          width: 100%; }
+          #wrapper sidebar ul.xoxo li ul li {
+            font-size: 0.5em;
+            width: 100%;
+            /*each sidebar's list items*/
+            margin-left: 2px;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style: none; }
+  #wrapper footer {
+    text-align: right;
+    margin: 30px auto;
+    width: 100%; }
+    #wrapper footer p {
+      font-family: 'Quicksand', sans-serif;
+      padding: 10px 0px; }
+  #wrapper line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #dadada;
+    clear: both; }
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir {
@@ -404,16 +487,6 @@ a {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table; }
-
-.clearfix:after {
-  clear: both; }
-
-.clearfix {
-  zoom: 1; }
-
 /* ==|== media queries ====================================================== */
 @media screen and (max-width: 768px) {
   body {
@@ -439,7 +512,12 @@ a {
       #wrapper article side list {
         display: none; }
     #wrapper article post {
-      width: 100%; } }
+      width: 100%; }
+    #wrapper sidebar ul.xoxo li {
+      width: 90%;
+      float: left;
+      margin-left: 5%;
+      margin-right: 5%; } }
 @media screen and (max-width: 480px) {
   body {
     background-image: url("./images/bg.png"); }

@@ -22,16 +22,21 @@
     </side>
 
 		<post>
+		   <h4><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+      
       <p>
         <?php the_content(); ?>
         <?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
   		</p>
 		</post>
-
-
+    
+    <menu>
+	    <prevtext><?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?></prevtext>
+	    <nextext><?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?></nextext>
+	  </menu>
+	
 	<?php comments_template( '', true ); ?>
-	<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
-	<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
+	
 
 <?php endwhile; // end of the loop. ?>
 

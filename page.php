@@ -12,12 +12,13 @@
       
   <post>
     <?php if ( is_front_page() ) { ?>
-  		<h3><?php the_title(); ?></h3>
+  		<h4><?php the_title(); ?></h4>
   	<?php } else { ?>	
-  		<h3><?php the_title(); ?></h3>
+  		<h4><?php the_title(); ?></h4>
   	<?php } ?>				
 
-    <p><?php the_content(); ?>
+    <p>
+    <?php the_content(); ?>
       <?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
   	</p>
       

@@ -51,12 +51,12 @@
 
 <?php endwhile; ?>
 
-<menu>
+<menu class="clearfix">
   <line></line>
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
-    	<prev><?php next_posts_link( __( '&larr; Previous', 'twentyten' ) ); ?></prev>
-    	<next><?php previous_posts_link('<img src="./images/prev.png" />'); ?></next>
+    	<prev><?php previous_posts_link( '<img src="./wp-content/themes/Icecap/images/prev.png" />'); ?></prev>
+    	<next><?php next_posts_link('<img src="./wp-content/themes/Icecap/images/next.png" />'); ?></next>
   	</div>
   <?php endif; ?>
 </menu>

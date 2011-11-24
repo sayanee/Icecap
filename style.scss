@@ -76,6 +76,28 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td 
 {margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-family: 'Quicksand', sans-serif; color:$grey-text-dark;}
 
@@ -197,7 +219,7 @@ a{color: $grey-text-dark; text-decoration:none;
         }
       }
       
-      p{font-size:1.2em; font-weight: lighter; line-height:23px; 
+      p{font-size:1.2em; font-weight: lighter; line-height:23px;  
         a { color: $blue-text-link; text-decoration: none;
           &:visited { color: $blue-text-link; }
           &:hover { color: $blue-text-link; text-decoration: underline;}
@@ -206,34 +228,115 @@ a{color: $grey-text-dark; text-decoration:none;
     }
   }
 
+  
+  
   menu{
     clear:both;
     height:40px;
     width:100%;
-    margin:20px 0;
-    padding:0;
+    padding:0px 0;
+    text-align:center;
+     a { color: $blue-text-link; text-decoration: none;
+        &:visited { color: $blue-text-link; }
+        &:hover { color: $blue-text-link; text-decoration: underline;}
+      }
     
-    line{
-      display:block;
-      width:100%;
-      height:4px;
-      background-color: $grey-bgr-light;
-      clear:both;
-    }
     prev, next{
       display:block;
       background-repeat: no-repeat;
-      text-indent:-99999px;
       height:45px;
       width:45px;
       float:left;
     }
+    prevtext,nextext{
+      display:block;
+      width:50%;
+      float:left;
+    }
+    prevtext{text-align: left;}
+    nexttext{text-align: right;}
+    
     #button{
       width:100px;
       margin:0 auto;
       margin-top:-25px;
     }
   }
+
+  sidebar{
+    clear:both;
+    width:100%;
+    margin:0px 0;
+    
+    ul.xoxo{
+      width:100%;
+      list-style-type: none;
+      
+      a { color: $blue-text-link; text-decoration: none;
+        &:visited { color: $blue-text-link; }
+        &:hover { color: $blue-text-link; text-decoration: underline;}
+      }
+      
+      label{
+        display:block;
+      }
+      
+      input[type="text"]{
+        clear:both;
+        width:280px;
+        height:25px;
+        margin-top:20px;
+        border: 1px solid $grey-bgr-light;
+        font-family: 'Quicksand', sans-serif; 
+        font-size:0.7em;
+      }
+      
+      textarea:focus, input:focus {
+        border: 1px solid lighten($blue-text-link, 20%);
+        outline: none;
+      }
+      
+      li{
+        width: 28.33%;
+        float: left;
+        margin-left:2.5%;
+        margin-right:2.5%;
+        margin-bottom:5%;
+        font-size:2em; /*each sidebar heading*/
+        
+        h3{margin-bottom:15px;}
+                
+        ul {
+          width:100%;
+          li{
+            font-size:0.5em;
+            width:100%;/*each sidebar's list items*/
+            margin-left:2px;
+            margin-top:0;
+            margin-bottom:0;
+            list-style: none;
+          }          
+        }
+      }
+    } 
+  }
+
+  footer{
+    text-align:right;
+    margin:30px auto;
+    width:100%;
+    p{font-family: 'Quicksand', sans-serif; padding:10px 0px;
+    }
+  }
+  
+  line{
+    display:block;
+    width:100%;
+    height:4px;
+    background-color: $grey-bgr-light;
+    clear:both;
+  }
+  
 }
 
 
@@ -252,10 +355,6 @@ a{color: $grey-text-dark; text-decoration:none;
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 .invisible { visibility: hidden; }
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
-
 
 /* ==|== media queries ====================================================== */
 @media screen and (max-width: 1024px) {
@@ -275,6 +374,12 @@ a{color: $grey-text-dark; text-decoration:none;
         list{display:none;}
       }
       post{width:100%;}
+    }
+    sidebar ul.xoxo li{
+      width: 90%;
+      float: left;
+      margin-left: 5%;
+      margin-right: 5%;
     }
   }
   
