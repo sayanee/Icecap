@@ -26,8 +26,8 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 body { margin: 0; font-size: 13px; line-height: 1.231; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-::-moz-selection { background: $blue-text-link; color: #000; text-shadow: none; }
-::selection { background: $blue-text-link; color: #000; text-shadow: none; }
+::-moz-selection { background: lighten($blue-text-link, 15%); color: #000; text-shadow: none; }
+::selection { background: lighten($blue-text-link, 15%);  color: #000; text-shadow: none; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
 {margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-family: 'Quicksand', sans-serif; color:$grey-text-dark;}
 
 a{color: $grey-text-dark; text-decoration:none; 
-  &:visited { color: $blue-text-link; }
+  &:visited { color: $grey-text-dark; }
   &:hover{color: $blue-text-link; text-decoration: none;}
 }
 
@@ -221,15 +221,13 @@ a{color: $grey-text-dark; text-decoration:none;
       
       p{font-size:1.2em; font-weight: lighter; line-height:23px;  
         a { color: $blue-text-link; text-decoration: none;
-          &:visited { color: $blue-text-link; }
+          &:visited { color: $grey-text-dark; }
           &:hover { color: $blue-text-link; text-decoration: underline;}
         }
       }
     }
   }
 
-  
-  
   menu{
     clear:both;
     height:40px;
@@ -283,7 +281,7 @@ a{color: $grey-text-dark; text-decoration:none;
       
       input[type="text"]{
         clear:both;
-        width:280px;
+        width:100%;
         height:25px;
         margin-top:20px;
         border: 1px solid $grey-bgr-light;
@@ -341,13 +339,6 @@ a{color: $grey-text-dark; text-decoration:none;
 
 
 
-
-
-
-
-
-
-
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .ir br { display: none; }
@@ -386,9 +377,7 @@ a{color: $grey-text-dark; text-decoration:none;
 }
 
 @media screen and (max-width: 480px) {
-  body{background-image: url("./images/bg.png");}
-  #wrapper article side date{padding-top:6%}
-  
+  #wrapper article side date{padding-top:6%}  
 }
 
 

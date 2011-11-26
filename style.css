@@ -38,12 +38,12 @@ body, button, input, select, textarea {
   color: #222; }
 
 ::-moz-selection {
-  background: #55afb9;
+  background: #8bc8cf;
   color: #000;
   text-shadow: none; }
 
 ::selection {
-  background: #55afb9;
+  background: #8bc8cf;
   color: #000;
   text-shadow: none; }
 
@@ -243,7 +243,7 @@ a {
   color: #646464;
   text-decoration: none; }
   a:visited {
-    color: #55afb9; }
+    color: #646464; }
   a:hover {
     color: #55afb9;
     text-decoration: none; }
@@ -350,7 +350,7 @@ a {
           color: #55afb9;
           text-decoration: none; }
           #wrapper article post p a:visited {
-            color: #55afb9; }
+            color: #646464; }
           #wrapper article post p a:hover {
             color: #55afb9;
             text-decoration: underline; }
@@ -405,7 +405,7 @@ a {
         display: block; }
       #wrapper sidebar ul.xoxo input[type="text"] {
         clear: both;
-        width: 280px;
+        width: 100%;
         height: 25px;
         margin-top: 20px;
         border: 1px solid #dadada;
@@ -519,9 +519,6 @@ a {
       margin-left: 5%;
       margin-right: 5%; } }
 @media screen and (max-width: 480px) {
-  body {
-    background-image: url("./images/bg.png"); }
-
   #wrapper article side date {
     padding-top: 6%; } }
 /* ==|== print styles ======================================================= */
