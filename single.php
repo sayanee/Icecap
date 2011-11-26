@@ -34,11 +34,23 @@
 	    <prevtext><?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?></prevtext>
 	    <nextext><?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?></nextext>
 	  </menu>
+	</article>
 	
+	<line></line>
+	  
 	<?php comments_template( '', true ); ?>
 	
-
 <?php endwhile; // end of the loop. ?>
+
+<menu class="clearfix">
+  <line></line>
+  <?php if (  $wp_query->max_num_pages > 1 ) : ?>
+    <div id="button" class="aligncenter">
+    	<prev><?php previous_posts_link( '<img src="./wp-content/themes/Icecap/images/prev.png" />'); ?></prev>
+    	<next><?php next_posts_link('<img src="./wp-content/themes/Icecap/images/next.png" />'); ?></next>
+  	</div>
+  <?php endif; ?>
+</menu>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

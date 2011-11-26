@@ -441,6 +441,33 @@ a {
     #wrapper footer p {
       font-family: 'Quicksand', sans-serif;
       padding: 10px 0px; }
+  #wrapper comments {
+    display: block;
+    width: 100%;
+    clear: both; }
+    #wrapper comments h3 {
+      margin: 20px 0px; }
+    #wrapper comments #comments-nav {
+      display: block;
+      clear: both;
+      width: 100%; }
+      #wrapper comments #comments-nav a {
+        color: #55afb9; }
+        #wrapper comments #comments-nav a:hover {
+          text-decoration: underline; }
+        #wrapper comments #comments-nav a:visited {
+          color: #55afb9; }
+    #wrapper comments ul, #wrapper comments ol, #wrapper comments li {
+      list-style-type: none; }
+    #wrapper comments .commentlist {
+      display: block;
+      width: 100%;
+      margin: 20px 0px; }
+      #wrapper comments .commentlist .comment-body {
+        padding: 20px; }
+      #wrapper comments .commentlist .children li {
+        padding: 10px 0 0 52px;
+        margin: 5px 0 0; }
   #wrapper line {
     display: block;
     width: 100%;

@@ -327,6 +327,45 @@ a{color: $grey-text-dark; text-decoration:none;
     }
   }
   
+  comments{
+    display:block;
+    width:100%;
+    clear:both;
+    
+    h3{margin:20px 0px;}
+    
+    #comments-nav{
+      display:block;
+      clear:both;
+      width:100%;
+      a{
+        color:$blue-text-link;
+        &:hover{text-decoration: underline;}
+        &:visited{color:$blue-text-link;}
+      }
+    }
+  
+    ul, ol, li{
+      list-style-type: none;
+    }
+    .commentlist{
+      display:block;
+      width:100%;
+      margin:20px 0px;
+      
+      .comment-body{
+        padding:20px;
+      }
+      
+      .children li{
+        padding: 10px 0 0 52px;
+        margin: 5px 0 0;
+      }
+    }
+  }
+  
+  
+  
   line{
     display:block;
     width:100%;
