@@ -97,7 +97,12 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
-
+body{
+  -moz-transition:    all 1.2s ease-out;
+  -o-transition:      all 1.2s ease-out; 
+  -webkit-transition: all 1.2s ease-out; 
+  -ms-transition:     all 1.2s ease-out;
+}
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td 
 {margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-family: 'Quicksand', sans-serif; color:$grey-text-dark;}
 
