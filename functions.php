@@ -84,9 +84,9 @@ function custom_comments($comment, $args, $depth) {
         
       	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
   		  <div class="comment-meta">
-    		  <?php printf(__('<a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'twentyten'),
+    		  <?php printf(__('on <a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'twentyten'),
     				get_comment_date('j M y'),
-    				get_comment_time('h:ia'),
+    				get_comment_time('ha'),
     				'#comment-' . get_comment_ID() );
     				edit_comment_link(__('Edit', 'twentyten'), '  <span class="edit-link">', '</span>'); ?>
     		</div><!--comment-meta-->
@@ -95,13 +95,13 @@ function custom_comments($comment, $args, $depth) {
   		
       <?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'twentyten') ?>
         <div class="comment-content">
-          <h6><?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?></h6>
+          <h6><?php printf(__('<cite class="fn">%s</cite> <span class="says">says...</span>'), get_comment_author_link()) ?></h6>
           <?php comment_text() ?>
           
           <?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
       			if($args['type'] == 'all' || get_comment_type() == 'comment') :
       				comment_reply_link(array_merge($args, array(
-      					'reply_text' => __('Reply','twentyten'), 
+      					'reply_text' => __('[reply]','twentyten'), 
       					'login_text' => __('Log in to reply.','twentyten'),
       					'depth' => $depth,
       					'before' => '<div class="comment-reply-link">', 

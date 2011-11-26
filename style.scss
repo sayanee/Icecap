@@ -355,6 +355,9 @@ a{color: $grey-text-dark; text-decoration:none;
         
         .comment-meta{
           text-align: center;
+          line-height:15px;
+          margin-top:5px;
+          font-size: 1em;
         }
 
         .avatar{
@@ -370,9 +373,16 @@ a{color: $grey-text-dark; text-decoration:none;
         width:70%;
         font-size:1.2em;
         
-        h6{font-size:1.5em;color:$blue-text-link;text-decoration: underline;margin-bottom:20px;}
+        h6{
+          font-size:1.2em;
+          color:$blue-text-link;
+          text-decoration: none;
+          font-style: italic;
+          margin-bottom:20px;
+        }
         .comment-reply-link{
           margin-top:20px;
+          font-size:0.9em;
           a{
             color:$blue-text-link;
               &:visited{color:$blue-text-link;}
@@ -399,8 +409,74 @@ a{color: $grey-text-dark; text-decoration:none;
     width:100%;
     clear:both;
     
-    legend{
-      span{ font-size: 2em;}
+    h5{font-size: 2em; margin-bottom:20px;}
+    
+    .leaveComment{
+      display:block;
+      width:100%;
+      
+      .commentForm{
+        width:90%;
+        margin:0 0 0 2%;
+        
+        .commentBox{
+          display:block;
+          width:50%;
+          margin:20px 0px;
+          float:left;    
+        }
+        .commentAuthorInfo{
+           display:block;
+           width:50%;
+           margin:20px 0px;
+           float:right;
+           clear:both;
+        }
+        
+        input[type="text"], input[type="url"], input[type="email"]{
+          clear:both;
+          width:80%;
+          height:25px;
+          margin-top:0px;
+          margin-bottom:20px;
+          border: 1px solid $grey-bgr-light;
+          font-family: 'Quicksand', sans-serif; 
+          font-size:1em;
+        }
+        
+        textarea{
+          clear:both;
+          width:80%;
+          height:150px;
+          margin-top:0px;
+          margin-bottom:20px;
+          border: 1px solid $grey-bgr-light;
+          font-family: 'Quicksand', sans-serif; 
+          font-size:1em;
+        }
+        
+        textarea:focus, input:focus {
+          border: 1px solid lighten($blue-text-link, 20%);
+          outline: none;
+        }
+        
+        input.submit {
+          background-color : lighten($grey-bgr-light, 5%);
+          color : $grey-text-dark;
+          font-family: 'Quicksand', sans-serif; 
+          font-size:1.3em;
+          height:40px;
+          border:none;
+          
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          
+          -webkit-box-shadow: 1px 1px 1px 1px #aaaaaa;
+          -moz-box-shadow: 1px 1px 1px 1px #aaaaaa;
+          box-shadow: 1px 1px 1px 1px #aaaaaa;
+        }
+      }
       
     }
   }
@@ -469,8 +545,12 @@ a{color: $grey-text-dark; text-decoration:none;
       margin-left: 5%;
       margin-right: 5%;
     }
+    
+    #respond .leaveComment .commentForm{
+      .commentBox, .commentAuthorInfo{ width:100%; }
+      textarea, input[type="text"], input[type="url"], input[type="email"]{ width:100%; }
+    }
   }
-  
 }
 
 @media screen and (max-width: 480px) {

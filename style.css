@@ -230,6 +230,12 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%; }
 
+body {
+  -moz-transition: all 1.2s ease-out;
+  -o-transition: all 1.2s ease-out;
+  -webkit-transition: all 1.2s ease-out;
+  -ms-transition: all 1.2s ease-out; }
+
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -463,7 +469,10 @@ a {
         padding: 0;
         float: left; }
         #wrapper comments .commentlist .comment-author .comment-meta {
-          text-align: center; }
+          text-align: center;
+          line-height: 15px;
+          margin-top: 5px;
+          font-size: 1em; }
         #wrapper comments .commentlist .comment-author .avatar {
           display: block;
           margin-left: auto;
@@ -474,12 +483,14 @@ a {
         width: 70%;
         font-size: 1.2em; }
         #wrapper comments .commentlist .comment-content h6 {
-          font-size: 1.5em;
+          font-size: 1.2em;
           color: #55afb9;
-          text-decoration: underline;
+          text-decoration: none;
+          font-style: italic;
           margin-bottom: 20px; }
         #wrapper comments .commentlist .comment-content .comment-reply-link {
-          margin-top: 20px; }
+          margin-top: 20px;
+          font-size: 0.9em; }
           #wrapper comments .commentlist .comment-content .comment-reply-link a {
             color: #55afb9; }
             #wrapper comments .commentlist .comment-content .comment-reply-link a:visited {
@@ -501,8 +512,60 @@ a {
     display: block;
     width: 100%;
     clear: both; }
-    #wrapper #respond legend span {
-      font-size: 2em; }
+    #wrapper #respond h5 {
+      font-size: 2em;
+      margin-bottom: 20px; }
+    #wrapper #respond .leaveComment {
+      display: block;
+      width: 100%; }
+      #wrapper #respond .leaveComment .commentForm {
+        width: 90%;
+        margin: 0 0 0 2%; }
+        #wrapper #respond .leaveComment .commentForm .commentBox {
+          display: block;
+          width: 50%;
+          margin: 20px 0px;
+          float: left; }
+        #wrapper #respond .leaveComment .commentForm .commentAuthorInfo {
+          display: block;
+          width: 50%;
+          margin: 20px 0px;
+          float: right;
+          clear: both; }
+        #wrapper #respond .leaveComment .commentForm input[type="text"], #wrapper #respond .leaveComment .commentForm input[type="url"], #wrapper #respond .leaveComment .commentForm input[type="email"] {
+          clear: both;
+          width: 80%;
+          height: 25px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+          border: 1px solid #dadada;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1em; }
+        #wrapper #respond .leaveComment .commentForm textarea {
+          clear: both;
+          width: 80%;
+          height: 150px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+          border: 1px solid #dadada;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1em; }
+        #wrapper #respond .leaveComment .commentForm textarea:focus, #wrapper #respond .leaveComment .commentForm input:focus {
+          border: 1px solid #9dd1d7;
+          outline: none; }
+        #wrapper #respond .leaveComment .commentForm input.submit {
+          background-color: #e7e7e7;
+          color: #646464;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1.3em;
+          height: 40px;
+          border: none;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          -webkit-box-shadow: 1px 1px 1px 1px #aaaaaa;
+          -moz-box-shadow: 1px 1px 1px 1px #aaaaaa;
+          box-shadow: 1px 1px 1px 1px #aaaaaa; }
   #wrapper label {
     display: block; }
   #wrapper input[type="text"] {
@@ -592,7 +655,11 @@ a {
       width: 90%;
       float: left;
       margin-left: 5%;
-      margin-right: 5%; } }
+      margin-right: 5%; }
+    #wrapper #respond .leaveComment .commentForm .commentBox, #wrapper #respond .leaveComment .commentForm .commentAuthorInfo {
+      width: 100%; }
+    #wrapper #respond .leaveComment .commentForm textarea, #wrapper #respond .leaveComment .commentForm input[type="text"], #wrapper #respond .leaveComment .commentForm input[type="url"], #wrapper #respond .leaveComment .commentForm input[type="email"] {
+      width: 100%; } }
 @media screen and (max-width: 480px) {
   #wrapper article side date {
     padding-top: 6%; } }
