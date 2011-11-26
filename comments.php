@@ -19,7 +19,7 @@
   	</div>
 
   	<ol class="commentlist">
-  	<?php wp_list_comments('avatar_size=48'); ?>
+      <?php wp_list_comments(array('avatar_size' => '90', 'type' => 'comment', 'callback' => 'custom_comments')); ?>
   	</ol>
 
   	<div id="comments-nav" class="clearfix">
@@ -39,9 +39,9 @@
 
 
   <?php if ( comments_open() ) : ?>
+</comments>
 
-
-  
+    
 <div id="respond">  
   
 <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
@@ -92,4 +92,3 @@
 
 <?php endif; // if you delete this the sky will fall on your head ?>
 
-</comments>

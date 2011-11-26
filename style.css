@@ -401,19 +401,6 @@ a {
         #wrapper sidebar ul.xoxo a:hover {
           color: #55afb9;
           text-decoration: underline; }
-      #wrapper sidebar ul.xoxo label {
-        display: block; }
-      #wrapper sidebar ul.xoxo input[type="text"] {
-        clear: both;
-        width: 100%;
-        height: 25px;
-        margin-top: 20px;
-        border: 1px solid #dadada;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 0.7em; }
-      #wrapper sidebar ul.xoxo textarea:focus, #wrapper sidebar ul.xoxo input:focus {
-        border: 1px solid #9dd1d7;
-        outline: none; }
       #wrapper sidebar ul.xoxo li {
         width: 28.33%;
         float: left;
@@ -450,7 +437,8 @@ a {
     #wrapper comments #comments-nav {
       display: block;
       clear: both;
-      width: 100%; }
+      width: 100%;
+      margin: 20px 0px; }
       #wrapper comments #comments-nav a {
         color: #55afb9; }
         #wrapper comments #comments-nav a:hover {
@@ -458,16 +446,76 @@ a {
         #wrapper comments #comments-nav a:visited {
           color: #55afb9; }
     #wrapper comments ul, #wrapper comments ol, #wrapper comments li {
-      list-style-type: none; }
+      list-style-type: none;
+      clear: both;
+      padding: 0px; }
     #wrapper comments .commentlist {
       display: block;
       width: 100%;
       margin: 20px 0px; }
-      #wrapper comments .commentlist .comment-body {
-        padding: 20px; }
+      #wrapper comments .commentlist comment {
+        display: block;
+        margin: 20px 0px;
+        padding: 0; }
+      #wrapper comments .commentlist .comment-author {
+        display: block;
+        width: 25%;
+        padding: 0;
+        float: left; }
+        #wrapper comments .commentlist .comment-author .comment-meta {
+          text-align: center; }
+        #wrapper comments .commentlist .comment-author .avatar {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
+      #wrapper comments .commentlist .comment-content {
+        padding: 0px;
+        float: left;
+        width: 70%;
+        font-size: 1.2em; }
+        #wrapper comments .commentlist .comment-content h6 {
+          font-size: 1.5em;
+          color: #55afb9;
+          text-decoration: underline;
+          margin-bottom: 20px; }
+        #wrapper comments .commentlist .comment-content .comment-reply-link {
+          margin-top: 20px; }
+          #wrapper comments .commentlist .comment-content .comment-reply-link a {
+            color: #55afb9; }
+            #wrapper comments .commentlist .comment-content .comment-reply-link a:visited {
+              color: #55afb9; }
+            #wrapper comments .commentlist .comment-content .comment-reply-link a:hover {
+              text-decoration: underline; }
       #wrapper comments .commentlist .children li {
-        padding: 10px 0 0 52px;
-        margin: 5px 0 0; }
+        margin: 0px 0 0 30px;
+        padding: 10px; }
+      #wrapper comments .commentlist .depth-2 {
+        background-color: #f7f7f7; }
+      #wrapper comments .commentlist .depth-3 {
+        background-color: #f0f0f0; }
+      #wrapper comments .commentlist .depth-4 {
+        background-color: #e8e8e8; }
+      #wrapper comments .commentlist .depth-5 {
+        background-color: #e0e0e0; }
+  #wrapper #respond {
+    display: block;
+    width: 100%;
+    clear: both; }
+    #wrapper #respond legend span {
+      font-size: 2em; }
+  #wrapper label {
+    display: block; }
+  #wrapper input[type="text"] {
+    clear: both;
+    width: 100%;
+    height: 25px;
+    margin-top: 20px;
+    border: 1px solid #dadada;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.7em; }
+  #wrapper textarea:focus, #wrapper input:focus {
+    border: 1px solid #9dd1d7;
+    outline: none; }
   #wrapper line {
     display: block;
     width: 100%;
