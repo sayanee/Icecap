@@ -111,6 +111,8 @@ a{color: $grey-text-dark; text-decoration:none;
   &:hover{color: $blue-text-link; text-decoration: none;}
 }
 
+img{max-width:100%; height:auto;}
+
 #wrapper{
   width:80%;
   margin:0 auto;
@@ -143,7 +145,7 @@ a{color: $grey-text-dark; text-decoration:none;
  			 text-align:center;
        
        li{
-          margin:10px 20px;
+          margin:20px 20px;
           display:inline;
         }
        
@@ -352,7 +354,7 @@ a{color: $grey-text-dark; text-decoration:none;
         width:25%;
         padding:0;
         float:left;
-        
+                
         .comment-meta{
           text-align: center;
           line-height:15px;
@@ -545,7 +547,10 @@ a{color: $grey-text-dark; text-decoration:none;
       margin-left: 5%;
       margin-right: 5%;
     }
-    
+    comments .commentlist .comment-content {
+      margin-left:2%;
+      h6 {font-size: 1em;}
+    }
     #respond .leaveComment .commentForm{
       .commentBox, .commentAuthorInfo{ width:100%; }
       textarea, input[type="text"], input[type="url"], input[type="email"]{ width:100%; }

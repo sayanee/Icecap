@@ -84,9 +84,9 @@ function custom_comments($comment, $args, $depth) {
         
       	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
   		  <div class="comment-meta">
-    		  <?php printf(__('on <a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'twentyten'),
-    				get_comment_date('j M y'),
-    				get_comment_time('ha'),
+    		  <?php printf(__('<a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'twentyten'),
+    				get_comment_date('jMy'),
+    				get_comment_time('ga'),
     				'#comment-' . get_comment_ID() );
     				edit_comment_link(__('Edit', 'twentyten'), '  <span class="edit-link">', '</span>'); ?>
     		</div><!--comment-meta-->

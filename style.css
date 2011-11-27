@@ -254,6 +254,10 @@ a {
     color: #55afb9;
     text-decoration: none; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 #wrapper {
   width: 80%;
   margin: 0 auto; }
@@ -283,7 +287,7 @@ a {
       list-style: none;
       text-align: center; }
       #wrapper nav ul li {
-        margin: 10px 20px;
+        margin: 20px 20px;
         display: inline; }
       #wrapper nav ul a {
         color: #ebebeb;
@@ -656,6 +660,10 @@ a {
       float: left;
       margin-left: 5%;
       margin-right: 5%; }
+    #wrapper comments .commentlist .comment-content {
+      margin-left: 2%; }
+      #wrapper comments .commentlist .comment-content h6 {
+        font-size: 1em; }
     #wrapper #respond .leaveComment .commentForm .commentBox, #wrapper #respond .leaveComment .commentForm .commentAuthorInfo {
       width: 100%; }
     #wrapper #respond .leaveComment .commentForm textarea, #wrapper #respond .leaveComment .commentForm input[type="text"], #wrapper #respond .leaveComment .commentForm input[type="url"], #wrapper #respond .leaveComment .commentForm input[type="email"] {
