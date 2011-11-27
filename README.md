@@ -4,7 +4,7 @@
 
 ##About
 
-This is a Wordpress Theme that is White, Minimal and Responsive.
+This is a [Wordpress Theme](http://wordpress.org/) that is White, Minimal and Responsive.
 
 ##Thanks:
 
