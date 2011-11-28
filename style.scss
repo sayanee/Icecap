@@ -16,6 +16,8 @@ $grey-bgr-dark:#787878;
 $grey-bgr-light:#dadada;
 
 @import "css/layout.css";
+@import "css/common";
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
@@ -174,9 +176,7 @@ img{max-width:100%; height:auto;}
         background: $grey-bgr-light;
         width: 65px;
         height: 65px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
+        @include rounded(50%);
         margin-top:0%;
         margin-bottom:15%;
         margin-left:auto;
@@ -547,10 +547,12 @@ img{max-width:100%; height:auto;}
         date{width:70%;float:left;text-align:left;font-size:1.2em;padding-top:4%;padding-right:3%;}
         list{display:none;}
       }
-      post{width:100%;
+      post{
+        width:100%;
         h4{font-size:2em;}
         p{font-size: 1em;}
       }
+      #circle{@include rounded(32px);}
     }
     sidebar ul.xoxo li{
       width: 90%;
