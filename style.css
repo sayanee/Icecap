@@ -384,10 +384,16 @@ img {
       height: 45px;
       width: 45px;
       float: left; }
-    #wrapper menu prev {
-      background: url(images/prev.png) no-repeat; }
-    #wrapper menu next {
-      background: url(images/next.png) no-repeat; }
+    #wrapper menu prev a {
+      display: block;
+      background: url(images/prev.png) no-repeat;
+      height: 45px;
+      width: 45px; }
+    #wrapper menu next a {
+      display: block;
+      background: url(images/next.png) no-repeat;
+      height: 45px;
+      width: 45px; }
     #wrapper menu #button {
       width: 100px;
       margin: 0 auto;
@@ -651,6 +657,10 @@ img {
         display: none; }
     #wrapper article post {
       width: 100%; }
+      #wrapper article post h4 {
+        font-size: 2em; }
+      #wrapper article post p {
+        font-size: 1em; }
     #wrapper sidebar ul.xoxo li {
       width: 90%;
       float: left;

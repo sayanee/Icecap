@@ -254,8 +254,18 @@ img{max-width:100%; height:auto;}
       float:left;
     }
     
-    prev{background:url(images/prev.png) no-repeat;}
-    next{background:url(images/next.png) no-repeat;}
+    prev a{
+        display:block;
+        background:url(images/prev.png) no-repeat;
+        height:45px;
+        width:45px;
+    }
+    next a{
+        display:block;
+        background:url(images/next.png) no-repeat;
+        height:45px;
+        width:45px;
+    }
     
     #button{
       width:100px;
@@ -535,7 +545,10 @@ img{max-width:100%; height:auto;}
         date{width:70%;float:left;text-align:left;font-size:1.2em;padding-top:4%;padding-right:3%;}
         list{display:none;}
       }
-      post{width:100%;}
+      post{width:100%;
+        h4{font-size:2em;}
+        p{font-size: 1em;}
+      }
     }
     sidebar ul.xoxo li{
       width: 90%;

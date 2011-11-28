@@ -55,8 +55,8 @@
   
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
-    	<prev><?php previous_posts_link( 'prev'); ?></prev>
-    	<next><?php next_posts_link('next'); ?></next>
+    	<prev><?php previous_posts_link( ''); ?></prev>
+    	<next><?php next_posts_link(''); ?></next>
   	</div>
   <?php endif; ?>
 </menu>
