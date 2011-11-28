@@ -358,7 +358,8 @@ img {
       #wrapper article post p {
         font-size: 1.2em;
         font-weight: lighter;
-        line-height: 23px; }
+        line-height: 23px;
+        margin-bottom: 20px; }
         #wrapper article post p a {
           color: #55afb9;
           text-decoration: none; }
