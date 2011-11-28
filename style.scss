@@ -230,7 +230,7 @@ img{max-width:100%; height:auto;}
       
       p{font-size:1.2em; font-weight: lighter; line-height:23px;  
         a { color: $blue-text-link; text-decoration: none;
-          &:visited { color: $grey-text-dark; }
+          &:visited { color: $blue-text-link; }
           &:hover { color: $blue-text-link; text-decoration: underline;}
         }
       }
