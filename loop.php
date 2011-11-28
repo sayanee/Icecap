@@ -45,14 +45,14 @@
     	
   	</side>
   
-   
-	
 	</article>
 
 <?php endwhile; ?>
 
 <menu class="clearfix">
   <line></line>
+  
+  
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
     	<prev><?php previous_posts_link( 'prev'); ?></prev>
