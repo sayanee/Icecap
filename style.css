@@ -384,14 +384,10 @@ img {
       height: 45px;
       width: 45px;
       float: left; }
-    #wrapper menu prevtext, #wrapper menu nextext {
-      display: block;
-      width: 50%;
-      float: left; }
-    #wrapper menu prevtext {
-      text-align: left; }
-    #wrapper menu nexttext {
-      text-align: right; }
+    #wrapper menu prev {
+      background: url(images/prev.png) no-repeat; }
+    #wrapper menu next {
+      background: url(images/next.png) no-repeat; }
     #wrapper menu #button {
       width: 100px;
       margin: 0 auto;

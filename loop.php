@@ -55,8 +55,8 @@
   <line></line>
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
-    	<prev><?php previous_posts_link( '<img src="./wp-content/themes/Icecap/images/prev.png" />'); ?></prev>
-    	<next><?php next_posts_link('<img src="./wp-content/themes/Icecap/images/next.png" />'); ?></next>
+    	<prev><?php previous_posts_link( 'prev'); ?></prev>
+    	<next><?php next_posts_link('next'); ?></next>
   	</div>
   <?php endif; ?>
 </menu>

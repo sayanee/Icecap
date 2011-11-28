@@ -253,13 +253,9 @@ img{max-width:100%; height:auto;}
       width:45px;
       float:left;
     }
-    prevtext,nextext{
-      display:block;
-      width:50%;
-      float:left;
-    }
-    prevtext{text-align: left;}
-    nexttext{text-align: right;}
+    
+    prev{background:url(images/prev.png) no-repeat;}
+    next{background:url(images/next.png) no-repeat;}
     
     #button{
       width:100px;

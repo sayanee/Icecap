@@ -30,10 +30,6 @@
   		</p>
 		</post>
     
-    <menu>
-	    <prevtext><?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?></prevtext>
-	    <nextext><?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?></nextext>
-	  </menu>
 	</article>
 	
 	<line></line>
