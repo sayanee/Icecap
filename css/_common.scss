@@ -1,6 +1,6 @@
 @mixin rounded ($size){
-  -moz-border-radius: $size; 
-  -o-border-radius: $size; 
-  -webkit-border-radius: $size; 
-  border-radius: $size; 
+  -moz-border-radius: $size;
+  -o-border-radius: $size;
+  -webkit-border-radius: $size;
+  border-radius: $size;
 }
