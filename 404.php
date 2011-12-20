@@ -19,7 +19,7 @@ get_header(); ?>
 		// focus on search field after it has loaded
 		document.getElementById('s') && document.getElementById('s').focus();
 	</script>
-	
+
 	<script>
   var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),
 GOOG_FIXURL_SITE = location.host;

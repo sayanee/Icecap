@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html class="no-js" <?php language_attributes(); ?> lang="en"> <!--<![endif]-->
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -15,8 +15,8 @@
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  
-  
+
+
 
   <?php
   	if ( is_singular() && get_option( 'thread_comments' ) )
@@ -26,7 +26,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  
+
   <div id="wrapper">
     <header>
 
@@ -36,5 +36,5 @@
     	<h2><?php bloginfo( 'description' ); ?></h2>
 
     	<nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?></nav>
-	
+
   	</header>

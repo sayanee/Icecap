@@ -3,13 +3,13 @@
 
 	- - - - - - - - - - - - - - - - - - - - - - -
 
-	Starkers is a bare-bones WordPress theme created 
-	to act as a starting point for the theme designer.	Free of all presentational elements and non-semantic 
-	markup, Starkers is the perfect 'blank slate' for 
-	your WordPress projects, as it's a stripped-back 
-	version of the 'Twenty Ten' theme (versions prior to 
-	3.0 were based on the now-retired 'Default' theme).	Best of all: it's free and fully GPL-licensed, 
-	so you can use it for whatever you like — even 
+	Starkers is a bare-bones WordPress theme created
+	to act as a starting point for the theme designer.	Free of all presentational elements and non-semantic
+	markup, Starkers is the perfect 'blank slate' for
+	your WordPress projects, as it's a stripped-back
+	version of the 'Twenty Ten' theme (versions prior to
+	3.0 were based on the now-retired 'Default' theme).	Best of all: it's free and fully GPL-licensed,
+	so you can use it for whatever you like — even
 	your commercial projects.
 
 	For full details, and for instructions, please see:
@@ -51,10 +51,10 @@
 	theme included with WordPress 2.8 as a basis.
 
 	- - - - - - - - - - - - - - - - - - - - - - -
-	
+
 	Versions 2.3 - 2.7
 
-	Non-existent. Starkers is now named according to 
+	Non-existent. Starkers is now named according to
 	the version of WordPress with which it is compatible.
 
 	- - - - - - - - - - - - - - - - - - - - - - -

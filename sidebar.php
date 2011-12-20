@@ -1,7 +1,7 @@
 <sidebar class="clearfix">
   <ul class="xoxo">
 
-    <?php if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>	
+    <?php if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
       <li>
     		<?php get_search_form(); ?>
     	</li>
@@ -23,7 +23,7 @@
     	</li>
 
     <?php endif; // end primary widget area ?>
-  
+
   </ul>
 
   <?php if ( is_active_sidebar( 'secondary-widget-area' ) ) : ?>
