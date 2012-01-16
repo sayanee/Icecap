@@ -19,7 +19,7 @@
       		<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
       	<?php endif; ?>
 
-      	<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
+      	<?php edit_post_link( __( 'Edit', 'twentyten' ), '<p>', '</p>' ); ?>
     	</p>
 
     	<?php comments_template( '', true ); ?>
@@ -29,7 +29,7 @@
     <side>
       <div id="circle"><div><?php comments_popup_link( __( '0', 'twentyten' ), __( '1', 'twentyten' ), __( '%', 'twentyten' ) ); ?></div></div>
     	
-    	<date><?php the_date(); ?></date>
+    	<date><?php the_date('j M Y'); ?></date>
 	    
 	    <list>
       	<?php if ( count( get_the_category() ) ) : ?>
@@ -49,7 +49,7 @@
 
 <?php endwhile; ?>
 
-<menu class="clearfix">
+<nav class="clearfix">
   <line></line>
   
   
@@ -59,4 +59,4 @@
     	<next><?php previous_posts_link(''); ?></next>
   	</div>
   <?php endif; ?>
-</menu>
+</nav>

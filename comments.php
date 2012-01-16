@@ -58,6 +58,8 @@
               
               <label>Comment:</label>
               <textarea name="comment" id="comment" cols="50" rows="20" class="loggedIn"></textarea>
+              <input type="submit" class="submit" value="Post your comment" /> 
+              
               
             <?php endif; ?>
         

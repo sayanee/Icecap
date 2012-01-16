@@ -1,6 +1,6 @@
 /*
 Theme Name: Ice Cap
-Theme URI: http://github.com/sayanee
+Theme URI: http://github.com/sayanee/icecap
 Description: White, Minimal & Responsive
 Version: 0.1
 Author: Sayanee
@@ -48,19 +48,17 @@ body, button, input, select, textarea {
   text-shadow: none; }
 
 a {
-  color: #00e; }
-
-a:visited {
-  color: #551a8b; }
-
-a:hover {
-  color: #06e; }
-
-a:focus {
-  outline: thin dotted; }
-
-a:hover, a:active {
-  outline: 0; }
+  color: #55afb9;
+  text-decoration: none; }
+  a:visited {
+    color: #55afb9; }
+  a:hover {
+    color: #55afb9;
+    text-decoration: underline; }
+  a:focus {
+    outline: 0; }
+  a:hover, a:active {
+    outline: 0; }
 
 abbr[title] {
   border-bottom: 1px dotted; }
@@ -242,59 +240,62 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   border: 0;
   font-weight: normal;
   font-style: normal;
-  font-family: 'Quicksand', sans-serif;
-  color: #646464; }
+  font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
+  color: black; }
 
-a {
-  color: #646464;
-  text-decoration: none; }
-  a:visited {
-    color: #646464; }
-  a:hover {
-    color: #55afb9;
-    text-decoration: none; }
+p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  margin-bottom: 1em;
+  color: #646464; }
 
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  margin: 10px; }
 
 #wrapper {
-  width: 80%;
+  width: 800px;
   margin: 0 auto; }
   #wrapper header h1 {
     font-size: 6em;
     text-align: center; }
     #wrapper header h1 a {
       color: #646464;
-      font-weight: lighter; }
+      font-weight: lighter;
+      font-family: 'Quicksand', sans-serif;
+      text-decoration: none; }
       #wrapper header h1 a:hover {
-        color: #55afb9;
-        text-decoration: none; }
+        color: #55afb9; }
   #wrapper header h2 {
     font-size: 1.5em;
     color: #646464;
     text-align: center;
-    margin-top: 10px; }
-  #wrapper nav {
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif; }
+  #wrapper header .menu {
     font-size: 1.5em;
-    width: 100%;
+    width: 98%;
     clear: both;
-    background-color: #787878;
+    background-color: #7e7e7e;
     margin: 30px 0px;
-    padding-top: 5px;
-    padding-bottom: 5px; }
-    #wrapper nav ul {
+    padding: 1%; }
+    #wrapper header .menu ul {
       list-style: none;
-      text-align: center; }
-      #wrapper nav ul li {
-        margin: 20px 20px;
+      text-align: center;
+      width: 100%; }
+      #wrapper header .menu ul li {
+        margin: 20px;
         display: inline; }
-      #wrapper nav ul a {
-        color: #ebebeb;
+      #wrapper header .menu ul a {
+        font-family: 'Quicksand', sans-serif;
+        line-height: 1.5em;
+        color: #e4e4e4;
         font-weight: lighter;
-        display: inline-block; }
-        #wrapper nav ul a:hover {
-          text-decoration: none; }
+        display: inline-block;
+        text-decoration: none; }
+        #wrapper header .menu ul a:hover {
+          text-decoration: underline; }
   #wrapper article {
     display: block;
     width: 100%;
@@ -303,9 +304,14 @@ img {
     #wrapper article side {
       display: block;
       float: left;
-      width: 25%; }
+      width: 23%;
+      /* 200px = 800*0.25 */
+      padding: 0% 1%;
+      font-weight: normal;
+      color: #646464; }
       #wrapper article side #circle {
-        background: #dadada;
+        background: #d7d7d7;
+        font-family: 'Quicksand', sans-serif;
         width: 65px;
         height: 65px;
         -moz-border-radius: 50%;
@@ -321,84 +327,86 @@ img {
         #wrapper article side #circle div {
           padding: 25%; }
       #wrapper article side date {
+        font-family: 'Quicksand', sans-serif;
         display: block;
         text-align: center;
-        font-family: 'Quicksand', sans-serif;
         font-size: 1em;
-        color: #646464;
         width: 60%;
-        margin: 0 auto; }
+        margin: 0 auto;
+        font-size: 1.3em; }
       #wrapper article side list {
         display: block;
         text-align: center;
         width: 60%;
         margin: 10px auto;
-        font-size: 0.9em; }
-        #wrapper article side list a {
-          color: #646464; }
-          #wrapper article side list a:hover {
-            color: #55afb9;
-            text-decoration: none; }
+        font-size: 1em; }
+      #wrapper article side a {
+        color: black;
+        font-family: 'Quicksand', sans-serif; }
+        #wrapper article side a:hover {
+          color: #55afb9;
+          text-decoration: none; }
     #wrapper article post {
       display: block;
       float: right;
-      width: 75%%; }
+      width: 75%;
+      /* 600px = 800*0.75 */ }
       #wrapper article post li {
         margin-left: 30px; }
       #wrapper article post h4 {
         font-size: 2.5em;
-        font-weight: lighter;
-        margin-bottom: 30px; }
+        font-weight: normal;
+        margin-bottom: 30px;
+        color: #979797; }
         #wrapper article post h4 a {
+          font-family: 'Quicksand', sans-serif;
           color: #646464;
-          font-weight: lighter; }
+          font-weight: normal; }
           #wrapper article post h4 a:hover {
             color: #55afb9;
             text-decoration: none; }
       #wrapper article post p {
-        font-size: 1.2em;
-        font-weight: lighter;
-        line-height: 23px;
-        margin-bottom: 20px; }
+        font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
+        color: black; }
         #wrapper article post p a {
-          color: #55afb9;
+          color: #40929b;
           text-decoration: none; }
-          #wrapper article post p a:visited {
-            color: #55afb9; }
           #wrapper article post p a:hover {
-            color: #55afb9;
             text-decoration: underline; }
-  #wrapper menu {
+      #wrapper article post ul, #wrapper article post ol {
+        margin-top: -10px;
+        margin-bottom: 10px; }
+  #wrapper nav {
     clear: both;
     height: 40px;
     width: 100%;
     padding: 0px 0;
     text-align: center; }
-    #wrapper menu a {
+    #wrapper nav a {
       color: #55afb9;
       text-decoration: none; }
-      #wrapper menu a:visited {
+      #wrapper nav a:visited {
         color: #55afb9; }
-      #wrapper menu a:hover {
+      #wrapper nav a:hover {
         color: #55afb9;
         text-decoration: underline; }
-    #wrapper menu prev, #wrapper menu next {
+    #wrapper nav prev, #wrapper nav next {
       display: block;
       background-repeat: no-repeat;
       height: 45px;
       width: 45px;
       float: left; }
-    #wrapper menu prev a {
+    #wrapper nav prev a {
       display: block;
       background: url(images/prev.png) no-repeat;
       height: 45px;
       width: 45px; }
-    #wrapper menu next a {
+    #wrapper nav next a {
       display: block;
       background: url(images/next.png) no-repeat;
       height: 45px;
       width: 45px; }
-    #wrapper menu #button {
+    #wrapper nav #button {
       width: 100px;
       margin: 0 auto;
       margin-top: -25px; }
@@ -425,12 +433,14 @@ img {
         margin-bottom: 5%;
         font-size: 2em;
         /*each sidebar heading*/ }
-        #wrapper sidebar ul.xoxo li h3 {
-          margin-bottom: 15px; }
+        #wrapper sidebar ul.xoxo li h3, #wrapper sidebar ul.xoxo li label {
+          margin-bottom: 15px;
+          font-family: 'Quicksand', sans-serif;
+          color: #646464; }
         #wrapper sidebar ul.xoxo li ul {
           width: 100%; }
           #wrapper sidebar ul.xoxo li ul li {
-            font-size: 0.5em;
+            font-size: 0.6em;
             width: 100%;
             /*each sidebar's list items*/
             margin-left: 2px;
@@ -449,7 +459,8 @@ img {
     width: 100%;
     clear: both; }
     #wrapper comments h3 {
-      margin: 20px 0px; }
+      margin: 20px 0px;
+      font-family: 'Quicksand', sans-serif; }
     #wrapper comments #comments-nav {
       display: block;
       clear: both;
@@ -483,6 +494,12 @@ img {
           line-height: 15px;
           margin-top: 5px;
           font-size: 1em; }
+          #wrapper comments .commentlist .comment-author .comment-meta a {
+            font-family: 'Quicksand', sans-serif;
+            color: #646464;
+            text-decoration: none; }
+            #wrapper comments .commentlist .comment-author .comment-meta a:hover {
+              color: #55afb9; }
         #wrapper comments .commentlist .comment-author .avatar {
           display: block;
           margin-left: auto;
@@ -490,8 +507,7 @@ img {
       #wrapper comments .commentlist .comment-content {
         padding: 0px;
         float: left;
-        width: 70%;
-        font-size: 1.2em; }
+        width: 70%; }
         #wrapper comments .commentlist .comment-content h6 {
           font-size: 1.2em;
           color: #55afb9;
@@ -524,13 +540,19 @@ img {
     clear: both; }
     #wrapper #respond h5 {
       font-size: 2em;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      color: #646464;
+      font-family: 'Quicksand', sans-serif; }
     #wrapper #respond .leaveComment {
       display: block;
       width: 100%; }
       #wrapper #respond .leaveComment .commentForm {
         width: 90%;
         margin: 0 0 0 2%; }
+        #wrapper #respond .leaveComment .commentForm p.loggedin, #wrapper #respond .leaveComment .commentForm label {
+          font-family: 'Quicksand', sans-serif; }
+        #wrapper #respond .leaveComment .commentForm a {
+          color: #55afb9; }
         #wrapper #respond .leaveComment .commentForm .commentBox {
           display: block;
           width: 50%;
@@ -636,12 +658,17 @@ img {
   visibility: hidden; }
 
 /* ==|== media queries ====================================================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  #wrapper {
+    width: 90%; } }
+@media screen and (max-width: 600px) {
   body {
     background-image: none; }
 
   #wrapper {
     width: 90%; }
+    #wrapper header h1 {
+      font-size: 3em; }
     #wrapper article side {
       width: 100%;
       margin-top: 5%;

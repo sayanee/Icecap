@@ -4,3 +4,10 @@
   -webkit-border-radius: $size; 
   border-radius: $size; 
 }
+
+@mixin transition($type, $time, $timing){
+  -moz-transition:    all 1.2s ease-out;
+  -o-transition:      all 1.2s ease-out; 
+  -webkit-transition: all 1.2s ease-out; 
+  -ms-transition:     all 1.2s ease-out;
+}

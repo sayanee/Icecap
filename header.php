@@ -14,9 +14,7 @@
   <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  
-  
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 
   <?php
   	if ( is_singular() && get_option( 'thread_comments' ) )
@@ -29,12 +27,11 @@
   
   <div id="wrapper">
     <header>
-
-    	<h1 id="fittext"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-    	    <?php bloginfo( 'name' ); ?></a>
+    	<h1>
+    	  <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+    	    <?php bloginfo( 'name' ); ?>
+    	  </a>
     	</h1>
     	<h2><?php bloginfo( 'description' ); ?></h2>
-
-    	<nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?></nav>
-	
+    	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
   	</header>

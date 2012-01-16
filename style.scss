@@ -1,6 +1,6 @@
 /*
 Theme Name: Ice Cap
-Theme URI: http://github.com/sayanee
+Theme URI: http://github.com/sayanee/icecap
 Description: White, Minimal & Responsive
 Version: 0.1
 Author: Sayanee
@@ -8,9 +8,9 @@ Author URI: http://sayan.ee/
 Tags: clean, white, minimal, fluid, responsive
 */
 
-$grey-text-dark:#646464;
+$grey:#646464;
 $grey-text-light:#ebebeb;
-$blue-text-link:#55afb9;
+$blue:#55afb9;
 
 $grey-bgr-dark:#787878;
 $grey-bgr-light:#dadada;
@@ -28,14 +28,17 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 body { margin: 0; font-size: 13px; line-height: 1.231; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-::-moz-selection { background: lighten($blue-text-link, 15%); color: #000; text-shadow: none; }
-::selection { background: lighten($blue-text-link, 15%);  color: #000; text-shadow: none; }
+::-moz-selection { background: lighten($blue, 15%); color: #000; text-shadow: none; }
+::selection { background: lighten($blue, 15%);  color: #000; text-shadow: none; }
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
+a { 
+  color: $blue; 
+  text-decoration: none;
+  &:visited { color: $blue; }
+  &:hover { color: $blue; text-decoration: underline;}
+  &:focus { outline: 0; }
+  &:hover, &:active { outline: 0; }
+}
 
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
@@ -100,67 +103,72 @@ html[xmlns] .clearfix {
 }
 
 body{
-  -moz-transition:    all 1.2s ease-out;
-  -o-transition:      all 1.2s ease-out; 
-  -webkit-transition: all 1.2s ease-out; 
-  -ms-transition:     all 1.2s ease-out;
+  @include transition (all, 0.2s, ease-out);
 }
+
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td 
-{margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-family: 'Quicksand', sans-serif; color:$grey-text-dark;}
-
-a{color: $grey-text-dark; text-decoration:none; 
-  &:visited { color: $grey-text-dark; }
-  &:hover{color: $blue-text-link; text-decoration: none;}
+{
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  font-weight: normal; 
+  font-style: normal; 
+  font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
+  color:black;
 }
 
-img{max-width:100%; height:auto;}
+p{font-size:1.2em; line-height:1.8em; margin-bottom:1em; color:$grey;}
+
+img{ max-width:100%; height:auto; margin:10px;}
 
 #wrapper{
-  width:80%;
+  width:800px;
   margin:0 auto;
   
   header{
-    
-    h1{font-size:6em; text-align: center; 
-      a{color:$grey-text-dark;font-weight: lighter;
-        &:hover{color: $blue-text-link; text-decoration: none;}
+    h1{
+      font-size:6em; 
+      text-align: center; 
+      a{
+        color:$grey;
+        font-weight: lighter;
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: none;
+        &:hover{ color: $blue; }
       }
     } 
-    h2{font-size:1.5em; color:$grey-text-dark;text-align: center;margin-top:10px;}  
-  }
-  
-  nav{
-    font-size:1.5em; 
-    width:100%;
-    clear:both;
-    background-color: $grey-bgr-dark;
-    margin:30px 0px;
-   
-    padding:
-    {
-      top:5px;
-      bottom:5px;
-    }
-      
-    ul{
-       list-style:none;
- 			 text-align:center;
-       
-       li{
-          margin:20px 20px;
-          display:inline;
+    h2{
+      font-size:1.5em; 
+      color:$grey;
+      text-align: center;
+      margin-top:10px;
+      font-family: 'Quicksand', sans-serif;
+    }  
+    .menu{
+      font-size:1.5em; 
+      width:98%;
+      clear:both;
+      background-color: lighten($grey,10%);
+      margin:30px 0px;
+      padding:1%;
+      ul{
+        list-style:none;
+   			text-align:center;
+   			width:100%;
+        li{ margin:20px; display:inline; }
+        a{
+          font-family: 'Quicksand', sans-serif;
+          line-height:1.5em;
+          color:lighten($grey, 50%);
+          font-weight: lighter;
+          display:inline-block;
+          text-decoration: none;
+          &:hover {text-decoration: underline; }
         }
-       
-       a{
-         color:$grey-text-light;
-         font-weight: lighter;
-         display:inline-block;
-
-         &:hover {text-decoration: none;}
-       }
+      }
     }
   }
-  
+    
   article{
     display:block;
     width:100%;
@@ -170,10 +178,14 @@ img{max-width:100%; height:auto;}
     side{
       display:block;
       float:left;
-      width:25%;
+      width:23%; /* 200px = 800*0.25 */
+      padding:0% 1%;
+      font-weight: normal;
+      color:$grey;
       
       #circle {
-        background: $grey-bgr-light;
+        background: lighten($grey, 45%);
+        font-family: 'Quicksand', sans-serif;
         width: 65px;
         height: 65px;
         @include rounded(50%);
@@ -181,24 +193,18 @@ img{max-width:100%; height:auto;}
         margin-bottom:15%;
         margin-left:auto;
         margin-right:auto;
-        
         text-align:center;
-        font-size: 2em;
-                
-        div{
-          padding:25%;
-        }
+        font-size: 2em;      
+        div{ padding:25%;}
       }
-    
       date{
+        font-family: 'Quicksand', sans-serif;
         display:block;
         text-align: center;
-        font-family: 'Quicksand', sans-serif; 
         font-size:1em;
-        
-        color:$grey-text-dark;
         width:60%;
         margin:0 auto;
+        font-size: 1.3em;
       }
       
       list{
@@ -206,50 +212,58 @@ img{max-width:100%; height:auto;}
         text-align:center;
         width:60%;
         margin:10px auto;
-        font-size:0.9em;
-        
-         a{color:$grey-text-dark;
-            &:hover{color: $blue-text-link; text-decoration: none;}
-        }
+        font-size: 1em;
+      }
+      a{
+        color:darken($grey, 40%);
+        font-family: 'Quicksand', sans-serif;
+        &:hover{color: $blue; text-decoration: none;}
       }
     }
     
     post{
       display:block;
       float:right;
-      width:75%%;
+      width:75%; /* 600px = 800*0.75 */
       
       li{margin-left:30px;}
-      
       h4{
-        font-size:2.5em; font-weight: lighter; margin-bottom:30px; 
-         a{color:$grey-text-dark;font-weight: lighter;
-            &:hover{color: $blue-text-link; text-decoration: none;}
+        font-size:2.5em; 
+        font-weight: normal; 
+        margin-bottom:30px; 
+        color:lighten($grey, 20%);
+        a{
+          font-family: 'Quicksand', sans-serif;
+          color:$grey;
+          font-weight: normal;
+          &:hover{
+            color: $blue; 
+            text-decoration: none;
+          }
         }
       }
-      
       p{
-        font-size:1.2em; 
-        font-weight: lighter; 
-        line-height:23px;  
-        margin-bottom:20px;
-        a { color: $blue-text-link; text-decoration: none;
-          &:visited { color: $blue-text-link; }
-          &:hover { color: $blue-text-link; text-decoration: underline;}
+        font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
+        color:black;
+        a { 
+          color: darken($blue,10%); 
+          text-decoration: none;
+          &:hover {text-decoration: underline;}
         }
       }
+      ul,ol{margin-top:-10px;margin-bottom:10px;}
     }
   }
 
-  menu{
+  nav{
     clear:both;
     height:40px;
     width:100%;
     padding:0px 0;
     text-align:center;
-     a { color: $blue-text-link; text-decoration: none;
-        &:visited { color: $blue-text-link; }
-        &:hover { color: $blue-text-link; text-decoration: underline;}
+     a { color: $blue; text-decoration: none;
+        &:visited { color: $blue; }
+        &:hover { color: $blue; text-decoration: underline;}
       }
     
     prev, next{
@@ -288,10 +302,10 @@ img{max-width:100%; height:auto;}
     ul.xoxo{
       width:100%;
       list-style-type: none;
-      
-      a { color: $blue-text-link; text-decoration: none;
-        &:visited { color: $blue-text-link; }
-        &:hover { color: $blue-text-link; text-decoration: underline;}
+      a { 
+        color: $blue; text-decoration: none;
+        &:visited { color: $blue; }
+        &:hover { color: $blue; text-decoration: underline;}
       }
       
       li{
@@ -302,13 +316,17 @@ img{max-width:100%; height:auto;}
         margin-bottom:5%;
         font-size:2em; /*each sidebar heading*/
         
-        h3{margin-bottom:15px;}
+        h3, label{
+          margin-bottom:15px;
+          font-family: 'Quicksand', sans-serif;
+          color:$grey;
+        }
                 
         ul {
           width:100%;
           li{
-            font-size:0.5em;
-            width:100%;/*each sidebar's list items*/
+            font-size:0.6em;
+            width:100%; /*each sidebar's list items*/
             margin-left:2px;
             margin-top:0;
             margin-bottom:0;
@@ -332,7 +350,10 @@ img{max-width:100%; height:auto;}
     width:100%;
     clear:both;
     
-    h3{margin:20px 0px;}
+    h3{
+      margin:20px 0px;
+      font-family: 'Quicksand', sans-serif;
+    }
     
     #comments-nav{
       display:block;
@@ -340,9 +361,9 @@ img{max-width:100%; height:auto;}
       width:100%;
       margin:20px 0px;
       a{
-        color:$blue-text-link;
+        color:$blue;
         &:hover{text-decoration: underline;}
-        &:visited{color:$blue-text-link;}
+        &:visited{color:$blue;}
       }
     }
   
@@ -372,6 +393,13 @@ img{max-width:100%; height:auto;}
           line-height:15px;
           margin-top:5px;
           font-size: 1em;
+          a{
+            font-family: 'Quicksand', sans-serif;
+            color:$grey;
+            text-decoration: none;
+            &:hover{color:$blue;}
+          }
+          
         }
 
         .avatar{
@@ -385,11 +413,10 @@ img{max-width:100%; height:auto;}
         padding:0px;
         float:left;
         width:70%;
-        font-size:1.2em;
         
         h6{
           font-size:1.2em;
-          color:$blue-text-link;
+          color:$blue;
           text-decoration: none;
           font-style: italic;
           margin-bottom:20px;
@@ -398,8 +425,8 @@ img{max-width:100%; height:auto;}
           margin-top:20px;
           font-size:0.9em;
           a{
-            color:$blue-text-link;
-              &:visited{color:$blue-text-link;}
+            color:$blue;
+              &:visited{color:$blue;}
               &:hover{text-decoration: underline;}
           }
         }
@@ -423,7 +450,12 @@ img{max-width:100%; height:auto;}
     width:100%;
     clear:both;
     
-    h5{font-size: 2em; margin-bottom:20px;}
+    h5{
+      font-size: 2em; 
+      margin-bottom:20px;
+      color:$grey;
+      font-family: 'Quicksand', sans-serif;
+    }
     
     .leaveComment{
       display:block;
@@ -432,6 +464,8 @@ img{max-width:100%; height:auto;}
       .commentForm{
         width:90%;
         margin:0 0 0 2%;
+        p.loggedin, label{font-family: 'Quicksand', sans-serif;}
+        a{color:$blue;}
         
         .commentBox{
           display:block;
@@ -470,13 +504,13 @@ img{max-width:100%; height:auto;}
         }
         
         textarea:focus, input:focus {
-          border: 1px solid lighten($blue-text-link, 20%);
+          border: 1px solid lighten($blue, 20%);
           outline: none;
         }
         
         input.submit {
           background-color : lighten($grey-bgr-light, 5%);
-          color : $grey-text-dark;
+          color : $grey;
           font-family: 'Quicksand', sans-serif; 
           font-size:1.3em;
           height:40px;
@@ -510,7 +544,7 @@ img{max-width:100%; height:auto;}
   }
   
   textarea:focus, input:focus {
-    border: 1px solid lighten($blue-text-link, 20%);
+    border: 1px solid lighten($blue, 20%);
     outline: none;
   }
   
@@ -535,12 +569,14 @@ img{max-width:100%; height:auto;}
 .invisible { visibility: hidden; }
 
 /* ==|== media queries ====================================================== */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
+  #wrapper{ width:90%;}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   body{background-image: none;}
   #wrapper{ 
+    header h1{font-size: 3em;}
     width:90%;
     article {
       side{
