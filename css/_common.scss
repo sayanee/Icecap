@@ -11,3 +11,9 @@
   -webkit-transition: all 1.2s ease-out; 
   -ms-transition:     all 1.2s ease-out;
 }
+
+@mixin shading($horl, $verl, $blur, $spread, $shade){
+	-webkit-box-shadow: $horl $verl $blur $spread $shade;
+	-moz-box-shadow: $horl $verl $blur $spread $shade;
+	box-shadow: $horl $verl $blur $spread $shade;
+}

@@ -27,6 +27,7 @@
   
   <div id="wrapper">
     <header>
+      
     	<h1>
     	  <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
     	    <?php bloginfo( 'name' ); ?>
@@ -34,4 +35,21 @@
     	</h1>
     	<h2><?php bloginfo( 'description' ); ?></h2>
     	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+      
+      <div id="topimage">
+      	<?php if ( get_header_image() != '' ) : ?>
+  			  <a href="<?php echo home_url( '/' ); ?>">
+  				<?php
+  					if ( is_singular() &&
+  							has_post_thumbnail( $post->ID ) &&
+  							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
+  							$image[1] >= HEADER_IMAGE_WIDTH ) :
+  						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+  					else : ?>
+  					<img src="<?php header_image(); ?>" />
+  				<?php endif; ?>
+		    </a>
+			  <?php endif; ?>
+			</div><!-- #topimage -->
+  			
   	</header>

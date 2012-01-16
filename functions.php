@@ -1,4 +1,25 @@
 <?php
+
+add_custom_image_header( 'icecap_header_style', '', '' );
+register_default_headers( array(
+	'ceiling' => array(
+		'url' => '%s/images/headers/ceiling.jpg',
+		'thumbnail_url' => '%s/images/headers/ceiling-thumbnail.jpg',
+		'description' => __( 'Ceiling', 'icecap' )
+	),
+	'wheel' => array(
+		'url' => '%s/images/headers/wheel.jpg',
+		'thumbnail_url' => '%s/images/headers/wheel-thumbnail.jpg',
+		'description' => __( 'Wheel', 'icecap' )
+	),
+	'sunset' => array(
+		'url' => '%s/images/headers/sunset.jpg',
+		'thumbnail_url' => '%s/images/headers/sunset-thumbnail.jpg',
+		'description' => __( 'Sunset', 'icecap' )
+	)
+) );
+
+
 /**
  * TwentyTen functions and definitions
  *
@@ -150,32 +171,17 @@ function twentyten_setup() {
 
 	// The height and width of your custom header. You can hook into the theme's own filters to change these values.
 	// Add a filter to twentyten_header_image_width and twentyten_header_image_height to change these values.
-	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 940 ) );
-	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 198 ) );
+	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 800 ) );
+	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 150 ) );
 
 	// We'll be using post thumbnails for custom header images on posts and pages.
-	// We want them to be 940 pixels wide by 198 pixels tall.
+	// We want them to be 800  pixels wide by 150 pixels tall.
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
 
 	// Don't support text inside the header image.
 	define( 'NO_HEADER_TEXT', true );
 
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See twentyten_admin_header_style(), below.
-	add_custom_image_header( '', 'twentyten_admin_header_style' );
-
-	// ... and thus ends the changeable header business.
-
-	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
-	register_default_headers( array(
-		'berries' => array(
-			'url' => '%s/images/headers/starkers.png',
-			'thumbnail_url' => '%s/images/headers/starkers-thumbnail.png',
-			/* translators: header image description */
-			'description' => __( 'Starkers', 'twentyten' )
-		)
-	) );
 }
 endif;
 

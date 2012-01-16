@@ -278,7 +278,7 @@ img {
     width: 98%;
     clear: both;
     background-color: #7e7e7e;
-    margin: 30px 0px;
+    margin-top: 30px;
     padding: 1%; }
     #wrapper header .menu ul {
       list-style: none;
@@ -296,6 +296,12 @@ img {
         text-decoration: none; }
         #wrapper header .menu ul a:hover {
           text-decoration: underline; }
+  #wrapper header #topimage {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0; }
+    #wrapper header #topimage img {
+      margin: 0px; }
   #wrapper article {
     display: block;
     width: 100%;
@@ -354,6 +360,7 @@ img {
       #wrapper article post li {
         margin-left: 30px; }
       #wrapper article post h4 {
+        font-family: 'Quicksand', sans-serif;
         font-size: 2.5em;
         font-weight: normal;
         margin-bottom: 30px;
@@ -413,7 +420,7 @@ img {
   #wrapper sidebar {
     clear: both;
     width: 100%;
-    margin: 0px 0; }
+    margin: 20px 0; }
     #wrapper sidebar ul.xoxo {
       width: 100%;
       list-style-type: none; }
@@ -426,13 +433,15 @@ img {
           color: #55afb9;
           text-decoration: underline; }
       #wrapper sidebar ul.xoxo li {
-        width: 28.33%;
+        width: 30%;
         float: left;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+        margin-left: 0;
+        margin-right: 5%;
         margin-bottom: 5%;
         font-size: 2em;
-        /*each sidebar heading*/ }
+        /* each sidebar heading */ }
+        #wrapper sidebar ul.xoxo li:nth-child(3n) {
+          margin-right: 0%; }
         #wrapper sidebar ul.xoxo li h3, #wrapper sidebar ul.xoxo li label {
           margin-bottom: 15px;
           font-family: 'Quicksand', sans-serif;
@@ -508,6 +517,8 @@ img {
         padding: 0px;
         float: left;
         width: 70%; }
+        #wrapper comments .commentlist .comment-content p {
+          color: black; }
         #wrapper comments .commentlist .comment-content h6 {
           font-size: 1.2em;
           color: #55afb9;
@@ -547,26 +558,26 @@ img {
       display: block;
       width: 100%; }
       #wrapper #respond .leaveComment .commentForm {
-        width: 90%;
-        margin: 0 0 0 2%; }
+        width: 100%;
+        margin: 0%; }
         #wrapper #respond .leaveComment .commentForm p.loggedin, #wrapper #respond .leaveComment .commentForm label {
           font-family: 'Quicksand', sans-serif; }
         #wrapper #respond .leaveComment .commentForm a {
           color: #55afb9; }
         #wrapper #respond .leaveComment .commentForm .commentBox {
           display: block;
-          width: 50%;
-          margin: 20px 0px;
-          float: left; }
+          width: 48%;
+          float: left;
+          margin-right: 2%; }
         #wrapper #respond .leaveComment .commentForm .commentAuthorInfo {
           display: block;
-          width: 50%;
-          margin: 20px 0px;
+          width: 48%;
+          margin-left: 2%;
           float: right;
           clear: both; }
         #wrapper #respond .leaveComment .commentForm input[type="text"], #wrapper #respond .leaveComment .commentForm input[type="url"], #wrapper #respond .leaveComment .commentForm input[type="email"] {
           clear: both;
-          width: 80%;
+          width: 100%;
           height: 25px;
           margin-top: 0px;
           margin-bottom: 20px;
@@ -575,7 +586,7 @@ img {
           font-size: 1em; }
         #wrapper #respond .leaveComment .commentForm textarea {
           clear: both;
-          width: 80%;
+          width: 100%;
           height: 150px;
           margin-top: 0px;
           margin-bottom: 20px;
@@ -586,18 +597,20 @@ img {
           border: 1px solid #9dd1d7;
           outline: none; }
         #wrapper #respond .leaveComment .commentForm input.submit {
+          width: 100%;
           background-color: #e7e7e7;
           color: #646464;
           font-family: 'Quicksand', sans-serif;
           font-size: 1.3em;
           height: 40px;
           border: none;
-          -webkit-border-radius: 5px;
           -moz-border-radius: 5px;
+          -o-border-radius: 5px;
+          -webkit-border-radius: 5px;
           border-radius: 5px;
-          -webkit-box-shadow: 1px 1px 1px 1px #aaaaaa;
-          -moz-box-shadow: 1px 1px 1px 1px #aaaaaa;
-          box-shadow: 1px 1px 1px 1px #aaaaaa; }
+          -webkit-box-shadow: 1px 1px 1px 1px #979797;
+          -moz-box-shadow: 1px 1px 1px 1px #979797;
+          box-shadow: 1px 1px 1px 1px #979797; }
   #wrapper label {
     display: block; }
   #wrapper input[type="text"] {
@@ -662,13 +675,12 @@ img {
   #wrapper {
     width: 90%; } }
 @media screen and (max-width: 600px) {
-  body {
-    background-image: none; }
-
   #wrapper {
     width: 90%; }
     #wrapper header h1 {
       font-size: 3em; }
+    #wrapper header .menu {
+      font-size: 1.2em; }
     #wrapper article side {
       width: 100%;
       margin-top: 5%;
@@ -698,10 +710,8 @@ img {
       -webkit-border-radius: 32px;
       border-radius: 32px; }
     #wrapper sidebar ul.xoxo li {
-      width: 90%;
-      float: left;
-      margin-left: 5%;
-      margin-right: 5%; }
+      width: 100%;
+      float: left; }
     #wrapper comments .commentlist .comment-content {
       margin-left: 2%; }
       #wrapper comments .commentlist .comment-content h6 {
