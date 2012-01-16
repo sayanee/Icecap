@@ -5,7 +5,7 @@
     
     <side>
       <div id="circle">
-        <div><?php comments_popup_link( __( '0', 'twentyten' ), __( '1', 'twentyten' ), __( '%', 'twentyten' ) ); ?></div>
+        <div><?php comments_popup_link( '0','1', '%', '', 'off' ); ?></div>
       </div>	
     	<date><?php the_date(); ?></date>
     </side>
