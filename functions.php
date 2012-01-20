@@ -1,6 +1,5 @@
-<?php
-
-add_custom_image_header( '', '', '' );
+<!--custom header -->
+<?php add_custom_image_header( '', '', '' );
 register_default_headers( array(
 	'ceiling' => array(
 		'url' => '%s/images/headers/ceiling.jpg',
@@ -19,56 +18,7 @@ register_default_headers( array(
 	)
 ) );
 
-
-/**
- * TwentyTen functions and definitions
- *
- * Sets up the theme and provides some helper functions. Some helper functions
- * are used in the theme as custom template tags. Others are attached to action and
- * filter hooks in WordPress to change core functionality.
- *
- * The first function, twentyten_setup(), sets up the theme by registering support
- * for various features in WordPress, such as post thumbnails, navigation menus, and the like.
- *
- * When using a child theme (see http://codex.wordpress.org/Theme_Development and
- * http://codex.wordpress.org/Child_Themes), you can override certain functions
- * (those wrapped in a function_exists() call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before the parent
- * theme's file, so the child theme functions would be used.
- *
- * Functions that are not pluggable (not wrapped in function_exists()) are instead attached
- * to a filter or action hook. The hook can be removed by using remove_action() or
- * remove_filter() and you can attach your own function to the hook.
- *
- * We can remove the parent theme's hook only after it is attached, which means we need to
- * wait until setting up the child theme:
- *
- * <code>
- * add_action( 'after_setup_theme', 'my_child_theme_setup' );
- * function my_child_theme_setup() {
- *     // We are providing our own filter for excerpt_length (or using the unfiltered value)
- *     remove_filter( 'excerpt_length', 'twentyten_excerpt_length' );
- *     ...
- * }
- * </code>
- *
- * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
- *
- * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
- */
-
-/**
- * Set the content width based on the theme's design and stylesheet.
- *
- * Used to set the width of images and content. Should be equal to the width the theme
- * is designed for, generally via the style.css stylesheet.
- */
-if ( ! isset( $content_width ) )
-	$content_width = 640;
-
-/** Tell WordPress to run twentyten_setup() when the 'after_setup_theme' hook is run. */
+if ( ! isset( $content_width ) ) $content_width = 640;
 add_action( 'after_setup_theme', 'twentyten_setup' );
 
 if ( ! function_exists( 'twentyten_setup' ) ):
@@ -105,16 +55,16 @@ function custom_comments($comment, $args, $depth) {
         
       	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
   		  <div class="comment-meta">
-    		  <?php printf(__('<a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'twentyten'),
+    		  <?php printf(__('<a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'icecap'),
     				get_comment_date('jMy'),
     				get_comment_time('ga'),
     				'#comment-' . get_comment_ID() );
-    				edit_comment_link(__('Edit', 'twentyten'), '  <span class="edit-link">', '</span>'); ?>
+    				edit_comment_link(__('Edit', 'icecap'), '  <span class="edit-link">', '</span>'); ?>
     		</div><!--comment-meta-->
     		
   		</div><!--comment-author vcard-->		
   		
-      <?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'twentyten') ?>
+      <?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'icecap') ?>
         <div class="comment-content">
           <h6><?php printf(__('<cite class="fn">%s</cite> <span class="says">says...</span>'), get_comment_author_link()) ?></h6>
           <?php comment_text() ?>
@@ -122,8 +72,8 @@ function custom_comments($comment, $args, $depth) {
           <?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
       			if($args['type'] == 'all' || get_comment_type() == 'comment') :
       				comment_reply_link(array_merge($args, array(
-      					'reply_text' => __('[reply]','twentyten'), 
-      					'login_text' => __('Log in to reply.','twentyten'),
+      					'reply_text' => __('[reply]','icecap'), 
+      					'login_text' => __('Log in to reply.','icecap'),
       					'depth' => $depth,
       					'before' => '<div class="comment-reply-link">', 
       					'after' => '</div>'
@@ -149,7 +99,7 @@ function twentyten_setup() {
 
 	// Make theme available for translation
 	// Translations can be filed in the /languages/ directory
-	load_theme_textdomain( 'twentyten', TEMPLATEPATH . '/languages' );
+	load_theme_textdomain( 'icecap', TEMPLATEPATH . '/languages' );
 
 	$locale = get_locale();
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
@@ -158,7 +108,7 @@ function twentyten_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Navigation', 'twentyten' ),
+		'primary' => __( 'Primary Navigation', 'icecap' ),
 	) );
 
 	// This theme allows users to set a custom background
@@ -247,7 +197,7 @@ add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function twentyten_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) . '</a>';
+	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'icecap' ) . '</a>';
 }
 
 /**
@@ -314,17 +264,17 @@ function twentyten_comment( $comment, $args, $depth ) {
 		<div id="comment-<?php comment_ID(); ?>">
 		<div class="comment-author vcard">
 			<?php echo get_avatar( $comment, 40 ); ?>
-			<?php printf( __( '%s <span class="says">says:</span>', 'twentyten' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+			<?php printf( __( '%s <span class="says">says:</span>', 'icecap' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 		</div><!-- .comment-author .vcard -->
 		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<em><?php _e( 'Your comment is awaiting moderation.', 'twentyten' ); ?></em>
+			<em><?php _e( 'Your comment is awaiting moderation.', 'icecap' ); ?></em>
 			<br />
 		<?php endif; ?>
 
 		<div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 			<?php
 				/* translators: 1: date, 2: time */
-				printf( __( '%1$s at %2$s', 'twentyten' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' );
+				printf( __( '%1$s at %2$s', 'icecap' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'icecap' ), ' ' );
 			?>
 		</div><!-- .comment-meta .commentmetadata -->
 
@@ -341,7 +291,7 @@ function twentyten_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'twentyten'), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'icecap' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'icecap'), ' ' ); ?></p>
 	<?php
 			break;
 	endswitch;
@@ -360,9 +310,9 @@ endif;
 function twentyten_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
-		'name' => __( 'Primary Widget Area', 'twentyten' ),
+		'name' => __( 'Primary Widget Area', 'icecap' ),
 		'id' => 'primary-widget-area',
-		'description' => __( 'The primary widget area', 'twentyten' ),
+		'description' => __( 'The primary widget area', 'icecap' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -371,9 +321,9 @@ function twentyten_widgets_init() {
 
 	// Area 2, located below the Primary Widget Area in the sidebar. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Secondary Widget Area', 'twentyten' ),
+		'name' => __( 'Secondary Widget Area', 'icecap' ),
 		'id' => 'secondary-widget-area',
-		'description' => __( 'The secondary widget area', 'twentyten' ),
+		'description' => __( 'The secondary widget area', 'icecap' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -382,9 +332,9 @@ function twentyten_widgets_init() {
 
 	// Area 3, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'First Footer Widget Area', 'twentyten' ),
+		'name' => __( 'First Footer Widget Area', 'icecap' ),
 		'id' => 'first-footer-widget-area',
-		'description' => __( 'The first footer widget area', 'twentyten' ),
+		'description' => __( 'The first footer widget area', 'icecap' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -393,9 +343,9 @@ function twentyten_widgets_init() {
 
 	// Area 4, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Second Footer Widget Area', 'twentyten' ),
+		'name' => __( 'Second Footer Widget Area', 'icecap' ),
 		'id' => 'second-footer-widget-area',
-		'description' => __( 'The second footer widget area', 'twentyten' ),
+		'description' => __( 'The second footer widget area', 'icecap' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -404,9 +354,9 @@ function twentyten_widgets_init() {
 
 	// Area 5, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Third Footer Widget Area', 'twentyten' ),
+		'name' => __( 'Third Footer Widget Area', 'icecap' ),
 		'id' => 'third-footer-widget-area',
-		'description' => __( 'The third footer widget area', 'twentyten' ),
+		'description' => __( 'The third footer widget area', 'icecap' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -415,9 +365,9 @@ function twentyten_widgets_init() {
 
 	// Area 6, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Fourth Footer Widget Area', 'twentyten' ),
+		'name' => __( 'Fourth Footer Widget Area', 'icecap' ),
 		'id' => 'fourth-footer-widget-area',
-		'description' => __( 'The fourth footer widget area', 'twentyten' ),
+		'description' => __( 'The fourth footer widget area', 'icecap' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -448,7 +398,7 @@ if ( ! function_exists( 'twentyten_posted_on' ) ) :
  * @since Twenty Ten 1.0
  */
 function twentyten_posted_on() {
-	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'twentyten' ),
+	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'icecap' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
 			get_permalink(),
@@ -457,7 +407,7 @@ function twentyten_posted_on() {
 		),
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'twentyten' ), get_the_author() ),
+			sprintf( esc_attr__( 'View all posts by %s', 'icecap' ), get_the_author() ),
 			get_the_author()
 		)
 	);
@@ -474,11 +424,11 @@ function twentyten_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
-		$posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		$posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'icecap' );
 	} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-		$posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		$posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'icecap' );
 	} else {
-		$posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		$posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'icecap' );
 	}
 	// Prints the string, replacing the placeholders.
 	printf(

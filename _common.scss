@@ -1,0 +1,19 @@
+@mixin rounded ($size){
+  -moz-border-radius: $size; 
+  -o-border-radius: $size; 
+  -webkit-border-radius: $size; 
+  border-radius: $size; 
+}
+
+@mixin transition($type, $time, $timing){
+  -moz-transition:    all 1.2s ease-out;
+  -o-transition:      all 1.2s ease-out; 
+  -webkit-transition: all 1.2s ease-out; 
+  -ms-transition:     all 1.2s ease-out;
+}
+
+@mixin shading($horl, $verl, $blur, $spread, $shade){
+	-webkit-box-shadow: $horl $verl $blur $spread $shade;
+	-moz-box-shadow: $horl $verl $blur $spread $shade;
+	box-shadow: $horl $verl $blur $spread $shade;
+}

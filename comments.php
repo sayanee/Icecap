@@ -11,7 +11,7 @@
 <!-- You can start editing here. -->
 <comments>
   <?php if ( have_comments() ) : ?>
-  	<h3><?php comments_number('No Comments', 'One Comment', '% Comments' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+  	<h3><?php comments_number('0', '1', '%' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
   	<div id="comments-nav" class="clearfix">
   		<div class="alignleft"><?php previous_comments_link() ?></div>
@@ -37,10 +37,9 @@
   	<?php endif; ?>
   <?php endif; ?>
 
-
-  <?php if ( comments_open() ) : ?>
 </comments>
 
+<?php if ( comments_open() ) : ?>
     
 <div id="respond">  
   
@@ -88,21 +87,19 @@
                 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
               </div><!--commentBox-->
               
-              
-              
             <?php endif; ?>
 
-            
-        </div>
-      </fieldset>
-    </div>
+          </div>
+        </fieldset>
+      </div>
   
-  <?php comment_id_fields(); ?>
+      <?php comment_id_fields(); ?>
 
-<?php do_action('comment_form', $post->ID); ?>
+    <?php do_action('comment_form', $post->ID); ?>
 
-</form>
-</div>
+  </form>
+</div><!--#respond-->
+
 <?php endif; // If registration required and not logged in ?>
 
 

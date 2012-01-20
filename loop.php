@@ -1,6 +1,6 @@
 <?php if ( ! have_posts() ) : ?>
-	<h1><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-	<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
+	<h1><?php _e( 'Not Found', 'icecap' ); ?></h1>
+	<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'icecap' ); ?></p>
 	<?php get_search_form(); ?>
 <?php endif; ?>
 
@@ -8,38 +8,38 @@
   
   <article class="clearfix">
     
-   <post>
-      <h4><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+   <post><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <h4><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'icecap' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 
       <p>
     	  <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
       		<?php the_excerpt(); ?>
       	<?php else : ?>
-      		<?php the_content( __( 'Continue reading &rarr;', 'twentyten' ) ); ?>
-      		<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+      		<?php the_content( __( 'Continue reading &rarr;', 'icecap' ) ); ?>
+      		<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
       	<?php endif; ?>
 
-      	<?php edit_post_link( __( 'Edit', 'twentyten' ), '<p>', '</p>' ); ?>
+      	<?php edit_post_link( __( 'Edit', 'icecap' ), '<p>', '</p>' ); ?>
     	</p>
 
     	<?php comments_template( '', true ); ?>
-  	</post>
+   </div></post>
     	
     	
     <side>
       <div id="circle"><div><?php comments_popup_link( '0','1', '%', '', 'off' ); ?></div></div>
     	
-    	<date><?php the_date('j M Y'); ?></date>
+    	<date><?php the_date(get_option( 'date_format' )); ?></date>
 	    
 	    <list>
       	<?php if ( count( get_the_category() ) ) : ?>
-      		<?php printf( __( '%2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
+      		<?php printf( __( '%2$s', 'icecap' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
       </list>		
       	<?php endif; ?>
 	
 	    <list>
       	<?php $tags_list = get_the_tag_list( '', ', ' ); if ( $tags_list ): ?>
-      		<?php printf( __( '%2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+      		<?php printf( __( '%2$s', 'icecap' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
       	<?php endif; ?>
     	</list>
     	

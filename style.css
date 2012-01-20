@@ -2,10 +2,15 @@
 Theme Name: Ice Cap
 Theme URI: http://github.com/sayanee/icecap
 Description: White, Minimal & Responsive
-Version: 0.1
 Author: Sayanee
 Author URI: http://sayan.ee/
-Tags: clean, white, minimal, fluid, responsive
+Version: 0.5
+Tags: one-column, flexible-width, white, custom-header, sticky-post
+License: GNU General Public License
+License URI: license.txt
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url(css/layout.css);
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
@@ -228,6 +233,40 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%; }
 
+.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+.alignleft {
+  float: left; }
+
+.alignright {
+  float: right; }
+
+.wp-caption {
+  border: 1px solid #666;
+  text-align: center;
+  background: #ccc;
+  padding: 10px;
+  margin: 10px; }
+
+div, ul, li {
+  position: relative; }
+
+br.clear {
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: -1px 0 0 0; }
+
+li#theme-switcher {
+  background: #fff;
+  border: 10px solid red;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0; }
+
 body {
   -moz-transition: all 1.2s ease-out;
   -o-transition: all 1.2s ease-out;
@@ -242,6 +281,13 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   font-style: normal;
   font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
   color: black; }
+
+.gallery-caption {
+  color: #888;
+  margin: 0 0 12px; }
+
+.bypostauthor {
+  background-color: #eee; }
 
 p {
   font-size: 1.2em;
@@ -273,28 +319,31 @@ img {
     text-align: center;
     margin-top: 10px;
     font-family: 'Quicksand', sans-serif; }
-  #wrapper header .menu {
+  #wrapper header .menu, #wrapper header .menu-header {
     font-size: 1.5em;
     width: 98%;
     clear: both;
     background-color: #7e7e7e;
     margin-top: 30px;
     padding: 1%; }
-    #wrapper header .menu ul {
+    #wrapper header .menu ul, #wrapper header .menu-header ul {
       list-style: none;
       text-align: center;
-      width: 100%; }
-      #wrapper header .menu ul li {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 1em; }
+      #wrapper header .menu ul li, #wrapper header .menu-header ul li {
         margin: 20px;
         display: inline; }
-      #wrapper header .menu ul a {
+      #wrapper header .menu ul a, #wrapper header .menu-header ul a {
         font-family: 'Quicksand', sans-serif;
         line-height: 1.5em;
         color: #e4e4e4;
         font-weight: lighter;
         display: inline-block;
         text-decoration: none; }
-        #wrapper header .menu ul a:hover {
+        #wrapper header .menu ul a:hover, #wrapper header .menu-header ul a:hover {
           text-decoration: underline; }
   #wrapper header #topimage {
     width: 100%;
@@ -357,6 +406,11 @@ img {
       float: right;
       width: 75%;
       /* 600px = 800*0.75 */ }
+      #wrapper article post .sticky {
+        background: #fff9c0;
+        border-top: 3px solid #d9d4a3;
+        border-bottom: 1px solid #D9D4A3;
+        padding: 1.7em; }
       #wrapper article post li {
         margin-left: 30px; }
       #wrapper article post h4 {

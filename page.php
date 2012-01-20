@@ -10,7 +10,7 @@
     	<date><?php the_date(); ?></date>
     </side>
       
-    <post>
+    <post><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <?php if ( is_front_page() ) { ?>
   		  <h4><?php the_title(); ?></h4>
   	  <?php } else { ?>	
@@ -19,15 +19,15 @@
 
       <p>
         <?php the_content(); ?>
-        <?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
+        <?php edit_post_link( __( 'Edit', 'icecap' ), '', '' ); ?>
     	</p>
-    </post>
+    </div></post>
   
   </article>
 	<?php comments_template( '', true ); ?>
 
 <?php endwhile; ?>
 
-<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
