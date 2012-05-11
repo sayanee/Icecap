@@ -42,8 +42,8 @@
   <line></line>
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
-    	<prev><?php previous_posts_link( '<img src="./wp-content/themes/Icecap/images/prev.png" />'); ?></prev>
-    	<next><?php next_posts_link('<img src="./wp-content/themes/Icecap/images/next.png" />'); ?></next>
+    	<prev> <?php prev_posts_link('<img src="'.get_template_directory_uri().'/images/prev.png" />'); ?></prev>
+    	<next> <?php next_posts_link('<img src="'.get_template_directory_uri().'/images/next.png" />'); ?></next>
   	</div>
   <?php endif; ?>
 </menu>
