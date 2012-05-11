@@ -7,24 +7,7 @@ function load_fonts() {
 add_action('wp_print_styles', 'load_fonts');
 
 
-add_custom_image_header( '', '', '' );
-register_default_headers( array(
-	'ceiling' => array(
-		'url' => '%s/images/headers/ceiling.jpg',
-		'thumbnail_url' => '%s/images/headers/ceiling-thumbnail.jpg',
-		'description' => __( 'Ceiling', 'icecap' )
-	),
-	'wheel' => array(
-		'url' => '%s/images/headers/wheel.jpg',
-		'thumbnail_url' => '%s/images/headers/wheel-thumbnail.jpg',
-		'description' => __( 'Wheel', 'icecap' )
-	),
-	'sunset' => array(
-		'url' => '%s/images/headers/sunset.jpg',
-		'thumbnail_url' => '%s/images/headers/sunset-thumbnail.jpg',
-		'description' => __( 'Sunset', 'icecap' )
-	)
-) );
+
 
 if ( ! isset( $content_width ) ) $content_width = 640;
 add_action( 'after_setup_theme', 'icecap_setup' );
@@ -151,6 +134,25 @@ if ( ! function_exists( 'icecap_admin_header_style' ) ) :
  *
  * 
  */
+
+add_custom_image_header( '', '', '' );
+register_default_headers( array(
+	'ceiling' => array(
+		'url' => '%s/images/headers/ceiling.jpg',
+		'thumbnail_url' => '%s/images/headers/ceiling-thumbnail.jpg',
+		'description' => __( 'Ceiling', 'icecap' )
+	),
+	'wheel' => array(
+		'url' => '%s/images/headers/wheel.jpg',
+		'thumbnail_url' => '%s/images/headers/wheel-thumbnail.jpg',
+		'description' => __( 'Wheel', 'icecap' )
+	),
+	'sunset' => array(
+		'url' => '%s/images/headers/sunset.jpg',
+		'thumbnail_url' => '%s/images/headers/sunset-thumbnail.jpg',
+		'description' => __( 'Sunset', 'icecap' )
+	)
+) );
 function icecap_admin_header_style() {
 ?>
 <style type="text/css">
