@@ -1,4 +1,3 @@
-<!--custom header -->
 <?php add_custom_image_header( '', '', '' );
 register_default_headers( array(
 	'ceiling' => array(

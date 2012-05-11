@@ -13,7 +13,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-
 $grey:#646464;
 $grey-text-light:#ebebeb;
 $blue:#55afb9;
@@ -21,9 +20,7 @@ $blue:#55afb9;
 $grey-bgr-dark:#787878;
 $grey-bgr-light:#dadada;
 
-@import "css/layout.css";
 @import "common";
-
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
@@ -385,11 +382,6 @@ img{ max-width:100%; height:auto; margin:10px;}
     width:100%;
     clear:both;
     
-    h3{
-      margin:20px 0px;
-      font-family: 'Quicksand', sans-serif;
-    }
-    
     #comments-nav{
       display:block;
       clear:both;
@@ -485,91 +477,61 @@ img{ max-width:100%; height:auto; margin:10px;}
     width:100%;
     clear:both;
     
-    h5{
+    h3{
       font-size: 2em; 
       margin-bottom:20px;
       color:$grey;
       font-family: 'Quicksand', sans-serif;
-    }
-    
-    .leaveComment{
-      display:block;
-      width:100%;
-      
-      .commentForm{
-        width:100%;
-        margin:0%;
-        p.loggedin, label{font-family: 'Quicksand', sans-serif;}
-        a{color:$blue;}
-        
-        .commentBox{
-          display:block;
-          width:48%;
-          float:left; 
-          margin-right:2%;   
-        }
-        .commentAuthorInfo{
-           display:block;
-           width:48%;
-           margin-left:2%;
-           float:right;
-           clear:both;
-        }
-        
-        input[type="text"], input[type="url"], input[type="email"]{
-          clear:both;
-          width:100%;
-          height:25px;
-          margin-top:0px;
-          margin-bottom:20px;
-          border: 1px solid $grey-bgr-light;
-          font-family: 'Quicksand', sans-serif; 
-          font-size:1em;
-        }
-        
-        textarea{
-          clear:both;
-          width:100%;
-          height:150px;
-          margin-top:0px;
-          margin-bottom:20px;
-          border: 1px solid $grey-bgr-light;
-          font-family: 'Quicksand', sans-serif; 
-          font-size:1em;
-        }
-        
-        textarea:focus, input:focus {
-          border: 1px solid lighten($blue, 20%);
-          outline: none;
-        }
-        
-        input.submit {
-          width:100%;
-          background-color : lighten($grey-bgr-light, 5%);
-          color : $grey;
-          font-family: 'Quicksand', sans-serif; 
-          font-size:1.3em;
-          height:40px;
-          border:none;
-          @include rounded(5px);
-          @include shading(1px, 1px, 1px, 1px, lighten($grey,20%));
-        }
-      }
-    }
+    }    
   }
   
-  label{
-    display:block;
-  }
-  
-  input[type="text"]{
+  input[type="text"], input[type="url"], input[type="email"]{
     clear:both;
-    width:100%;
+    width:50%;
     height:25px;
-    margin-top:20px;
+    margin:0px;
     border: 1px solid $grey-bgr-light;
     font-family: 'Quicksand', sans-serif; 
-    font-size:0.7em;
+    font-size:1em;
+  }
+    
+  textarea{
+    clear:both;
+    width:50%;
+    height:150px;
+    margin:0px;
+    border: 1px solid $grey-bgr-light;
+    font-family: 'Quicksand', sans-serif; 
+    font-size:1em;
+  }
+    
+  textarea:focus, input:focus {
+    border: 1px solid lighten($blue, 20%);
+    outline: none;
+  }
+    
+  input[type="submit"] {
+    width:50%;
+    background-color : lighten($grey-bgr-light, 5%);
+    color : $grey;
+    font-family: 'Quicksand', sans-serif; 
+    font-size:1.3em;
+    height:40px;
+    border:none;
+    @include rounded(5px);
+    @include shading(1px, 1px, 1px, 1px, lighten($grey,20%));
+  }
+    
+  label{
+    display:block;
+    font-family: 'Quicksand', sans-serif;
+    margin:0;
+    padding:0;
+    width:20%;
+  }
+  
+  span.required{
+    display:none;
   }
   
   textarea:focus, input:focus {
@@ -633,9 +595,8 @@ img{ max-width:100%; height:auto; margin:10px;}
       margin-left:2%;
       h6 {font-size: 1em;}
     }
-    #respond .leaveComment .commentForm{
-      .commentBox, .commentAuthorInfo{ width:100%; }
-      textarea, input[type="text"], input[type="url"], input[type="email"]{ width:100%; }
+    #respond {
+      textarea, input[type="text"], input[type="url"], input[type="email"], input[type="submit"]{ width:100%; }
     }
   }
 }
