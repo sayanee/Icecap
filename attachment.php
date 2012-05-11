@@ -52,7 +52,7 @@
 	}
 ?>
 						<p><a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
-							$attachment_size = apply_filters( 'twentyten_attachment_size', 900 );
+							$attachment_size = apply_filters( 'icecap_attachment_size', 900 );
 							echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); // filterable image width with, essentially, no limit for image height.
 						?></a></p>
 
@@ -66,7 +66,7 @@
 <?php the_content( __( 'Continue reading &rarr;', 'icecap' ) ); ?>
 <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
 
-						<?php twentyten_posted_in(); ?>
+						<?php icecap_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'icecap' ), ' ', '' ); ?>
 
 <?php comments_template(); ?>

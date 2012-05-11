@@ -1,4 +1,13 @@
-<?php add_custom_image_header( '', '', '' );
+<?php 
+
+function load_fonts() {
+    wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Quicksand');
+    wp_enqueue_style( 'googleFonts');
+}
+add_action('wp_print_styles', 'load_fonts');
+
+
+add_custom_image_header( '', '', '' );
 register_default_headers( array(
 	'ceiling' => array(
 		'url' => '%s/images/headers/ceiling.jpg',
@@ -18,9 +27,9 @@ register_default_headers( array(
 ) );
 
 if ( ! isset( $content_width ) ) $content_width = 640;
-add_action( 'after_setup_theme', 'twentyten_setup' );
+add_action( 'after_setup_theme', 'icecap_setup' );
 
-if ( ! function_exists( 'twentyten_setup' ) ):
+if ( ! function_exists( 'icecap_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -28,7 +37,7 @@ if ( ! function_exists( 'twentyten_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * To override twentyten_setup() in a child theme, add your own twentyten_setup to your child theme's
+ * To override icecap_setup() in a child theme, add your own icecap_setup to your child theme's
  * functions.php file.
  *
  * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
@@ -40,7 +49,7 @@ if ( ! function_exists( 'twentyten_setup' ) ):
  * @uses register_default_headers() To register the default custom header images provided with the theme.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since Twenty Ten 1.0
+ * 
  */
  
 function custom_comments($comment, $args, $depth) {
@@ -85,7 +94,7 @@ function custom_comments($comment, $args, $depth) {
 		    
 <?php } // end custom_comments
  
-function twentyten_setup() {
+function icecap_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
@@ -119,9 +128,9 @@ function twentyten_setup() {
 	define( 'HEADER_IMAGE', '%s/images/headers/path.jpg' );
 
 	// The height and width of your custom header. You can hook into the theme's own filters to change these values.
-	// Add a filter to twentyten_header_image_width and twentyten_header_image_height to change these values.
-	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 800 ) );
-	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 150 ) );
+	// Add a filter to icecap_header_image_width and icecap_header_image_height to change these values.
+	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'icecap_header_image_width', 800 ) );
+	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'icecap_header_image_height', 150 ) );
 
 	// We'll be using post thumbnails for custom header images on posts and pages.
 	// We want them to be 800  pixels wide by 150 pixels tall.
@@ -134,15 +143,15 @@ function twentyten_setup() {
 }
 endif;
 
-if ( ! function_exists( 'twentyten_admin_header_style' ) ) :
+if ( ! function_exists( 'icecap_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * Referenced via add_custom_image_header() in twentyten_setup().
+ * Referenced via add_custom_image_header() in icecap_setup().
  *
- * @since Twenty Ten 1.0
+ * 
  */
-function twentyten_admin_header_style() {
+function icecap_admin_header_style() {
 ?>
 <style type="text/css">
 /* Shows the same border as on front end */
@@ -167,13 +176,13 @@ endif;
  * To override this in a child theme, remove the filter and optionally add
  * your own function tied to the wp_page_menu_args filter hook.
  *
- * @since Twenty Ten 1.0
+ * 
  */
-function twentyten_page_menu_args( $args ) {
+function icecap_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'twentyten_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'icecap_page_menu_args' );
 
 /**
  * Sets the post excerpt length to 40 characters.
@@ -181,37 +190,37 @@ add_filter( 'wp_page_menu_args', 'twentyten_page_menu_args' );
  * To override this length in a child theme, remove the filter and add your own
  * function tied to the excerpt_length filter hook.
  *
- * @since Twenty Ten 1.0
+ * 
  * @return int
  */
-function twentyten_excerpt_length( $length ) {
+function icecap_excerpt_length( $length ) {
 	return 40;
 }
-add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
+add_filter( 'excerpt_length', 'icecap_excerpt_length' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
  *
- * @since Twenty Ten 1.0
+ * 
  * @return string "Continue Reading" link
  */
-function twentyten_continue_reading_link() {
+function icecap_continue_reading_link() {
 	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'icecap' ) . '</a>';
 }
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyten_continue_reading_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and icecap_continue_reading_link().
  *
  * To override this in a child theme, remove the filter and add your own
  * function tied to the excerpt_more filter hook.
  *
- * @since Twenty Ten 1.0
+ * 
  * @return string An ellipsis
  */
-function twentyten_auto_excerpt_more( $more ) {
-	return ' &hellip;' . twentyten_continue_reading_link();
+function icecap_auto_excerpt_more( $more ) {
+	return ' &hellip;' . icecap_continue_reading_link();
 }
-add_filter( 'excerpt_more', 'twentyten_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'icecap_auto_excerpt_more' );
 
 /**
  * Adds a pretty "Continue Reading" link to custom post excerpts.
@@ -219,42 +228,40 @@ add_filter( 'excerpt_more', 'twentyten_auto_excerpt_more' );
  * To override this link in a child theme, remove the filter and add your own
  * function tied to the get_the_excerpt filter hook.
  *
- * @since Twenty Ten 1.0
+ * 
  * @return string Excerpt with a pretty "Continue Reading" link
  */
-function twentyten_custom_excerpt_more( $output ) {
+function icecap_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= twentyten_continue_reading_link();
+		$output .= icecap_continue_reading_link();
 	}
 	return $output;
 }
-add_filter( 'get_the_excerpt', 'twentyten_custom_excerpt_more' );
+add_filter( 'get_the_excerpt', 'icecap_custom_excerpt_more' );
 
 /**
  * Remove inline styles printed when the gallery shortcode is used.
- *
- * Galleries are styled by the theme in Twenty Ten's style.css.
- *
- * @since Twenty Ten 1.0
+  *
+ * 
  * @return string The gallery style filter, with the styles themselves removed.
  */
-function twentyten_remove_gallery_css( $css ) {
+function icecap_remove_gallery_css( $css ) {
 	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
 }
-add_filter( 'gallery_style', 'twentyten_remove_gallery_css' );
+add_filter( 'gallery_style', 'icecap_remove_gallery_css' );
 
-if ( ! function_exists( 'twentyten_comment' ) ) :
+if ( ! function_exists( 'icecap_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own twentyten_comment(), and that function will be used instead.
+ * simply create your own icecap_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since Twenty Ten 1.0
+ * 
  */
-function twentyten_comment( $comment, $args, $depth ) {
+function icecap_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case '' :
@@ -300,13 +307,13 @@ endif;
 /**
  * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
  *
- * To override twentyten_widgets_init() in a child theme, remove the action hook and add your own
+ * To override icecap_widgets_init() in a child theme, remove the action hook and add your own
  * function tied to the init hook.
  *
- * @since Twenty Ten 1.0
+ * 
  * @uses register_sidebar
  */
-function twentyten_widgets_init() {
+function icecap_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
 		'name' => __( 'Primary Widget Area', 'icecap' ),
@@ -373,8 +380,8 @@ function twentyten_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 }
-/** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
-add_action( 'widgets_init', 'twentyten_widgets_init' );
+/** Register sidebars by running icecap_widgets_init() on the widgets_init hook. */
+add_action( 'widgets_init', 'icecap_widgets_init' );
 
 /**
  * Removes the default styles that are packaged with the Recent Comments widget.
@@ -382,21 +389,21 @@ add_action( 'widgets_init', 'twentyten_widgets_init' );
  * To override this in a child theme, remove the filter and optionally add your own
  * function tied to the widgets_init action hook.
  *
- * @since Twenty Ten 1.0
+ * 
  */
-function twentyten_remove_recent_comments_style() {
+function icecap_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 }
-add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );
+add_action( 'widgets_init', 'icecap_remove_recent_comments_style' );
 
-if ( ! function_exists( 'twentyten_posted_on' ) ) :
+if ( ! function_exists( 'icecap_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  *
- * @since Twenty Ten 1.0
+ * 
  */
-function twentyten_posted_on() {
+function icecap_posted_on() {
 	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'icecap' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
@@ -413,13 +420,13 @@ function twentyten_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'twentyten_posted_in' ) ) :
+if ( ! function_exists( 'icecap_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
  *
- * @since Twenty Ten 1.0
+ * 
  */
-function twentyten_posted_in() {
+function icecap_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {

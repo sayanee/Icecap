@@ -1,9 +1,4 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js" <?php language_attributes(); ?> lang="en"> <!--<![endif]-->
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
@@ -11,7 +6,6 @@
 
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
@@ -42,7 +36,7 @@
   				<?php
   					if ( is_singular() &&
   							has_post_thumbnail( $post->ID ) &&
-  							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
+  							( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
   							$image[1] >= HEADER_IMAGE_WIDTH ) :
   						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
   					else : ?>

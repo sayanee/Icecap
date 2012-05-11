@@ -3,8 +3,6 @@
  * The template for displaying Tag Archive pages.
  *
  * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
  */
 
 get_header(); ?>
