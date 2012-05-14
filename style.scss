@@ -248,13 +248,21 @@ dd {
   padding-left: 50px;
 }
 
-.post-edit-link{
+p.edit-post{
   margin:10px 0;
-  background-color:#ddd;
-  padding:5px;
-  @include rounded(4px);
-
 }
+a{
+  &:link, &:visited, &:hover, &:active{
+    &.post-edit-link{
+      color: darken($blue,10%); 
+      margin:10px 0;
+      background-color:#ddd;
+      padding:5px;
+      @include rounded(4px);
+    }
+  }
+}
+
 .gallery-caption {
 	color: #888;
 	margin: 0 0 12px;
@@ -395,9 +403,13 @@ article{
         font-family: 'Quicksand', sans-serif;
         color:$grey;
         font-weight: normal;
-        &:hover{
+        &:visited, &:link{
           color: $blue; 
           text-decoration: none;
+        }
+        &:hover, &:active{
+          color: $blue; 
+          text-decoration: underline;
         }
       }
     }
@@ -405,9 +417,13 @@ article{
       font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
       color:black;
       a { 
-        color: darken($blue,10%); 
-        text-decoration: none;
-        &:hover {text-decoration: underline;}
+        &:link, &:visited{
+          color: darken($blue,10%); 
+          text-decoration: none;
+        }
+        &:hover, &:active{
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -498,6 +514,15 @@ sidebar{
   } 
 }
 
+.gallery{
+  dl{
+    float:left;
+    width:150px;
+    height:150px;
+    margin: 0 10px 10px 0;
+  }
+}
+
 footer{
   text-align:right;
   margin:30px auto;
@@ -524,7 +549,6 @@ comments{
   }
 
   ul, ol, li{
-    list-style-type: none;
     clear:both;
     padding:0px;
   }
@@ -586,7 +610,12 @@ comments{
             &:hover{text-decoration: underline;}
         }
       }
-      
+      ul > li > ul > li{
+        margin-left:15px;
+      }
+      ol > li > ol > li{
+        margin-left:15px;
+      }
     }
     
     .children li{
@@ -703,9 +732,21 @@ line{
         width:100%;
         margin-top:5%;
         margin-bottom:10%;
-        #circle{margin:0; float:left;margin-right:5%;}
-        date{width:70%;float:left;text-align:left;font-size:1.2em;padding-top:4%;padding-right:3%;}
-        list{display:none;}
+        #circle{
+          margin:0; 
+          float:left;
+          margin-right:5%;
+        }
+        date{
+          width:70%;
+          float:left;
+          text-align:left;
+          font-size:1.2em;
+          padding:0 0 10px 7px;
+        }
+        list{
+          text-align:left;
+        }
       }
       post{
         width:100%;

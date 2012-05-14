@@ -28,7 +28,7 @@
 				esc_attr( __('Link to full-size image', 'icecap') ),
 				$metadata['width'],
 				$metadata['height']));} ?>
-	<?php edit_post_link( __( 'Edit', 'icecap' ), '', '' ); ?>
+	<?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
 </div><!-- .entry-meta -->
 
 <?php if ( wp_attachment_is_image() ) :

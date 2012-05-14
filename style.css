@@ -373,7 +373,11 @@ dt {
 dd {
   padding-left: 50px; }
 
-.post-edit-link {
+p.edit-post {
+  margin: 10px 0; }
+
+a:link.post-edit-link, a:visited.post-edit-link, a:hover.post-edit-link, a:active.post-edit-link {
+  color: #40929b;
   margin: 10px 0;
   background-color: #ddd;
   padding: 5px;
@@ -527,17 +531,20 @@ article {
         font-family: 'Quicksand', sans-serif;
         color: #646464;
         font-weight: normal; }
-        article post h4 a:hover {
+        article post h4 a:visited, article post h4 a:link {
           color: #55afb9;
           text-decoration: none; }
+        article post h4 a:hover, article post h4 a:active {
+          color: #55afb9;
+          text-decoration: underline; }
     article post p {
       font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
       color: black; }
-      article post p a {
+      article post p a:link, article post p a:visited {
         color: #40929b;
         text-decoration: none; }
-        article post p a:hover {
-          text-decoration: underline; }
+      article post p a:hover, article post p a:active {
+        text-decoration: underline; }
 
 nav {
   clear: both;
@@ -616,6 +623,12 @@ sidebar {
           margin-bottom: 0;
           list-style: none; }
 
+.gallery dl {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0 10px 10px 0; }
+
 footer {
   text-align: right;
   margin: 30px auto;
@@ -640,7 +653,6 @@ comments {
       comments #comments-nav a:visited {
         color: #55afb9; }
   comments ul, comments ol, comments li {
-    list-style-type: none;
     clear: both;
     padding: 0px; }
   comments .commentlist {
@@ -692,6 +704,10 @@ comments {
             color: #55afb9; }
           comments .commentlist .comment-content .comment-reply-link a:hover {
             text-decoration: underline; }
+      comments .commentlist .comment-content ul > li > ul > li {
+        margin-left: 15px; }
+      comments .commentlist .comment-content ol > li > ol > li {
+        margin-left: 15px; }
     comments .commentlist .children li {
       margin: 0px 0 0 30px;
       padding: 10px; }
@@ -837,10 +853,9 @@ line {
         float: left;
         text-align: left;
         font-size: 1.2em;
-        padding-top: 4%;
-        padding-right: 3%; }
+        padding: 0 0 10px 7px; }
       #wrapper article side list {
-        display: none; }
+        text-align: left; }
     #wrapper article post {
       width: 100%; }
       #wrapper article post h4 {
