@@ -3,6 +3,7 @@
   -o-border-radius: $size; 
   -webkit-border-radius: $size; 
   border-radius: $size; 
+  -ms-border-radius: 25px;
 }
 
 @mixin transition($type, $time, $timing){

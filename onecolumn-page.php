@@ -17,7 +17,7 @@ get_header(); ?>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
-				<?php edit_post_link( __( 'Edit', 'icecap' ), '', '' ); ?>
+				<?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
 
 				<?php comments_template( '', true ); ?>
 

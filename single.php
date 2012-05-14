@@ -26,27 +26,23 @@
       
       <p>
         <?php the_content(); ?>
-        <?php edit_post_link( __( 'Edit', 'icecap' ), '', '' ); ?>
+        <?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
   		</p>
 		</div></post>
     
 	</article>
 	
-	<line></line>
+	<nav class="clearfix">
+    <line></line>
+    <div id="button" class="aligncenter">
+      <prev> <?php previous_post_link('<img src="'.get_template_directory_uri().'/images/prev.png" />'); ?></prev>
+      <next> <?php next_post_link('<img src="'.get_template_directory_uri().'/images/next.png" />'); ?></next>
+    </div>
+  </nav>
 	  
 	<?php comments_template( '', true ); ?>
 	
 <?php endwhile; // end of the loop. ?>
-
-<menu class="clearfix">
-  <line></line>
-  <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-    <div id="button" class="aligncenter">
-    	<prev> <?php prev_posts_link('<img src="'.get_template_directory_uri().'/images/prev.png" />'); ?></prev>
-    	<next> <?php next_posts_link('<img src="'.get_template_directory_uri().'/images/next.png" />'); ?></next>
-  	</div>
-  <?php endif; ?>
-</menu>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

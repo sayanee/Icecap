@@ -19,7 +19,7 @@
 
       <p>
         <?php the_content(); ?>
-        <?php edit_post_link( __( 'Edit', 'icecap' ), '', '' ); ?>
+        <?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
     	</p>
     </div></post>
   
