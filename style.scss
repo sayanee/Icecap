@@ -219,6 +219,42 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   color:black;
 }
 
+blockquote{
+  background-color: #DDD;
+  margin-left: 20px;
+  border-left: 4px solid #666;
+  p{
+    margin-left: 10px;
+  }
+}
+
+table{
+  tr:nth-child(2n){
+    background-color:#ddd;
+  }
+  td, th{
+    padding:10px;
+    border:1px solid #999;
+  }
+  th{
+    font-weight:bold;
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  padding-left: 50px;
+}
+
+.post-edit-link{
+  margin:10px 0;
+  background-color:#ddd;
+  padding:5px;
+  @include rounded(4px);
+
+}
 .gallery-caption {
 	color: #888;
 	margin: 0 0 12px;
@@ -374,7 +410,6 @@ article{
         &:hover {text-decoration: underline;}
       }
     }
-    ul,ol{margin-top:-10px;margin-bottom:10px;}
   }
 }
 

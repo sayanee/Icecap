@@ -7,6 +7,9 @@
   </footer>
 
   </div>
+
+  <script src="<?php bloginfo('template_url'); ?>/fitvid.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/script.js"></script>
       
 </body>
 </html>

@@ -16,6 +16,7 @@
   		wp_enqueue_script( 'comment-reply' );
   	wp_head();
   ?>
+
 </head>
 
 <body <?php body_class(); ?>>

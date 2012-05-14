@@ -352,6 +352,37 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
   color: black; }
 
+blockquote {
+  background-color: #DDD;
+  margin-left: 20px;
+  border-left: 4px solid #666; }
+  blockquote p {
+    margin-left: 10px; }
+
+table tr:nth-child(2n) {
+  background-color: #ddd; }
+table td, table th {
+  padding: 10px;
+  border: 1px solid #999; }
+table th {
+  font-weight: bold; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  padding-left: 50px; }
+
+.post-edit-link {
+  margin: 10px 0;
+  background-color: #ddd;
+  padding: 5px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -ms-border-radius: 25px; }
+
 .gallery-caption {
   color: #888;
   margin: 0 0 12px; }
@@ -445,6 +476,7 @@ article {
       -o-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%;
+      -ms-border-radius: 25px;
       margin-top: 0%;
       margin-bottom: 15%;
       margin-left: auto;
@@ -506,9 +538,6 @@ article {
         text-decoration: none; }
         article post p a:hover {
           text-decoration: underline; }
-    article post ul, article post ol {
-      margin-top: -10px;
-      margin-bottom: 10px; }
 
 nav {
   clear: both;
@@ -719,6 +748,7 @@ input[type="submit"] {
   -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  -ms-border-radius: 25px;
   -webkit-box-shadow: 1px 1px 1px 1px #979797;
   -moz-box-shadow: 1px 1px 1px 1px #979797;
   box-shadow: 1px 1px 1px 1px #979797; }
@@ -821,7 +851,8 @@ line {
       -moz-border-radius: 32px;
       -o-border-radius: 32px;
       -webkit-border-radius: 32px;
-      border-radius: 32px; }
+      border-radius: 32px;
+      -ms-border-radius: 25px; }
     #wrapper sidebar ul.xoxo li {
       width: 100%;
       float: left; }
