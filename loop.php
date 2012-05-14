@@ -51,12 +51,10 @@
 
 <nav class="clearfix">
   <line></line>
-  
-  
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">
-    	<prev><?php next_posts_link( ''); ?></prev>
-    	<next><?php previous_posts_link(''); ?></next>
+    	<prev><?php next_posts_link('<img src="'.get_template_directory_uri().'/images/prev.png" />'); ?></prev>
+    	<next><?php previous_posts_link('<img src="'.get_template_directory_uri().'/images/next.png" />'); ?></next>
   	</div>
   <?php endif; ?>
 </nav>
