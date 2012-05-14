@@ -1,5 +1,6 @@
+  <sidebar>	
   <?php get_sidebar( 'footer' ); ?>
-
+</sidebar>
   <footer>
     <line></line>
     <p>made with wacky thinking</p>

@@ -16,12 +16,12 @@
 * Ice Cap is distributed under the terms of the GNU GPL
 */
 
-$grey:#646464;
-$grey-text-light:#ebebeb;
-$blue:#55afb9;
+$grey: #646464;
+$grey-text-light: #ebebeb;
+$blue: #55afb9;
 
-$grey-bgr-dark:#787878;
-$grey-bgr-light:#dadada;
+$grey-bgr-dark: #787878;
+$grey-bgr-light: #dadada;
 
 @import "common";
 
@@ -40,10 +40,19 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 a { 
   color: $blue; 
   text-decoration: none;
-  &:visited { color: $blue; }
-  &:hover { color: $blue; text-decoration: underline;}
-  &:focus { outline: 0; }
-  &:hover, &:active { outline: 0; }
+  &:visited { 
+    color: $blue; 
+  }
+  &:hover { 
+    color: $blue; 
+    text-decoration: underline;
+  }
+  &:focus { 
+    outline: 0; 
+  }
+  &:hover, &:active { 
+    outline: 0; 
+  }
 }
 
 abbr[title] { border-bottom: 1px dotted; }
@@ -53,7 +62,7 @@ dfn { font-style: italic; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 ins { background: #ff9; color: #000; text-decoration: none; }
 mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
-pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre, code, kbd, samp { font-family: monospace, monospace; font-family: 'courier new', monospace; font-size: 1em; }
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 q { quotes: none; }
 q:before, q:after { content: ""; content: none; }
@@ -88,12 +97,12 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 .clearfix:after {
+  clear: both;
 	content: ".";
 	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
 	height: 0;
+  line-height: 0;
+	visibility: hidden;
 }
  
 .clearfix {
@@ -108,14 +117,35 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
-.aligncenter { display:block; margin:0 auto }
-.alignleft { float:left }
-.alignright { float:right }
-.wp-caption { border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+.wp-caption { 
+  border: 1px solid #666; 
+  text-align: center; 
+  background: #ccc; 
+  padding: 10px; 
+  margin: 10px; 
+}
 
-div, ul, li { position:relative } 
-br.clear { clear:both; display:block; height:1px; margin:-1px 0 0 0 } 
-li#theme-switcher { background:#fff; border:10px solid red; padding:20px; position:fixed; top:0; right:0 }
+div, ul, li { 
+  position: relative; 
+} 
+br.clear { 
+  clear: both; 
+  display: block; 
+  height: 1px; 
+  margin: -1px 0 0 0; 
+}
+
+li#theme-switcher { 
+  background: #fff; 
+  border: 10px solid red; 
+  padding: 20px; 
+  position: fixed; 
+    top: 0; 
+    right: 0;
+}
 
 
 /* =WordPress Core
@@ -201,9 +231,6 @@ a img.aligncenter {
 }
 
 
-
-
-
 body{
   @include transition (all, 0.2s, ease-out);
 }
@@ -230,14 +257,14 @@ blockquote{
 
 table{
   tr:nth-child(2n){
-    background-color:#ddd;
+    background-color: #ddd;
   }
   td, th{
-    padding:10px;
-    border:1px solid #999;
+    padding: 10px;
+    border: 1px solid #999;
   }
   th{
-    font-weight:bold;
+    font-weight: bold;
   }
 }
 
@@ -249,16 +276,17 @@ dd {
 }
 
 p.edit-post{
-  margin:10px 0;
+  margin: 10px 0;
 }
 a{
   &:link, &:visited, &:hover, &:active{
     &.post-edit-link{
-      color: darken($blue,10%); 
-      margin:10px 0;
-      background-color:#ddd;
-      padding:5px;
       @include rounded(4px);
+      background-color: #ddd;
+      color: darken($blue,10%); 
+      margin: 10px 0;
+      padding: 5px;
+      
     }
   }
 }
@@ -271,101 +299,123 @@ a{
   background-color: #eee;
 }
 
-p{font-size:1.2em; line-height:1.8em; margin-bottom:1em; color:$grey;}
-img{ max-width:100%; height:auto; margin:10px;}
+p{
+  font-size: 1.2em; 
+  line-height: 1.8em; 
+  margin-bottom: 1em; 
+  color: $grey;
+}
+img{ 
+  max-width: 100%; 
+  height: auto; 
+  margin: 10px;
+}
 
 #wrapper{
-  width:800px;
-  margin:0 auto;
+  width: 800px;
+  margin: 0 auto;
 }
 
 header{
   h1{
-    font-size:6em; 
+    font-size: 6em; 
     text-align: center; 
     a{
-      color:$grey;
-      font-weight: lighter;
+      color: $grey;
       font-family: 'Quicksand', sans-serif;
+      font-weight: lighter;
       text-decoration: none;
       &:hover{ color: $blue; }
     }
   } 
   h2{
-    font-size:1.5em; 
-    color:$grey;
-    text-align: center;
-    margin-top:10px;
+    color: $grey;
     font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em; 
+    margin-top: 10px;
+    text-align: center;
   }  
   .menu, .menu-header{
-    font-size:1.5em; 
-    width:98%;
-    clear:both;
+    font-size: 1.5em; 
+    width: 98%;
+    clear: both;
     background-color: lighten($grey,10%);
-    margin-top:30px;
-    padding:1%;
+    margin-top: 30px;
+    padding: 1%;
     ul{
-      list-style:none;
-      text-align:center;
-      width:100%;
-      margin:0;
-      padding:0;
-      font-size:1em;
-      li{ margin:20px; display:inline; }
+      font-size: 1em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      
+      li{ 
+        margin: 20px; 
+        display: inline; 
+      }
       a{
+        color: lighten($grey, 50%);
+        display: inline-block;
         font-family: 'Quicksand', sans-serif;
-        line-height:1.5em;
-        color:lighten($grey, 50%);
         font-weight: lighter;
-        display:inline-block;
+        line-height: 1.5em;
         text-decoration: none;
-        &:hover {text-decoration: underline; }
+        &:hover {
+          text-decoration: underline; 
+        }
       }
     }
   }
   #topimage{
-    width:100%;
-    margin:0 auto;
-    padding:0;
-    img{margin:0px;}
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    img{
+      margin: 
+      0px;
+    }
   }
 }
     
 article{
-  display:block;
-  width:100%;
-  margin:40px 0px;
-  clear:both;
+  clear: both;
+  display: block;
+  margin: 40px 0px;
+  width: 100%;
+  
   side{
-    display:block;
-    float:left;
-    width:23%; /* 200px = 800*0.25 */
-    padding:0% 1%;
+    color: $grey;
+    display: block;
+    float: left;
     font-weight: normal;
-    color:$grey;
+    padding: 0% 1%;
+    width: 23%; // 200px = 800*0.25
     
     #circle {
-      background: lighten($grey, 45%);
-      font-family: 'Quicksand', sans-serif;
-      width: 65px;
-      height: 65px;
       @include rounded(50%);
-      margin-top:0%;
-      margin-bottom:15%;
-      margin-left:auto;
-      margin-right:auto;
-      text-align:center;
-      font-size: 2em;      
-      div{ padding:25%;}
+      background-color: lighten($grey, 45%);
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2em; 
+      height: 65px;
+      width: 65px;
+      margin-top: 0%;
+      margin-bottom: 15%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+           
+      div{ 
+        padding:25%;
+      }
     }
     date{
       font-family: 'Quicksand', sans-serif;
-      display:block;
+      display: block;
       text-align: center;
-      font-size:1em;
-      width:60%;
-      margin:0 auto;
+      font-size: 1em;
+      width: 60%;
+      margin: 0 auto;
       font-size: 1.3em;
     }
     
@@ -377,9 +427,12 @@ article{
       font-size: 1em;
     }
     a{
-      color:darken($grey, 40%);
+      color: darken($grey, 40%);
       font-family: 'Quicksand', sans-serif;
-      &:hover{color: $blue; text-decoration: none;}
+      &:hover{
+        color: $blue; 
+        text-decoration: none;
+      }
     }
   }
   post{
@@ -430,11 +483,11 @@ article{
 }
 
 nav{
-  clear:both;
-  height:40px;
-  width:100%;
-  padding:0px 0;
-  text-align:center;
+  clear: both;
+  height: 40px;
+  width: 100%;
+  padding: 0px 0;
+  text-align: center;
    a { color: $blue; text-decoration: none;
       &:visited { color: $blue; }
       &:hover { color: $blue; text-decoration: underline;}
@@ -510,6 +563,11 @@ sidebar{
           list-style: none;
         }          
       }
+      input[type="text"]#s{
+        width:100%;
+        font-size: 0.7em;
+        padding: 0.2em;
+      }
     }
   } 
 }
@@ -523,11 +581,19 @@ sidebar{
   }
 }
 
+#wp-calendar{
+  font-size:0.5em;
+  td{
+    padding:5px;
+  }
+}
 footer{
   text-align:right;
   margin:30px auto;
   width:100%;
-  p{font-family: 'Quicksand', sans-serif; padding:10px 0px;
+  p{
+    font-family: 'Quicksand', sans-serif; 
+    padding:10px 0px;
   }
 }
 
@@ -758,6 +824,7 @@ line{
     sidebar ul.xoxo li{
       width: 100%;
       float: left;
+
     }
     comments .commentlist .comment-content {
       margin-left:2%;
