@@ -3,7 +3,6 @@
 * Description: White, Minimal & Responsive
 * Author: Sayanee
 * Author URI: http://sayan.ee/
-* Theme URI: http://blog.sayan.ee/download-my-new-wordpress-theme-icecap/
 * Version: 1.2
 * Tags: one-column, flexible-width, white, custom-header, sticky-post
 * License: GNU General Public License v2.0
@@ -335,38 +334,7 @@ header{
     margin-top: 10px;
     text-align: center;
   }  
-  .menu, .menu-header{
-    font-size: 1.5em; 
-    width: 98%;
-    clear: both;
-    background-color: lighten($grey,10%);
-    margin-top: 30px;
-    padding: 1%;
-    ul{
-      font-size: 1em;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      width: 100%;
-      
-      li{ 
-        margin: 20px; 
-        display: inline; 
-      }
-      a{
-        color: lighten($grey, 50%);
-        display: inline-block;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: lighter;
-        line-height: 1.5em;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline; 
-        }
-      }
-    }
-  }
+  
   #topimage{
     margin: 0 auto;
     padding: 0;
@@ -377,6 +345,69 @@ header{
     }
   }
 }
+
+.menu, .menu-header{
+  clear: both;
+  background-color: lighten($grey,10%);
+  margin-top: 30px;
+  padding: 1%;
+  font-size: 1.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width:100%;
+  
+  li{ 
+    margin: 5px; 
+    display: inline; 
+  }
+  a{
+    color: lighten($grey, 50%);
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 5px;
+    padding: 2px 5px;
+    &:hover {
+      text-decoration: none;
+      background-color:white;
+      color:  lighten($grey,10%);
+      @include rounded(4px);
+    }
+  }
+}
+
+.children{
+  background:#fff; 
+  list-style:none;
+  position:absolute;
+  left:-9999px; 
+  z-index:100000;
+}
+.children li{
+  padding-top:1px;
+  float:none;
+}
+.children a{
+  white-space:nowrap;
+}
+.menu li:hover ul.children{ 
+  // Display the dropdown on hover
+  left:0; 
+}
+.menu li:hover a{ 
+  text-decoration:none;
+}
+.menu li:hover ul a{ 
+  text-decoration:none;
+}
+.menu li:hover ul li a:hover{ 
+  background:#333;
+}
+
     
 article{
   clear: both;
