@@ -16,12 +16,10 @@ This is a [Wordpress Theme](http://wordpress.org/) that is White, Minimal and Re
 
 ##to fix:
 
-* '''Menu''' design issues: http://screencast.com/t/5uRh2TcL
 * '''Single image gallery''' post: image shifted in left side with footer.
  check http://screencast.com/t/TthelI0At0e
  * Need next and previous image gallery link on single image gallery post.
- * '''Many Trackbacks'''-> post do't display pingback comment. check
- http://screencast.com/t/CIJXIfd3N
+ 
  * '''404page'''-> need style for 404page. check
  http://screencast.com/t/RUhfbSs1Gi
  * '''IE7 and IE8 menu issues'''-> check http://screencast.com/t/UerzCTrXK
@@ -29,6 +27,9 @@ This is a [Wordpress Theme](http://wordpress.org/) that is White, Minimal and Re
 
 ##done:
 
+* '''Many Trackbacks'''-> post do't display pingback comment. check
+ http://screencast.com/t/CIJXIfd3N
+* '''Menu''' design issues: http://screencast.com/t/5uRh2TcL
 * '''DOCTYPE''' write in capital letter
  * '''wp_footer()''' – immediately before </body>
  * '''Style.css'''-> Please follow coding standards. check

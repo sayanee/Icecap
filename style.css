@@ -706,6 +706,7 @@ article post .sticky {
   border-top: 3px solid #d9d4a3;
   border-bottom: 1px solid #D9D4A3;
   padding: 1.7em;
+  margin-bottom: 30px;
 }
 article post li {
   margin-left: 30px;
@@ -784,8 +785,7 @@ nav next a {
 }
 nav #button {
   width: 100px;
-  margin: 0 auto;
-  margin-top: -25px;
+  margin: -45px auto 0 auto;
 }
 
 line {
@@ -794,6 +794,7 @@ line {
   height: 4px;
   background-color: #dadada;
   clear: both;
+  margin-bottom: 20px;
 }
 
 sidebar {
@@ -893,6 +894,7 @@ comments .commentlist {
   display: block;
   width: 100%;
   margin: 20px 0px;
+  overflow: hidden;
 }
 comments .commentlist comment {
   display: block;
@@ -973,6 +975,10 @@ comments .commentlist .depth-4 {
 }
 comments .commentlist .depth-5 {
   background-color: #e0e0e0;
+}
+
+.pingback p {
+  clear: both;
 }
 
 #respond {

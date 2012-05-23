@@ -44,5 +44,7 @@
 	
 <?php endwhile; // end of the loop. ?>
 
+<line></line>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

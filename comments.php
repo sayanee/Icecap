@@ -20,6 +20,12 @@
       <?php wp_list_comments(array('avatar_size' => '80', 'type' => 'comment', 'callback' => 'custom_comments')); ?>
   	</ol>
 
+    <?php if ( ! empty($comments_by_type['pings']) ) : ?>
+      <h2 id="pings">Trackbacks/Pingbacks</h2>
+
+      <ol class="commentlist"><?php wp_list_comments('type=pings'); ?></ol>
+    <?php endif; ?>
+
   	<div id="comments-nav" class="clearfix">
   		<div class="alignleft"><?php previous_comments_link() ?></div>
   		<div class="alignright"><?php next_comments_link() ?></div>

@@ -23,6 +23,7 @@ comments{
     display:block;
     width:100%;
     margin:20px 0px;
+    overflow:hidden;
     
     comment{
       display:block;
@@ -95,6 +96,10 @@ comments{
     .depth-4{background-color: darken(white, 9%);}
     .depth-5{background-color: darken(white, 12%);}
   }
+}
+
+.pingback p{
+  clear:both;
 }
 
 #respond{
