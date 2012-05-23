@@ -19,7 +19,6 @@
       		<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
       	<?php endif; ?>
 
-      	/per person
     	</p>
 
     	<?php comments_template( '', true ); ?>

@@ -5,8 +5,11 @@
 @import "compass/css3";
 @import "compass/utilities/general/clearfix";
 
+//ice cap theme variables
 @import "color";
+@import "font";
 
+//resets and wp core classes
 @import "reset";
 @import "wpcore";
 
@@ -61,7 +64,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   border: 0; 
   font-weight: normal; 
   font-style: normal; 
-  font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-family: $proxima;
   color:black;
 }
 
@@ -74,25 +77,7 @@ blockquote{
   }
 }
 
-table{
-  tr:nth-child(2n){
-    background-color: #ddd;
-  }
-  td, th{
-    padding: 10px;
-    border: 1px solid #999;
-  }
-  th{
-    font-weight: bold;
-  }
-}
-
-dt {
-  font-weight: bold;
-}
-dd {
-  padding-left: 50px;
-}
+@import "table";
 
 p.edit-post{
   margin: 10px 0;
@@ -135,245 +120,12 @@ img{
   margin: 0 auto;
 }
 
-header{
-  h1{
-    font-size: 6em; 
-    text-align: center; 
-    a{
-      color: $grey;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: lighter;
-      text-decoration: none;
-      &:hover{ color: $blue; }
-    }
-  } 
-  h2{
-    color: $grey;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.5em; 
-    margin-top: 10px;
-    text-align: center;
-  }  
-  
-  #topimage{
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    img{
-      margin: 
-      0px;
-    }
-  }
-}
+@import "header";
+@import "article";
+@import "nav";    
 
-.menu, .menu-header{
-  clear: both;
-  background-color: lighten($grey,10%);
-  margin-top: 30px;
-  padding: 1%;
-  font-size: 1.5em;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  width:100%;
-  
-  li{ 
-    margin: 5px; 
-    display: inline; 
-  }
-  a{
-    color: lighten($grey, 50%);
-    display: inline-block;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: lighter;
-    line-height: 1.5em;
-    text-decoration: none;
-    margin: 5px;
-    padding: 2px 5px;
-    &:hover {
-      text-decoration: none;
-      background-color:white;
-      color:  lighten($grey,10%);
-      @include border-radius(4px);
-    }
-  }
-}
 
-.children{
-  background:#fff; 
-  list-style:none;
-  position:absolute;
-  left:-9999px; 
-  z-index:100000;
-}
-.children li{
-  padding-top:1px;
-  float:none;
-}
-.children a{
-  white-space:nowrap;
-}
-.menu li:hover ul.children{ 
-  // Display the dropdown on hover
-  left:0; 
-}
-.menu li:hover a{ 
-  text-decoration:none;
-}
-.menu li:hover ul a{ 
-  text-decoration:none;
-}
-.menu li:hover ul li a:hover{ 
-  background:#333;
-}
 
-    
-article{
-  clear: both;
-  display: block;
-  margin: 40px 0px;
-  width: 100%;
-  
-  side{
-    color: $grey;
-    display: block;
-    float: left;
-    font-weight: normal;
-    padding: 0% 1%;
-    width: 23%; // 200px = 800*0.25
-    
-    #circle {
-      @include border-radius(50%);
-      background-color: lighten($grey, 45%);
-      font-family: 'Quicksand', sans-serif;
-      font-size: 2em; 
-      height: 65px;
-      width: 65px;
-      margin-top: 0%;
-      margin-bottom: 15%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-           
-      div{ 
-        padding:25%;
-      }
-    }
-    date{
-      font-family: 'Quicksand', sans-serif;
-      display: block;
-      text-align: center;
-      font-size: 1em;
-      width: 60%;
-      margin: 0 auto;
-      font-size: 1.3em;
-    }
-    
-    list{
-      display:block;
-      text-align:center;
-      width:60%;
-      margin:10px auto;
-      font-size: 1em;
-    }
-    a{
-      color: darken($grey, 40%);
-      font-family: 'Quicksand', sans-serif;
-      &:hover{
-        color: $blue; 
-        text-decoration: none;
-      }
-    }
-  }
-  post{
-    display:block;
-    float:right;
-    width:75%; /* 600px = 800*0.75 */  
-    .sticky {
-      background: #fff9c0;
-      border-top: 3px solid #d9d4a3;
-      border-bottom: 1px solid #D9D4A3;
-      padding: 1.7em;
-    } 
-    li{margin-left:30px;}
-    h4{
-      font-family: 'Quicksand', sans-serif;
-      font-size:2.5em; 
-      font-weight: normal; 
-      margin-bottom:30px; 
-      color:lighten($grey, 20%);
-      a{
-        font-family: 'Quicksand', sans-serif;
-        color:$grey;
-        font-weight: normal;
-        &:visited, &:link{
-          color: $blue; 
-          text-decoration: none;
-        }
-        &:hover, &:active{
-          color: $blue; 
-          text-decoration: underline;
-        }
-      }
-    }
-    p{
-      font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
-      color:black;
-      a { 
-        &:link, &:visited{
-          color: darken($blue,10%); 
-          text-decoration: none;
-        }
-        &:hover, &:active{
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-nav{
-  clear: both;
-  height: 40px;
-  width: 100%;
-  padding: 0px 0;
-  text-align: center;
-   a { color: $blue; text-decoration: none;
-      &:visited { color: $blue; }
-      &:hover { color: $blue; text-decoration: underline;}
-    }
-  
-  prev, next{
-    display:block;
-    background-repeat: no-repeat;
-    height:45px;
-    width:45px;
-    float:left;
-    img{
-      margin:0;
-    }
-  }
-  
-  prev a{
-      display:block;
-      background:url(images/prev.png) no-repeat;
-      height:45px;
-      width:45px;
-  }
-  next a{
-      display:block;
-      background:url(images/next.png) no-repeat;
-      height:45px;
-      width:45px;
-  }
-  
-  #button{
-    width:100px;
-    margin:0 auto;
-    margin-top:-25px;
-  }
-}
 
 sidebar{
   clear:both;
@@ -399,7 +151,7 @@ sidebar{
       &:nth-child(3n){ margin-right:0%;}
       h3, label{
         margin-bottom:15px;
-        font-family: 'Quicksand', sans-serif;
+        font-family: $quicksand;
         color:$grey;
       }
               
@@ -438,15 +190,7 @@ sidebar{
     padding:5px;
   }
 }
-footer{
-  text-align:right;
-  margin:30px auto;
-  width:100%;
-  p{
-    font-family: 'Quicksand', sans-serif; 
-    padding:10px 0px;
-  }
-}
+@import "footer";
 
 comments{
   display:block;
@@ -491,7 +235,7 @@ comments{
         margin-top:5px;
         font-size: 1em;
         a{
-          font-family: 'Quicksand', sans-serif;
+          font-family: $quicksand;
           color:$grey;
           text-decoration: none;
           &:hover{color:$blue;}
@@ -556,7 +300,7 @@ comments{
     font-size: 2em; 
     margin-bottom:20px;
     color:$grey;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $quicksand;
   }    
 }
 
@@ -566,7 +310,7 @@ input[type="text"], input[type="url"], input[type="email"]{
   height:25px;
   margin:0px;
   border: 1px solid $grey-bgr-light;
-  font-family: 'Quicksand', sans-serif; 
+  font-family: $quicksand; 
   font-size:1em;
 }
   
@@ -576,7 +320,7 @@ textarea{
   height:150px;
   margin:0px;
   border: 1px solid $grey-bgr-light;
-  font-family: 'Quicksand', sans-serif; 
+  font-family: $quicksand; 
   font-size:1em;
 }
   
@@ -589,7 +333,7 @@ input[type="submit"] {
   width:50%;
   background-color : lighten($grey-bgr-light, 5%);
   color : $grey;
-  font-family: 'Quicksand', sans-serif; 
+  font-family: $quicksand; 
   font-size:1.3em;
   height:40px;
   border:none;
@@ -599,7 +343,7 @@ input[type="submit"] {
   
 label{
   display:block;
-  font-family: 'Quicksand', sans-serif;
+  font-family: $quicksand;
   margin:0;
   padding:0;
   width:20%;
@@ -622,94 +366,6 @@ line{
   clear:both;
 }
 
-
-
-/* ==|== non-semantic helper classes ======================================== */
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
-.ir br { display: none; }
-.hidden { display: none !important; visibility: hidden; }
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-.invisible { visibility: hidden; }
-
-/* ==|== media queries ====================================================== */
-@media screen and (max-width: 800px) {
-  #wrapper{ width:90%;}
-}
-
-@media screen and (max-width: 600px) {
-  #wrapper{ 
-    header {
-      h1{font-size: 3em;}
-      .menu {font-size:1.2em; }
-    }
-    width:90%;
-    article {
-      side{
-        width:100%;
-        margin-top:5%;
-        margin-bottom:10%;
-        #circle{
-          margin:0; 
-          float:left;
-          margin-right:5%;
-        }
-        date{
-          width:70%;
-          float:left;
-          text-align:left;
-          font-size:1.2em;
-          padding:0 0 10px 7px;
-        }
-        list{
-          text-align:left;
-        }
-      }
-      post{
-        width:100%;
-        h4{font-size:2em;}
-        p{font-size: 1em;}
-      }
-      #circle{@include border-radius(32px);}
-    }
-    sidebar ul.xoxo li{
-      width: 100%;
-      float: left;
-
-    }
-    comments .commentlist .comment-content {
-      margin-left:2%;
-      h6 {font-size: 1em;}
-    }
-    #respond {
-      textarea, input[type="text"], input[type="url"], input[type="email"], input[type="submit"]{ width:100%; }
-    }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #wrapper article side date{padding-top:6%}  
-}
-
-
-
-
-
-
-
-/* ==|== print styles ======================================================= */
- 
-@media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; }
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-}
+@import "nonsemantic";
+@import "responsive"; 
+@import "print";
