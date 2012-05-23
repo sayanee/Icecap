@@ -17,15 +17,15 @@ header{
     margin: 10px;
     text-align: center;
   }  
-  
-  #topimage{
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    img{
-      margin: 
-      0px;
-    }
+}
+
+#topimage{
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  img{
+    margin: 
+    0px;
   }
 }
 
@@ -75,6 +75,10 @@ header{
   left:-9999px; 
   z-index:100000;
   margin: -8px 0 0 5px;
+  display:block;
+  border-right: 1px solid lighten($grey, 40%);
+  border-left: 1px solid lighten($grey, 40%);
+  border-bottom: 1px solid lighten($grey, 40%);
 }
 .children li{
   padding:0;
@@ -83,6 +87,10 @@ header{
 }
 .children a{
   white-space:nowrap;
+}
+.children ul{
+  margin-left:0;
+  border: none;
 }
 .menu li:hover ul.children{ 
   // Display the dropdown on hover
@@ -95,5 +103,5 @@ header{
   text-decoration:none;
 }
 .menu li:hover ul li a:hover{ 
-  background:#333;
+  text-decoration: underline;
 }

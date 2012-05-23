@@ -1,0 +1,39 @@
+body{
+  @include single-transition(all, 0.2s, ease-out);
+}
+
+#wrapper{
+  width: 800px;
+  margin: 0 auto;
+}
+
+div, ul, li { 
+  position: relative; 
+} 
+
+br.clear { 
+  clear: both; 
+  display: block; 
+  height: 1px; 
+  margin: -1px 0 0 0; 
+}
+
+li#theme-switcher { 
+  background: #fff; 
+  border: 10px solid red; 
+  padding: 20px; 
+  position: fixed; 
+    top: 0; 
+    right: 0;
+}
+
+img{ 
+  max-width: 100%; 
+  height: auto; 
+  margin: 10px;
+}
+
+
+
+::-moz-selection { background: lighten($blue, 15%); color: #000; text-shadow: none; }
+::selection { background: lighten($blue, 15%);  color: #000; text-shadow: none; }

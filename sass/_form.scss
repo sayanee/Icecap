@@ -1,0 +1,54 @@
+
+input{
+  clear:both;
+  width:50%;
+  height:25px;
+  margin:0px;
+  border: 1px solid $grey-bgr-light;
+  font-family: $quicksand; 
+  font-size:1em;
+}
+  
+textarea{
+  clear:both;
+  width:50%;
+  height:150px;
+  margin:0px;
+  border: 1px solid $grey-bgr-light;
+  font-family: $quicksand; 
+  font-size:1em;
+}
+  
+textarea:focus, input:focus {
+  border: 1px solid lighten($blue, 20%);
+  outline: none;
+}
+  
+input[type="submit"] {
+  width:50%;
+  background-color : lighten($grey-bgr-light, 5%);
+  color : $grey;
+  font-family: $quicksand; 
+  font-size:1.3em;
+  height:40px;
+  border:none;
+  @include border-radius(5px);
+  @include box-shadow(lighten($grey,20%) 2px 2px 3px);
+}
+  
+label{
+  display:block;
+  font-family: $quicksand;
+  margin:0;
+  padding:0;
+  width:20%;
+}
+
+span.required{
+  display:none;
+}
+
+textarea:focus, input:focus {
+  border: 1px solid lighten($blue, 20%);
+  outline: none;
+}

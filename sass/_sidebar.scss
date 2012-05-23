@@ -1,0 +1,54 @@
+sidebar{
+  clear:both;
+  width:100%;
+  margin:20px 0;
+  
+  ul.xoxo{
+    width:100%;
+    list-style-type: none;
+    a { 
+      color: $blue; text-decoration: none;
+      &:visited { color: $blue; }
+      &:hover { color: $blue; text-decoration: underline;}
+    }
+    
+    li{
+      width: 30%;
+      float: left;
+      margin-left:0;
+      margin-right:5%;
+      margin-bottom:5%;
+      font-size:2em; /* each sidebar heading */
+      &:nth-child(3n){ margin-right:0%;}
+      h3, label{
+        margin-bottom:15px;
+        font-family: $quicksand;
+        color:$grey;
+      }
+              
+      ul {
+        width:100%;
+        li{
+          font-size:0.6em;
+          width:100%; /*each sidebar's list items*/
+          margin-left:2px;
+          margin-top:0;
+          margin-bottom:0;
+          list-style: none;
+        }          
+      }
+      input[type="text"]#s{
+        width:100%;
+        font-size: 0.7em;
+        padding: 0.2em;
+      }
+    }
+  } 
+}
+
+#wp-calendar{
+  font-size:0.5em;
+  td{
+    padding:5px;
+  }
+}
