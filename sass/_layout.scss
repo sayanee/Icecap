@@ -30,10 +30,7 @@ li#theme-switcher {
 img{ 
   max-width: 100%; 
   height: auto; 
-  margin: 10px;
 }
-
-
 
 ::-moz-selection { background: lighten($blue, 15%); color: #000; text-shadow: none; }
 ::selection { background: lighten($blue, 15%);  color: #000; text-shadow: none; }

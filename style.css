@@ -3,7 +3,7 @@
 * Description: White, Minimal & Responsive
 * Author: Sayanee
 * Author URI: http://sayan.ee/
-* Version: 1.3
+* Version: 1.4
 * Tags: one-column, flexible-width, white, custom-header, sticky-post
 * License: GNU General Public License v2.0
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -356,7 +356,6 @@ li#theme-switcher {
 img {
   max-width: 100%;
   height: auto;
-  margin: 10px;
 }
 
 ::-moz-selection {
@@ -874,6 +873,7 @@ sidebar ul.xoxo li input[type="text"]#s {
   width: 150px;
   height: 150px;
   margin: 0 10px 10px 0;
+  overflow: hidden;
 }
 
 comments {
@@ -1010,7 +1010,7 @@ footer {
 }
 footer p {
   font-family: "Quicksand" Helvetica Neue, sans-serif;
-  padding: 10px 0px;
+  margin: -30px 0 0 0;
 }
 
 .ir {
