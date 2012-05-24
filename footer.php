@@ -8,8 +8,8 @@
 
   </div>
 
-  <script src="<?php bloginfo('template_url'); ?>/fitvid.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/script.js"></script>
+  <script src="<?php get_template_directory_uri(); ?>/fitvid.js"></script>
+  <script src="<?php get_template_directory_uri(); ?>/script.js"></script>
   
   <?php wp_footer(); ?>
       
