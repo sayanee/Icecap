@@ -26,6 +26,8 @@
       
       <p>
         <?php the_content(); ?>
+        <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
+
         <?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
   		</p>
 		</div></post>
@@ -35,16 +37,14 @@
 	<nav class="clearfix">
     <line></line>
     <div id="button" class="aligncenter">
-      <prev> <?php previous_post_link('<img src="'.get_template_directory_uri().'/images/prev.png" />'); ?></prev>
-      <next> <?php next_post_link('<img src="'.get_template_directory_uri().'/images/next.png" />'); ?></next>
+      <prev><?php previous_post_link('%link', '<img src="'.get_template_directory_uri().'/images/prev.png" />') ?></prev>
+      <next><?php next_post_link('%link', '<img src="'.get_template_directory_uri().'/images/next.png" />') ?></next>
     </div>
   </nav>
 	  
 	<?php comments_template( '', true ); ?>
 	
 <?php endwhile; // end of the loop. ?>
-
-<line></line>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

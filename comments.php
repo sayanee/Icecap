@@ -45,12 +45,13 @@
 
 <?php if ( comments_open() ) : ?>
     
-<?php comment_form(array(
-  'title_reply'=>'Leave a comment',
-  'comment_notes_before' => '',
-  'comment_notes_after' => ''
-  )
-); ?>
+  <?php comment_form(array(
+    'title_reply'=>'Leave a comment',
+    'comment_notes_before' => '',
+    'comment_notes_after' => ''
+    )
+  ); ?>
+  <line></line>
 
 <?php endif; // If registration required and not logged in ?>
 

@@ -432,8 +432,8 @@ a:link.post-edit-link, a:visited.post-edit-link, a:hover.post-edit-link, a:activ
 }
 
 p {
-  font-size: 1.2em;
-  line-height: 1.8em;
+  font-size: 14px;
+  line-height: 21px;
   margin-bottom: 1em;
   color: #646464;
 }
@@ -785,7 +785,7 @@ nav next a {
 }
 nav #button {
   width: 100px;
-  margin: -45px auto 0 auto;
+  margin: -70px auto 0 auto;
 }
 
 line {
@@ -794,7 +794,7 @@ line {
   height: 4px;
   background-color: #dadada;
   clear: both;
-  margin-bottom: 20px;
+  margin: 45px 0;
 }
 
 sidebar {
