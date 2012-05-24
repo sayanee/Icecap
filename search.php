@@ -5,8 +5,9 @@
 	<?php get_template_part( 'loop', 'search' ); ?>
 <?php else : ?>
 	<h2><?php _e( 'Nothing Found', 'icecap' ); ?></h2>
-	<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'icecap' ); ?></p>
+	<p><?php _e( 'Ooops! We did not find anything. Try searching again...', 'icecap' ); ?></p>
 	<?php get_search_form(); ?>
+	<line></line>
 <?php endif; ?>
 
 <?php get_sidebar(); ?>
