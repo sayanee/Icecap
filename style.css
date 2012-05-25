@@ -380,12 +380,35 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, strong, dd, dl, dt, li, ol
   color: black;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
   color: #55afb9;
   font-family: "Quicksand" Helvetica Neue, sans-serif;
-  font-size: 2.5em;
   font-weight: normal;
   margin: 30px 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.6em;
+}
+
+h3 {
+  font-size: 2.4em;
+}
+
+h4 {
+  font-size: 2.2em;
+}
+
+h5 {
+  font-size: 1.8em;
+}
+
+h6 {
+  font-size: 1.5em;
 }
 
 blockquote {
@@ -417,6 +440,7 @@ a:hover, a:active {
 
 p.edit-post {
   margin: 10px 0;
+  clear: both;
 }
 
 a:link.post-edit-link, a:visited.post-edit-link, a:hover.post-edit-link, a:active.post-edit-link {
@@ -529,15 +553,12 @@ textarea:focus, input:focus {
 header h1 {
   font-size: 6em;
   text-align: center;
+  margin: 0;
 }
-header h1 a {
-  color: #646464;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: lighter;
+header h1 a:link, header h1 a:visited, header h1 a:hover, header h1 a:active {
   text-decoration: none;
-}
-header h1 a:hover {
-  color: #55afb9;
+  font-weight: lighter;
+  font-family: "Quicksand" Helvetica Neue, sans-serif;
 }
 header h2 {
   color: #646464;
@@ -607,12 +628,10 @@ header h2 {
   list-style: none;
   position: absolute;
   left: -9999px;
+  top: 35px;
   z-index: 100000;
   margin: -8px 0 0 5px;
   display: block;
-  border-right: 1px solid #cacaca;
-  border-left: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
 }
 
 .children li {
@@ -721,11 +740,7 @@ article post li {
   margin-left: 30px;
 }
 article post h4 {
-  font-family: "Quicksand" Helvetica Neue, sans-serif;
-  font-size: 2.5em;
-  font-weight: normal;
-  margin-bottom: 30px;
-  color: #979797;
+  margin: 0 0 30px 0;
 }
 article post h4 a {
   font-family: "Quicksand" Helvetica Neue, sans-serif;
@@ -811,6 +826,12 @@ sidebar {
   width: 100%;
   margin: 20px 0;
 }
+sidebar h3, sidebar label {
+  margin: 0 0 15px 0;
+  font-family: "Quicksand" Helvetica Neue, sans-serif;
+  color: #646464;
+  font-size: 1em;
+}
 sidebar ul.xoxo {
   width: 100%;
   list-style-type: none;
@@ -833,15 +854,9 @@ sidebar ul.xoxo li {
   margin-right: 5%;
   margin-bottom: 5%;
   font-size: 2em;
-  /* each sidebar heading */
 }
 sidebar ul.xoxo li:nth-child(3n) {
   margin-right: 0%;
-}
-sidebar ul.xoxo li h3, sidebar ul.xoxo li label {
-  margin-bottom: 15px;
-  font-family: "Quicksand" Helvetica Neue, sans-serif;
-  color: #646464;
 }
 sidebar ul.xoxo li ul {
   width: 100%;
@@ -849,11 +864,9 @@ sidebar ul.xoxo li ul {
 sidebar ul.xoxo li ul li {
   font-size: 0.6em;
   width: 100%;
-  /*each sidebar's list items*/
-  margin-left: 2px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 0 0 2px;
   list-style: none;
+  text-align: left;
 }
 sidebar ul.xoxo li input[type="text"]#s {
   width: 100%;
@@ -866,6 +879,19 @@ sidebar ul.xoxo li input[type="text"]#s {
 }
 #wp-calendar td {
   padding: 5px;
+}
+
+sidebar ul.menu li {
+  line-height: 19px;
+}
+sidebar ul.menu a:link, sidebar ul.menu a:visited, sidebar ul.menu a:hover, sidebar ul.menu a:active {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 19px;
+  text-align: left;
 }
 
 .gallery dl {

@@ -16,6 +16,7 @@
       		<?php the_excerpt(); ?>
       	<?php else : ?>
       		<?php the_content( __( 'Continue reading &rarr;', 'icecap' ) ); ?>
+          <div style="clear:both;"></div>
       		<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
           <?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
       	<?php endif; ?>

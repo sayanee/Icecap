@@ -2,6 +2,13 @@ sidebar{
   clear:both;
   width:100%;
   margin:20px 0;
+
+  h3, label{
+    margin:0 0 15px 0;
+    font-family: $quicksand;
+    color:$grey;
+    font-size: 1em;
+  }
   
   ul.xoxo{
     width:100%;
@@ -18,23 +25,17 @@ sidebar{
       margin-left:0;
       margin-right:5%;
       margin-bottom:5%;
-      font-size:2em; /* each sidebar heading */
+      font-size:2em;
       &:nth-child(3n){ margin-right:0%;}
-      h3, label{
-        margin-bottom:15px;
-        font-family: $quicksand;
-        color:$grey;
-      }
               
       ul {
         width:100%;
         li{
           font-size:0.6em;
-          width:100%; /*each sidebar's list items*/
-          margin-left:2px;
-          margin-top:0;
-          margin-bottom:0;
+          width:100%;
+          margin: 0 0 0 2px;
           list-style: none;
+          text-align: left;
         }          
       }
       input[type="text"]#s{
@@ -50,5 +51,22 @@ sidebar{
   font-size:0.5em;
   td{
     padding:5px;
+  }
+}
+
+sidebar ul.menu {
+  li{
+    line-height:19px;
+  }
+  a{
+    &:link, &:visited, &:hover, &:active{
+      font-family: $proxima;
+      font-size: 16px;
+      margin:0;
+      padding: 0;
+      font-weight: normal;
+      line-height: 19px;
+      text-align: left;
+    }
   }
 }

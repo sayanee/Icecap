@@ -8,10 +8,19 @@ add_action('wp_print_styles', 'load_fonts');
 
 function my_scripts_method() {
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array(), false, true);
     wp_enqueue_script( 'jquery' );
-}    
-add_action('wp_enqueue_scripts', 'my_scripts_method');
+    wp_deregister_script( 'fitvid' );
+    wp_register_script( 'fitvid', get_template_directory_uri().'/fitvid.js', array(), false, true);
+    wp_enqueue_script( 'fitvid' );
+    wp_deregister_script( 'script' );
+    wp_register_script( 'script', get_template_directory_uri().'/script.js', array(), false, true);
+    wp_enqueue_script( 'script' );
+
+}   
+if ( !is_admin() ) { 
+	add_action('wp_enqueue_scripts', 'my_scripts_method');
+}
 
 if ( ! isset( $content_width ) ) $content_width = 640;
 add_action( 'after_setup_theme', 'icecap_setup' );

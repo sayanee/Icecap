@@ -2,10 +2,7 @@
 
 25 May 2012 - Version 1.5
 
-
-	* Menu issues check  http://screencast.com/t/NErMRsHr7
-	* SUGGESTION:Reduce font size of tagline and menu. Display correct size of h1,h2,h3... tags. Check  http://screencast.com/t/x0f2eHhQ
-	* Clearing floats post: many page on single post should be display below the image. Check  http://screencast.com/t/QkrhTT05JX
-	* Need style for widget. check  http://screencast.com/t/c4BUD2K9Iu
-	* SUGGESTION: Reduce widget's font size
-	* Don't display Trackbacks/Pingbacks? text just below the comments. Check  http://screencast.com/t/LVrCXnXw
+	* Fonts for h1, h2, h3, h4, h5, h6
+	* Clear floats on post contents
+	* Corrected styles for Widgets
+	* Menu dropdown in Firefox

@@ -7,9 +7,6 @@
   </footer>
 
   </div>
-
-  <script src="<?php get_template_directory_uri(); ?>/fitvid.js"></script>
-  <script src="<?php get_template_directory_uri(); ?>/script.js"></script>
   
   <?php wp_footer(); ?>
       

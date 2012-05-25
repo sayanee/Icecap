@@ -2,12 +2,13 @@ header{
   h1{
     font-size: 6em; 
     text-align: center; 
+    margin:0;
     a{
-      color: $grey;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: lighter;
-      text-decoration: none;
-      &:hover{ color: $blue; }
+      &:link, &:visited, &:hover, &:active{
+        text-decoration: none;
+        font-weight: lighter;
+        font-family: $quicksand;
+      }
     }
   } 
   h2{
@@ -72,13 +73,11 @@ header{
   background:#fff; 
   list-style:none;
   position:absolute;
-  left:-9999px; 
+    left:-9999px; 
+    top: 35px;
   z-index:100000;
   margin: -8px 0 0 5px;
   display:block;
-  border-right: 1px solid lighten($grey, 40%);
-  border-left: 1px solid lighten($grey, 40%);
-  border-bottom: 1px solid lighten($grey, 40%);
 }
 .children li{
   padding:0;
