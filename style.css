@@ -1,4 +1,22 @@
-@import url(info.css);
+/*
+* Theme Name: Ice Cap
+* Description: White, Minimal & Responsive
+* Author: Sayanee
+* Theme URI: http://icecap.sayan.ee
+* Author URI: http://sayan.ee/
+* Version: 1.6
+* Tags: one-column, flexible-width, white, custom-header, sticky-post
+* License: GNU General Public License v2.0
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+* Browser Compatibility: Latest versions of IE10, Chrome, Opera, Safari, Firefox. IE9 and below are not supported.
+
+* This theme, like WordPress, is licensed under the GPL.
+* Use it to make something cool, have fun, and share what you've learned with others.
+
+* Ice Cap WordPress Theme, Copyright 2012 WordPress.org
+* Ice Cap is distributed under the terms of the GNU GPL
+*/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
 }

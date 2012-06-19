@@ -54,6 +54,3 @@
   <line></line>
 
 <?php endif; // If registration required and not logged in ?>
-
-
-

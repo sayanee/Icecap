@@ -1,15 +1,18 @@
 *** Ice Cap Changelog ***
 
 19 June 2012 - Version 1.6
+  
+  * included html5 boilerplate
+  * changed to sass as a precompiler for css
 
   * Theme homepage: http://icecap.sayan.ee
   * Theme demo page: http://icecap.sayan.ee/demo
   * Next and Previous image gallery link on single image gallery post [http://screencast.com/t/m9Gf0jKF]
   * Increase password field size [http://screencast.com/t/iifV7ecm]
   * Code Quality: Use load_theme_textdomain( 'icecap', get_template_directory() . '/languages' ) instead of load_theme_textdomain( 'icecap', TEMPLATEPATH . '/languages' );
-  * included html5 boilerplate
   * included print stylesheet for IE9, IE8 and below
   * included build html5 build script for easy integration of codes
+  * Notice: add_custom_image_header is deprecated since version 3.4! Use add_theme_support( 'custom-header', $args ) instead. in /Users/sayanee/Sites/wp/wp-includes/functions.php on line 2705. Notice: add_custom_background is deprecated since version 3.4! Use add_theme_support( 'custom-background', $args ) instead. in /Users/sayanee/Sites/wp/wp-includes/functions.php on line 2705
 
 25 May 2012 - Version 1.5
 
