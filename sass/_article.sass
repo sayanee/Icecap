@@ -1,0 +1,77 @@
+article
+  clear: both
+  display: block
+  margin: 40px 0px
+  width: 100%
+  side
+    color: $grey
+    display: block
+    float: left
+    font-weight: normal
+    padding: 0% 1%
+    width: 23% // 200px = 800*0.25
+    #circle 
+      @include border-radius(50%)
+      background-color: lighten($grey, 45%)
+      font-family: $quicksand
+      font-size: 2em 
+      height: 65px
+      width: 65px
+      margin: 0 auto 15% auto
+      text-align: center
+      div 
+        padding: 18%
+    date
+      font-family: $quicksand
+      display: block
+      text-align: center
+      font-size: 1em
+      width: 60%
+      margin: 0 auto
+      font-size: 1.3em
+    list
+      display: block
+      text-align: center
+      width: 60%
+      margin: 10px auto
+      font-size: 1em
+    a
+      color: darken($grey, 40%)
+      font-family: $quicksand
+      &:hover
+        color: $blue 
+        text-decoration: none
+  post
+    display: block
+    float: right
+    width: 75% /* 600px = 800*0.75 */  
+    .sticky 
+      background: #fff9c0
+      border-top: 3px solid #d9d4a3
+      border-bottom: 1px solid #D9D4A3
+      padding: 1.7em
+      margin: 0 0 30px 0
+    li
+      margin: 0 0 0 30px
+    h4
+      margin: 0 0 30px 0 
+      a
+        font-family: $quicksand
+        color: $grey
+        font-weight: normal
+        &:visited, &:link
+          color: $blue 
+          text-decoration: none
+        &:hover, &:active
+          color: $blue 
+          text-decoration: underline
+    p
+      font-family: $proxima
+      color:black
+      a  
+        &:link, &:visited
+          color: darken($blue,10%) 
+          text-decoration: none
+        
+        &:hover, &:active
+          text-decoration: underline

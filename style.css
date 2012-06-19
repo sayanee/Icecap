@@ -1,21 +1,4 @@
-/*
-* Theme Name: Ice Cap
-* Description: White, Minimal & Responsive
-* Author: Sayanee
-* Author URI: http://sayan.ee/
-* Version: 1.5
-* Tags: one-column, flexible-width, white, custom-header, sticky-post
-* License: GNU General Public License v2.0
-* License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-* Browser Compatibility: Latest versions of IE10, Chrome, Opera, Safari, Firefox. IE9 and below are not supported.
-
-* This theme, like WordPress, is licensed under the GPL.
-* Use it to make something cool, have fun, and share what you've learned with others.
-
-* Ice Cap WordPress Theme, Copyright 2012 WordPress.org
-* Ice Cap is distributed under the terms of the GNU GPL
-*/
+@import url(info.css);
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
 }
@@ -36,20 +19,35 @@ audio:not([controls]) {
 
 html {
   font-size: 100%;
-  overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.231;
+html, button, input, select, textarea {
+  font-family: sans-serif;
+  color: #222222;
 }
 
-body, button, input, select, textarea {
-  font-family: sans-serif;
-  color: #222;
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+a {
+  color: #0000ee;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #0066ee;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
 }
 
 abbr[title] {
@@ -72,27 +70,27 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
 
 ins {
-  background: #ff9;
-  color: #000;
+  background: #ffff99;
+  color: black;
   text-decoration: none;
 }
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: yellow;
+  color: black;
   font-style: italic;
   font-weight: bold;
 }
 
 pre, code, kbd, samp {
-  font-family: monospace, monospace;
-  font-family: 'courier new', monospace;
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
   font-size: 1em;
 }
 
@@ -105,7 +103,6 @@ pre {
 q {
   quotes: none;
 }
-
 q:before, q:after {
   content: "";
   content: none;
@@ -178,6 +175,7 @@ legend {
   border: 0;
   *margin-left: -7px;
   padding: 0;
+  white-space: normal;
 }
 
 button, input, select, textarea {
@@ -189,20 +187,23 @@ button, input, select, textarea {
 
 button, input {
   line-height: normal;
-  *overflow: visible;
-}
-
-table button, table input {
-  *overflow: auto;
 }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
+  *overflow: visible;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
 }
 
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
 }
 
 input[type="search"] {
@@ -212,7 +213,7 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -240,22 +241,26 @@ td {
   vertical-align: top;
 }
 
+.chromeframe {
+  margin: 0.2em 0;
+  background: #cccccc;
+  color: black;
+  padding: 0.2em 0;
+}
+
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
 .aligncenter, div.aligncenter {
-  display: block;
   margin: 5px auto 5px auto;
 }
 
 .alignright {
-  float: right;
   margin: 5px 0 20px 20px;
 }
 
 .alignleft {
-  float: left;
   margin: 5px 20px 20px 0;
 }
 
@@ -265,7 +270,6 @@ td {
 }
 
 a img.alignright {
-  float: right;
   margin: 5px 0 20px 20px;
 }
 
@@ -274,7 +278,6 @@ a img.alignnone {
 }
 
 a img.alignleft {
-  float: left;
   margin: 5px 20px 20px 0;
 }
 
@@ -285,7 +288,7 @@ a img.aligncenter {
 }
 
 .wp-caption {
-  background: #fff;
+  background: white;
   border: 1px solid #f0f0f0;
   max-width: 96%;
   padding: 5px 3px 10px;
@@ -345,28 +348,28 @@ br.clear {
 }
 
 li#theme-switcher {
-  background: #fff;
+  background: white;
   border: 10px solid red;
   padding: 20px;
   position: fixed;
-  top: 0;
-  right: 0;
+  position-top: 0;
+  position-right: 0;
 }
 
-img {
+im {
   max-width: 100%;
   height: auto;
 }
 
 ::-moz-selection {
   background: #8bc8cf;
-  color: #000;
+  color: black;
   text-shadow: none;
 }
 
 ::selection {
   background: #8bc8cf;
-  color: #000;
+  color: black;
   text-shadow: none;
 }
 
@@ -412,9 +415,9 @@ h6 {
 }
 
 blockquote {
-  background-color: #DDD;
+  background-color: #dddddd;
   margin-left: 20px;
-  border-left: 4px solid #666;
+  border-left: 4px solid #666666;
 }
 blockquote p {
   margin-left: 10px;
@@ -449,19 +452,19 @@ a:link.post-edit-link, a:visited.post-edit-link, a:hover.post-edit-link, a:activ
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  background-color: #ddd;
+  background-color: #dddddd;
   color: #40929b;
   margin: 10px 0;
   padding: 5px;
 }
 
 .gallery-caption {
-  color: #888;
+  color: #888888;
   margin: 0 0 12px;
 }
 
 .bypostauthor {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 p {
@@ -472,11 +475,11 @@ p {
 }
 
 table tr:nth-child(2n) {
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 table td, table th {
   padding: 10px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 table th {
   font-weight: bold;
@@ -562,7 +565,7 @@ header h1 a:link, header h1 a:visited, header h1 a:hover, header h1 a:active {
 }
 header h2 {
   color: #646464;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand" Helvetica Neue, sans-serif;
   font-size: 1.5em;
   margin: 10px;
   text-align: center;
@@ -574,7 +577,7 @@ header h2 {
   width: 100%;
 }
 #topimage img {
-  margin: 0px;
+  margin: 0;
 }
 
 .menu, .menu-header {
@@ -605,7 +608,7 @@ header h2 {
 .menu a, .menu-header a {
   color: #e4e4e4;
   display: inline-block;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand" Helvetica Neue, sans-serif;
   font-weight: lighter;
   line-height: 1.5em;
   text-decoration: none;
@@ -624,7 +627,7 @@ header h2 {
 }
 
 .children {
-  background: #fff;
+  background: white;
   list-style: none;
   position: absolute;
   left: -9999px;
@@ -633,17 +636,14 @@ header h2 {
   margin: -8px 0 0 5px;
   display: block;
 }
-
 .children li {
   padding: 0;
   margin: 0;
   float: none;
 }
-
 .children a {
   white-space: nowrap;
 }
-
 .children ul {
   margin-left: 0;
   border: none;
@@ -652,16 +652,13 @@ header h2 {
 .menu li:hover ul.children {
   left: 0;
 }
-
 .menu li:hover a {
   text-decoration: none;
 }
-
 .menu li:hover ul a {
   text-decoration: none;
 }
-
-.menu li:hover ul li a:hover {
+.menu li:hover ul a:hover {
   text-decoration: underline;
 }
 
@@ -690,14 +687,11 @@ article side #circle {
   font-size: 2em;
   height: 65px;
   width: 65px;
-  margin-top: 0%;
-  margin-bottom: 15%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 15% auto;
   text-align: center;
 }
 article side #circle div {
-  padding: 25%;
+  padding: 18%;
 }
 article side date {
   font-family: "Quicksand" Helvetica Neue, sans-serif;
@@ -727,17 +721,16 @@ article post {
   display: block;
   float: right;
   width: 75%;
-  /* 600px = 800*0.75 */
 }
 article post .sticky {
   background: #fff9c0;
   border-top: 3px solid #d9d4a3;
-  border-bottom: 1px solid #D9D4A3;
+  border-bottom: 1px solid #d9d4a3;
   padding: 1.7em;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
 }
 article post li {
-  margin-left: 30px;
+  margin: 0 0 0 30px;
 }
 article post h4 {
   margin: 0 0 30px 0;
@@ -757,7 +750,6 @@ article post h4 a:hover, article post h4 a:active {
 }
 article post p {
   font-family: "Proxima Nova Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  color: black;
 }
 article post p a:link, article post p a:visited {
   color: #40929b;
@@ -786,7 +778,6 @@ nav a:hover {
   text-decoration: underline;
 }
 nav prev, nav next {
-  display: block;
   background-repeat: no-repeat;
   height: 45px;
   width: 45px;
@@ -848,11 +839,9 @@ sidebar ul.xoxo a:hover {
   text-decoration: underline;
 }
 sidebar ul.xoxo li {
-  width: 30%;
+  width: 28%;
   float: left;
-  margin-left: 0;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  margin: 0 0 5% 5%;
   font-size: 2em;
 }
 sidebar ul.xoxo li:nth-child(3n) {
@@ -931,6 +920,10 @@ comments .commentlist {
   width: 100%;
   margin: 20px 0px;
   overflow: hidden;
+  .depth-2background-color: #f7f7f7;
+  .depth-3background-color: #f0f0f0;
+  .depth-4background-color: #e8e8e8;
+  .depth-5background-color: #e0e0e0;
 }
 comments .commentlist comment {
   display: block;
@@ -966,9 +959,7 @@ comments .commentlist .comment-content {
   padding: 0px;
   float: left;
   width: 70%;
-}
-comments .commentlist .comment-content p {
-  color: black;
+  pcolor: black;
 }
 comments .commentlist .comment-content h6 {
   font-size: 1.2em;
@@ -1000,18 +991,6 @@ comments .commentlist .children li {
   margin: 0px 0 0 30px;
   padding: 10px;
 }
-comments .commentlist .depth-2 {
-  background-color: #f7f7f7;
-}
-comments .commentlist .depth-3 {
-  background-color: #f0f0f0;
-}
-comments .commentlist .depth-4 {
-  background-color: #e8e8e8;
-}
-comments .commentlist .depth-5 {
-  background-color: #e0e0e0;
-}
 
 .pingback p {
   clear: both;
@@ -1039,64 +1018,18 @@ footer p {
   margin: -30px 0 0 0;
 }
 
-.ir {
-  display: block;
-  border: 0;
-  text-indent: -999em;
-  overflow: hidden;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
-}
-
-.ir br {
-  display: none;
-}
-
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
 @media screen and (max-width: 800px) {
   #wrapper {
     width: 90%;
   }
 }
 @media screen and (max-width: 600px) {
-  #wrapper {
-    width: 90%;
-  }
   #wrapper header h1 {
     font-size: 3em;
   }
   #wrapper header .menu {
     font-size: 1.2em;
+    width: 90%;
   }
   #wrapper article side {
     width: 100%;
@@ -1153,10 +1086,69 @@ footer p {
     padding-top: 6%;
   }
 }
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+
+.ir br {
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
 @media print {
   * {
     background: transparent !important;
     color: black !important;
+    box-shadow: none !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
@@ -1179,7 +1171,7 @@ footer p {
   }
 
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
