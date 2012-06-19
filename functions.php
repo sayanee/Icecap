@@ -103,7 +103,7 @@ function icecap_setup() {
 
 	// Make theme available for translation
 	// Translations can be filed in the /languages/ directory
-	load_theme_textdomain( 'icecap', TEMPLATEPATH . '/languages' );
+	load_theme_textdomain( 'icecap', get_template_directory() . '/languages' );
 
 	$locale = get_locale();
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
@@ -116,7 +116,7 @@ function icecap_setup() {
 	) );
 
 	// This theme allows users to set a custom background
-	add_custom_background();
+	add_theme_support( 'custom-background' );
 
 	// Your changeable header business starts here
 	define( 'HEADER_TEXTCOLOR', '' );
@@ -148,7 +148,7 @@ if ( ! function_exists( 'icecap_admin_header_style' ) ) :
  * 
  */
 
-add_custom_image_header( '', '', '' );
+add_theme_support( 'custom-header' );
 register_default_headers( array(
 	'ceiling' => array(
 		'url' => '%s/images/headers/ceiling.jpg',
