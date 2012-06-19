@@ -1,4 +1,4 @@
-<sidebar class="clearfix">
+<sidebar >
   <ul class="xoxo">
 
     <?php if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>	

@@ -54,7 +54,7 @@ function custom_comments($comment, $args, $depth) {
   ?>
   	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
       
-  	  <comment class="clearfix">
+  	  <comment >
       <div class="comment-author vcard">
         
       	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>

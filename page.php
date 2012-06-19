@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-  <article class="clearfix">
-    
+  <article>
     <side>
       <div id="circle">
         <div><?php comments_popup_link( '0','1', '%', '', 'off' ); ?></div>

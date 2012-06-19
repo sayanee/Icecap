@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<article class="clearfix">
+	<article>
 		<side>
 			<?php printf(__('By %2$s', 'icecap'), 'meta-prep meta-prep-author',
 				sprintf( '<a class="url fn n" href="%1$s" title="%2$s">%3$s</a>',
@@ -77,7 +77,7 @@
 		</post>	
 	</article>
 
-	<nav class="clearfix"><line></line></nav>
+	<nav ><line></line></nav>
 
 	<?php comments_template(); ?>
 

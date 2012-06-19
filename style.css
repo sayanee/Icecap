@@ -667,6 +667,7 @@ article {
   display: block;
   margin: 40px 0px;
   width: 100%;
+  overflow: hidden;
 }
 article side {
   color: #646464;
@@ -761,10 +762,11 @@ article post p a:hover, article post p a:active {
 
 nav {
   clear: both;
-  height: 40px;
+  height: 80px;
   width: 100%;
-  padding: 0px 0;
+  padding: 0;
   text-align: center;
+  overflow: hidden;
 }
 nav a {
   color: #55afb9;
@@ -800,7 +802,7 @@ nav next a {
 }
 nav #button {
   width: 100px;
-  margin: -70px auto 0 auto;
+  margin: -25px auto 0 auto;
 }
 
 line {
@@ -809,7 +811,7 @@ line {
   height: 4px;
   background-color: #dadada;
   clear: both;
-  margin: 45px 0;
+  margin: 45px 0 0 0;
 }
 
 sidebar {
@@ -901,6 +903,7 @@ comments #comments-nav {
   clear: both;
   width: 100%;
   margin: 20px 0px;
+  overflow: hidden;
 }
 comments #comments-nav a {
   color: #55afb9;

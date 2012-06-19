@@ -6,8 +6,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
   
-  <article class="clearfix">
-    
+  <article>
    <post><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <h4><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'icecap' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 
@@ -50,7 +49,7 @@
 
 <?php endwhile; ?>
 
-<nav class="clearfix">
+<nav >
   <line></line>
   <?php if (  $wp_query->max_num_pages > 1 ) : ?>
     <div id="button" class="aligncenter">

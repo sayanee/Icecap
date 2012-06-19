@@ -11,7 +11,7 @@
   <?php if ( have_comments() ) : ?>
   	<h3><?php comments_number('0', '1', '%' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-  	<div id="comments-nav" class="clearfix">
+  	<div id="comments-nav" >
   		<div class="alignleft"><?php previous_comments_link() ?></div>
   		<div class="alignright"><?php next_comments_link() ?></div>
   	</div>
@@ -26,7 +26,7 @@
       <?php wp_list_comments(array('avatar_size' => '80', 'type' => 'all', 'callback' => 'custom_comments')); ?>
   	</ol>
 
-  	<div id="comments-nav" class="clearfix">
+  	<div id="comments-nav" >
   		<div class="alignleft"><?php previous_comments_link() ?></div>
   		<div class="alignright"><?php next_comments_link() ?></div>
   	</div>

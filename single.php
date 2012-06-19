@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-  <article class="clearfix">
+  <article>
     <side>
       <div id="circle"><div><?php comments_popup_link( '0','1', '%', '', 'off' ); ?></div></div>
     	
@@ -34,7 +34,7 @@
     
 	</article>
 	
-	<nav class="clearfix">
+	<nav >
     <line></line>
     <div id="button" class="aligncenter">
       <prev><?php previous_post_link('%link', '<img src="'.get_template_directory_uri().'/images/prev.png" />') ?></prev>
