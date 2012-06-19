@@ -1,5 +1,16 @@
 *** Ice Cap Changelog ***
 
+19 June 2012 - Version 1.6
+
+  * Theme homepage: http://icecap.sayan.ee
+  * Theme demo page: http://icecap.sayan.ee/demo
+  * Next and Previous image gallery link on single image gallery post [http://screencast.com/t/m9Gf0jKF]
+  * Increase password field size [http://screencast.com/t/iifV7ecm]
+  * Code Quality: Use load_theme_textdomain( 'icecap', get_template_directory() . '/languages' ) instead of load_theme_textdomain( 'icecap', TEMPLATEPATH . '/languages' );
+  * included html5 boilerplate
+  * included print stylesheet for IE9, IE8 and below
+  * included build html5 build script for easy integration of codes
+
 25 May 2012 - Version 1.5
 
 	* Fonts for h1, h2, h3, h4, h5, h6
