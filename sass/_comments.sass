@@ -17,6 +17,7 @@ comments
   ul, ol, li
     clear: both
     padding: 0px
+    overflow: hidden
   .commentlist
     display: block
     width: 100%
@@ -26,6 +27,7 @@ comments
       display: block
       margin: 20px 0px
       padding: 0
+      overflow: hidden
     .comment-author
       display: block
       width: 25%
@@ -73,10 +75,14 @@ comments
     .children li
       margin: 0px 0 0 30px
       padding: 10px
-    .depth-2background-color: darken(white, 3%)
-    .depth-3background-color: darken(white, 6%)
-    .depth-4background-color: darken(white, 9%)
-    .depth-5background-color: darken(white, 12%)
+    .depth-2
+      background-color: darken(white, 3%)
+    .depth-3
+      background-color: darken(white, 6%)
+    .depth-4
+      background-color: darken(white, 9%)
+    .depth-5
+      background-color: darken(white, 12%)
 .pingback p
   clear: both
 #respond
