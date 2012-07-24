@@ -1,6 +1,10 @@
 *** Ice Cap Changelog ***
 
-19 June 2012 - Version 1.5.4
+26 July 2012 - Version 1.5.5
+
+  * TEMPLATEPATH was found in the file functions.php. Use get_template_directory() instead.
+
+25 July 2012 - Version 1.5.4
   
   * Integrated html5 boilerplate
   * Changed from scss to sass syntax as a precompiler for css
