@@ -14,7 +14,7 @@
   * Theme homepage: http://icecap.sayan.ee
   * Next and Previous image gallery link on single image gallery post [http://screencast.com/t/m9Gf0jKF]
   * Increase password field size [http://screencast.com/t/iifV7ecm]
-  * included print stylesheet for IE9, IE8 and below 
+  * included print stylesheet for IE9, IE8 and below
 
 25 May 2012 - Version 1.5
 

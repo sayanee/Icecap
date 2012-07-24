@@ -48,12 +48,21 @@
 					$next_attachment_url = wp_get_attachment_url();
 				}
 			?>
-			<p>
-				<a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php esc_attr( printf( __( 'Return to %s', 'icecap' ), get_the_title( $post->post_parent ) ) ); ?>" rel="gallery">
-					<?php printf( __( '<span>&larr;</span> %s', 'icecap' ), get_the_title( $post->post_parent ) );?>
-				</a>
-			</p>
-
+			<div class="back-to-post">
+				<p>
+					<a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php esc_attr( printf( __( 'Return to %s', 'icecap' ), get_the_title( $post->post_parent ) ) ); ?>" rel="gallery">
+						<?php printf( __( '<span>&larr;</span> %s', 'icecap' ), get_the_title( $post->post_parent ) );?>
+					</a>
+				</p>
+			</div>
+			
+			<div class="nav-link-gallery">
+				<p>
+					<?php previous_image_link( false, __( '&larr; Previous' , 'icecap' ) ); ?>
+					<?php next_image_link( false, __( 'Next &rarr;' , 'icecap' ) ); ?>
+				</p>
+			</div>
+			
 			<p><a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment">
 				<?php $attachment_size = apply_filters( 'icecap_attachment_size', 900 );
 					echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); ?>
