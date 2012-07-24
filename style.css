@@ -515,10 +515,11 @@ input {
   clear: both;
   width: 50%;
   height: 25px;
-  margin: 0px;
+  margin: 0 0 10px 0;
   border: 1px solid #dadada;
   font-family: "Quicksand" Helvetica Neue, sans-serif;
   font-size: 1em;
+  display: block;
 }
 
 textarea {
@@ -559,7 +560,6 @@ label {
   font-family: "Quicksand" Helvetica Neue, sans-serif;
   margin: 0;
   padding: 0;
-  width: 20%;
 }
 
 span.required {
@@ -857,26 +857,26 @@ sidebar ul.xoxo a:hover {
   color: #55afb9;
   text-decoration: underline;
 }
-sidebar ul.xoxo li {
-  width: 28%;
+sidebar ul.xoxo > li {
+  width: 30%;
   float: left;
-  margin: 0 0 5% 5%;
+  margin: 0 0 5% 0;
   font-size: 2em;
 }
-sidebar ul.xoxo li:nth-child(3n) {
-  margin-right: 0%;
+sidebar ul.xoxo > li:nth-child(3n+2) {
+  margin: 0 5% 5% 5%;
 }
-sidebar ul.xoxo li ul {
+sidebar ul.xoxo > li ul {
   width: 100%;
 }
-sidebar ul.xoxo li ul li {
+sidebar ul.xoxo > li ul li {
   font-size: 0.6em;
   width: 100%;
   margin: 0 0 0 2px;
   list-style: none;
   text-align: left;
 }
-sidebar ul.xoxo li input[type="text"]#s {
+sidebar ul.xoxo > li input[type="text"]#s {
   width: 100%;
   font-size: 0.7em;
   padding: 0.2em;

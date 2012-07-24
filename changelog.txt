@@ -10,11 +10,9 @@
   * Used function load_theme_textdomain( 'icecap', get_template_directory() . '/languages' )
   * Added to general styles for bold and itallic words for posts
   * Fixed the display for nested comments
-
-  * Theme homepage: http://icecap.sayan.ee
-  * Next and Previous image gallery link on single image gallery post [http://screencast.com/t/m9Gf0jKF]
-  * Increase password field size [http://screencast.com/t/iifV7ecm]
-  * included print stylesheet for IE9, IE8 and below
+  * Next and Previous image gallery link on single image gallery post
+  * Added Theme homepage: http://icecap.sayan.ee  
+  * Increase password field size in password protected posts
 
 25 May 2012 - Version 1.5
 
