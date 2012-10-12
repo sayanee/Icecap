@@ -9,7 +9,7 @@
 				sprintf( esc_attr__( 'View all posts by %s', 'icecap' ), get_the_author() ),
 				get_the_author() ) ); ?>
 	<span>|</span>
-	
+
 	<?php printf( __('Published %2$s', 'icecap'), 'meta-prep meta-prep-entry-date',
 				sprintf( '<abbr title="%1$s">%2$s</abbr>',
 					esc_attr( get_the_time() ),
@@ -55,14 +55,14 @@
 					</a>
 				</p>
 			</div>
-			
+
 			<div class="nav-link-gallery">
 				<p>
 					<?php previous_image_link( false, __( '&larr; Previous' , 'icecap' ) ); ?>
 					<?php next_image_link( false, __( 'Next &rarr;' , 'icecap' ) ); ?>
 				</p>
 			</div>
-			
+
 			<p><a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment">
 				<?php $attachment_size = apply_filters( 'icecap_attachment_size', 900 );
 					echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); ?>
@@ -74,16 +74,16 @@
 			<?php else : ?>
 				<a href="<?php echo wp_get_attachment_url(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php echo basename( get_permalink() ); ?></a>
 			<?php endif; ?>
-			
+
 			<?php if ( !empty( $post->post_excerpt ) ) the_excerpt(); ?>
 
 			<?php the_content( __( 'Continue reading &rarr;', 'icecap' ) ); ?>
-			
+
 			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'icecap' ), 'after' => '' ) ); ?>
 			<?php icecap_posted_in(); ?>
 			<?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
 
-		</post>	
+		</post>
 	</article>
 
 	<nav ><line></line></nav>

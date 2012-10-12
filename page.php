@@ -5,23 +5,23 @@
     <side>
       <div id="circle">
         <div><?php comments_popup_link( '0','1', '%', '', 'off' ); ?></div>
-      </div>	
+      </div>
     	<date><?php the_date(); ?></date>
     </side>
-      
+
     <post><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <?php if ( is_front_page() ) { ?>
   		  <h4><?php the_title(); ?></h4>
-  	  <?php } else { ?>	
+  	  <?php } else { ?>
   		  <h4><?php the_title(); ?></h4>
-  	  <?php } ?>				
+  	  <?php } ?>
 
       <p>
         <?php the_content(); ?>
         <?php edit_post_link( __( 'Edit', 'icecap' ), '<p class="edit-post">', '</p>' ); ?>
     	</p>
     </div></post>
-  
+
   </article>
 	<?php comments_template( '', true ); ?>
 

@@ -4,15 +4,15 @@
   <article>
     <side>
       <div id="circle"><div><?php comments_popup_link( '0','1', '%', '', 'off' ); ?></div></div>
-    	
+
     	<date><?php the_date(); ?></date>
-	    
+
 	    <list>
       	<?php if ( count( get_the_category() ) ) : ?>
       		<?php printf( __( '%2$s', 'icecap' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-      </list>		
+      </list>
       	<?php endif; ?>
-	
+
 	    <list>
       	<?php $tags_list = get_the_tag_list( '', ', ' ); if ( $tags_list ): ?>
       		<?php printf( __( '%2$s', 'icecap' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
@@ -31,9 +31,9 @@
   		  </p>
 		  </div>
     </post>
-    
+
 	</article>
-	
+
 	<nav >
     <line></line>
     <div id="button" class="aligncenter">
@@ -41,9 +41,9 @@
       <next><?php next_post_link('%link', '<img src="'.get_template_directory_uri().'/images/next.png" />') ?></next>
     </div>
   </nav>
-	  
+
 	<?php comments_template( '', true ); ?>
-	
+
 <?php endwhile; // end of the loop. ?>
 
 <?php get_sidebar(); ?>
