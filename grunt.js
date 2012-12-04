@@ -1,15 +1,11 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-rm');
-  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.initConfig({
 
-    clean: {
-      build: ['publish/']
-    },
 
     copy: {
       dist: {
@@ -45,13 +41,13 @@ module.exports = function(grunt) {
     compress: {
       zip: {
         files: {
-          "icecap.1.5.6.zip": "publish/*"
+          "icecap.1.5.6.zip": "publish/**"
         }
       }
     },
 
     rm: {
-      publish: ['publish/*/**', 'publish/images/headers']
+      publish: ['publish/*/**', 'icecap.1.5.6.zip']
     }
 
   });
