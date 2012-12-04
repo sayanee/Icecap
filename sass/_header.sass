@@ -1,7 +1,7 @@
 header
   h1
-    font-size: 6em 
-    text-align: center 
+    font-size: 6em
+    text-align: center
     margin: 0
     a
       &:link, &:visited, &:hover, &:active
@@ -11,16 +11,17 @@ header
   h2
     color: $grey
     font-family: $quicksand
-    font-size: 1.5em 
+    font-size: 1.5em
     margin: 10px
     text-align: center
-  
+
 #topimage
   margin: 0 auto
   padding: 0
   width: 100%
   img
     margin: 0
+    max-width: 100%
 
 .menu, .menu-header
   clear: both
@@ -33,9 +34,9 @@ header
   padding: 0
   text-align: center
   width: 100%
-  li 
-    margin: 5px 
-    display: inline 
+  li
+    margin: 5px
+    display: inline
     &:hover a
       background-color: white
       color: lighten($grey,10%)
@@ -49,16 +50,16 @@ header
     text-decoration: none
     margin: 5px
     padding: 2px 5px
-    &:hover 
+    &:hover
       text-decoration: none
       background-color: white
       color: lighten($grey,10%)
       @include border-radius(4px)
   .children
-    background: #fff 
+    background: #fff
     list-style: none
     position: absolute
-    left: -9999px 
+    left: -9999px
     top: 35px
     z-index: 100000
     margin: -8px 0 0 5px
@@ -72,12 +73,12 @@ header
     ul
       margin-left: 0
       border: none
-.menu li:hover 
-  ul.children 
+.menu li:hover
+  ul.children
     left: 0 // Display the dropdown on hover
-  a 
+  a
     text-decoration: none
-  ul a 
+  ul a
     text-decoration: none
     &:hover
       text-decoration: underline
