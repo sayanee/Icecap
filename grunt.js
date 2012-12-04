@@ -1,12 +1,14 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-clean');
+  grunt.loadNpmTasks('grunt-rm');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.initConfig({
+
     clean: {
-      build: ['publish/404.php']
+      build: ['publish/']
     },
 
     copy: {
@@ -46,7 +48,12 @@ module.exports = function(grunt) {
           "icecap.1.5.6.zip": "publish/*"
         }
       }
+    },
+
+    rm: {
+      publish: ['publish/*/**', 'publish/images/headers']
     }
+
   });
 
   grunt.registerTask('default', 'copy');
