@@ -1,21 +1,26 @@
 *** Ice Cap Changelog ***
 
+4 December 2012 - Version 1.5.6
+
+  * integrated grunt.js for automating publish folder and zip file
+  * fixed responsive image header
+
 26 July 2012 - Version 1.5.5
 
   * TEMPLATEPATH was found in the file functions.php. Use get_template_directory() instead.
 
 25 July 2012 - Version 1.5.4
-  
+
   * Integrated html5 boilerplate
   * Changed from scss to sass syntax as a precompiler for css
-  * Replaced deprecated add_custom_image_header to add_theme_support( 'custom-header', $args ) 
-  * Replaced deprecated add_custom_background to add_theme_support( 'custom-background', $args ) 
+  * Replaced deprecated add_custom_image_header to add_theme_support( 'custom-header', $args )
+  * Replaced deprecated add_custom_background to add_theme_support( 'custom-background', $args )
   * Created new theme demo page: http://icecap.sayan.ee/demo
   * Used function load_theme_textdomain( 'icecap', get_template_directory() . '/languages' )
   * Added to general styles for bold and itallic words for posts
   * Fixed the display for nested comments
   * Next and Previous image gallery link on single image gallery post
-  * Added Theme homepage: http://icecap.sayan.ee  
+  * Added Theme homepage: http://icecap.sayan.ee
   * Increase password field size in password protected posts
 
 25 May 2012 - Version 1.5
