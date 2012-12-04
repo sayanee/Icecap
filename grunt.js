@@ -15,6 +15,7 @@ module.exports = function(grunt) {
           "publish/archive.php": "archive.php",
           "publish/attachment.php": "attachment.php",
           "publish/author.php": "author.php",
+          "publish/comments.php": "comments.php",
           "publish/category.php": "category.php",
           "publish/changelog.txt": "changelog.txt",
           "publish/fitvid.js": "fitvid.js",
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
     compress: {
       zip: {
         files: {
-          "icecap.1.5.6.zip": "publish/**"
+          "icecap.1.5.7.zip": "publish/**"
         }
       }
     },

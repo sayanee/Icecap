@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function load_fonts() {
     wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Quicksand');
@@ -17,8 +17,8 @@ function my_scripts_method() {
     wp_register_script( 'script', get_template_directory_uri().'/script.js', array(), false, true);
     wp_enqueue_script( 'script' );
 
-}   
-if ( !is_admin() ) { 
+}
+if ( !is_admin() ) {
 	add_action('wp_enqueue_scripts', 'my_scripts_method');
 }
 
@@ -45,18 +45,18 @@ if ( ! function_exists( 'icecap_setup' ) ):
  * @uses register_default_headers() To register the default custom header images provided with the theme.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * 
+ *
  */
- 
+
 function custom_comments($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
 	$GLOBALS['comment_depth'] = $depth;
   ?>
   	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-      
+
   	  <comment >
       <div class="comment-author vcard">
-        
+
       	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
   		  <div class="comment-meta">
     		  <?php printf(__('<a href="%3$s">%1$s <br/>@%2$s</a><br/>', 'icecap'),
@@ -65,31 +65,31 @@ function custom_comments($comment, $args, $depth) {
     				'#comment-' . get_comment_ID() );
     				edit_comment_link(__('Edit', 'icecap'), '  <span class="edit-link">', '</span>'); ?>
     		</div><!--comment-meta-->
-    		
-  		</div><!--comment-author vcard-->		
-  		
+
+  		</div><!--comment-author vcard-->
+
       <?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'icecap') ?>
         <div class="comment-content">
           <h6><?php printf(__('<cite class="fn">%s</cite> <span class="says">says...</span>'), get_comment_author_link()) ?></h6>
           <?php comment_text() ?>
-          
+
           <?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
       			if($args['type'] == 'all' || get_comment_type() == 'comment') :
       				comment_reply_link(array_merge($args, array(
-      					'reply_text' => __('[reply]','icecap'), 
+      					'reply_text' => __('[reply]','icecap'),
       					'login_text' => __('Log in to reply.','icecap'),
       					'depth' => $depth,
-      					'before' => '<div class="comment-reply-link">', 
+      					'before' => '<div class="comment-reply-link">',
       					'after' => '</div>'
       				)));
       			endif;
       		?>
-  			    
+
         </div><!--comment-content-->
         </comment>
-		    
+
 <?php } // end custom_comments
- 
+
 function icecap_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
@@ -106,7 +106,7 @@ function icecap_setup() {
 	load_theme_textdomain( 'icecap', get_template_directory() . '/languages' );
 
 	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	$locale_file = get_template_directory() . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
 
@@ -145,7 +145,7 @@ if ( ! function_exists( 'icecap_admin_header_style' ) ) :
  *
  * Referenced via add_custom_image_header() in icecap_setup().
  *
- * 
+ *
  */
 
 add_theme_support( 'custom-header' );
@@ -191,7 +191,7 @@ endif;
  * To override this in a child theme, remove the filter and optionally add
  * your own function tied to the wp_page_menu_args filter hook.
  *
- * 
+ *
  */
 function icecap_page_menu_args( $args ) {
 	$args['show_home'] = true;
@@ -205,7 +205,7 @@ add_filter( 'wp_page_menu_args', 'icecap_page_menu_args' );
  * To override this length in a child theme, remove the filter and add your own
  * function tied to the excerpt_length filter hook.
  *
- * 
+ *
  * @return int
  */
 function icecap_excerpt_length( $length ) {
@@ -216,7 +216,7 @@ add_filter( 'excerpt_length', 'icecap_excerpt_length' );
 /**
  * Returns a "Continue Reading" link for excerpts
  *
- * 
+ *
  * @return string "Continue Reading" link
  */
 function icecap_continue_reading_link() {
@@ -229,7 +229,7 @@ function icecap_continue_reading_link() {
  * To override this in a child theme, remove the filter and add your own
  * function tied to the excerpt_more filter hook.
  *
- * 
+ *
  * @return string An ellipsis
  */
 function icecap_auto_excerpt_more( $more ) {
@@ -243,7 +243,7 @@ add_filter( 'excerpt_more', 'icecap_auto_excerpt_more' );
  * To override this link in a child theme, remove the filter and add your own
  * function tied to the get_the_excerpt filter hook.
  *
- * 
+ *
  * @return string Excerpt with a pretty "Continue Reading" link
  */
 function icecap_custom_excerpt_more( $output ) {
@@ -257,7 +257,7 @@ add_filter( 'get_the_excerpt', 'icecap_custom_excerpt_more' );
 /**
  * Remove inline styles printed when the gallery shortcode is used.
   *
- * 
+ *
  * @return string The gallery style filter, with the styles themselves removed.
  */
 function icecap_remove_gallery_css( $css ) {
@@ -274,7 +274,7 @@ if ( ! function_exists( 'icecap_comment' ) ) :
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * 
+ *
  */
 function icecap_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -325,7 +325,7 @@ endif;
  * To override icecap_widgets_init() in a child theme, remove the action hook and add your own
  * function tied to the init hook.
  *
- * 
+ *
  * @uses register_sidebar
  */
 function icecap_widgets_init() {
@@ -404,7 +404,7 @@ add_action( 'widgets_init', 'icecap_widgets_init' );
  * To override this in a child theme, remove the filter and optionally add your own
  * function tied to the widgets_init action hook.
  *
- * 
+ *
  */
 function icecap_remove_recent_comments_style() {
 	global $wp_widget_factory;
@@ -416,7 +416,7 @@ if ( ! function_exists( 'icecap_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  *
- * 
+ *
  */
 function icecap_posted_on() {
 	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'icecap' ),
@@ -439,7 +439,7 @@ if ( ! function_exists( 'icecap_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
  *
- * 
+ *
  */
 function icecap_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
