@@ -1,4 +1,4 @@
 .sass-cache/*
 .DS_Store
-do-not-include.md
 publish/*
+*.zip

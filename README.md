@@ -1,10 +1,21 @@
+#About
+
+[Icecap](http://icecap.sayan.ee/) is a [Wordpress Theme](http://wordpress.org/) that is White, Minimal and Responsive:
+
+- [download](http://wordpress.org/extend/themes/ice-cap)
+- [demo](http://icecap.sayan.ee/demo/)
+- [source code](https://github.com/sayanee/icecap)
+- [contact the author](mailto:sayanee@gmail.com)
+
 ##Installation
 
 1. put the entire **Icecap** folder inside your wordpress `wp-content/themes/icecap` folder
 
-##About
+##Development
 
-This is a [Wordpress Theme](http://wordpress.org/) that is White, Minimal and Responsive.
+1. run the sass and compass compiler and watcher `sass --compass --watch sass/style.sass:style.css`
+2. run `grunt pub` to create the zip file and the publish folder
+3. run `grunt` to remove zip file and publish folders
 
 ##Thanks:
 

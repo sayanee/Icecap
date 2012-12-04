@@ -47,11 +47,12 @@ module.exports = function(grunt) {
     },
 
     rm: {
-      publish: ['publish/*/**', 'icecap.1.5.6.zip']
+      publish: ['publish/**', '*.zip']
     }
 
   });
 
-  grunt.registerTask('default', 'copy');
+  grunt.registerTask('pub', 'rm copy compress');
+  grunt.registerTask('default', 'rm');
 
 };
