@@ -1,0 +1,23 @@
+{
+  "name": "icecap",
+  "version": "1.5.8",
+  "author": "Sayanee <sayanee@gmail.com>",
+  "description": "White, Minimal & Responsive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sayanee/icecap.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "white",
+    "minimal",
+    "responsive"
+  ],
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-shell": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-compress": "latest"
+  }
+}

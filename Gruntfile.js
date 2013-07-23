@@ -1,12 +1,11 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-rm');
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.initConfig({
-
-
+    pkg: grunt.file.readJSON('package.json'),
     copy: {
       dist: {
         files: {
@@ -38,22 +37,25 @@ module.exports = function(grunt) {
         }
       }
     },
-
     compress: {
       zip: {
         files: {
-          "icecap.1.5.7.zip": "publish/**"
+          "icecap.<%= pkg.version %>.zip": "publish/**"
         }
       }
     },
-
-    rm: {
-      publish: ['publish/**', '*.zip']
+    shell: {
+      removePublish: {
+        command: 'rm -rf publish'
+      },
+      removeZip: {
+        command: 'rm icecap.<%= pkg.version %>.zip.gz'
+      }
     }
 
   });
 
-  grunt.registerTask('pub', 'rm copy compress');
-  grunt.registerTask('default', 'rm');
+  grunt.registerTask('pub', ['shell', 'copy', 'compress']);
+  grunt.registerTask('default', 'shell');
 
 };
