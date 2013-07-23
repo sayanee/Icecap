@@ -16,8 +16,8 @@ function my_scripts_method() {
     wp_deregister_script( 'script' );
     wp_register_script( 'script', get_template_directory_uri().'/script.js', array(), false, true);
     wp_enqueue_script( 'script' );
-
 }
+
 if ( !is_admin() ) {
 	add_action('wp_enqueue_scripts', 'my_scripts_method');
 }
